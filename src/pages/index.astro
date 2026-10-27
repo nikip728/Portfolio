@@ -1,0 +1,237 @@
+---
+import Page from "../layouts/Page.astro";
+import { getPortfolio } from "../lib/content";
+import { assetUrl } from "../lib/urls";
+const {
+    profile,
+    skills,
+    projects,
+    experience,
+    education,
+    certificates,
+    site,
+    navigation,
+} = await getPortfolio();
+const { labels } = site;
+const sections = navigation.filter((section) => section.visible);
+const projectsVisible = sections.some((section) => section.id === "projects");
+---
+
+<Page
+    title={`${profile.name} — ${profile.title}`}
+    description={site.description}
+    language={site.language}
+    name={profile.name}
+    labels={labels}
+    navigation={navigation}
+    home
+>
+    {sections.map((section, index) => (
+        <section
+            id={section.id}
+            class:list={["section", { hero: section.id === "about" }]}
+            aria-labelledby={`${section.id}-title`}
+        >
+            {section.id === "about" ? (
+                <>
+                    <p class="eyebrow">{profile.title}</p>
+                    <h1 id="about-title">
+                        {profile.name}
+                        <span aria-hidden="true">.</span>
+                    </h1>
+                    <div class="bio prose">
+                        <profile.Content />
+                    </div>
+                    {profile.avatar && (
+                        <img
+                            class="avatar"
+                            src={assetUrl(profile.avatar)}
+                            alt={profile.name}
+                            width="240"
+                            height="240"
+                        />
+                    )}
+                    <div class="links">
+                        {projectsVisible && (
+                            <a class="button" href="#projects">
+                                {labels.exploreWork}{" "}
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        )}
+                        <a href={`mailto:${profile.email}`}>
+                            {labels.getInTouch}{" "}
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </>
+            ) : (
+                <>
+                    <div class="section-heading">
+                        <p class="eyebrow">
+                            {String(index + 1).padStart(2, "0")} /{" "}
+                            {section.label}
+                        </p>
+                        <h2 id={`${section.id}-title`}>
+                            {section.label}
+                            <span aria-hidden="true">.</span>
+                        </h2>
+                    </div>
+                    {section.id === "skills" && (
+                        <ul class="skills">
+                            {skills.map((skill) => (
+                                <li>{skill}</li>
+                            ))}
+                        </ul>
+                    )}
+                    {section.id === "projects" && (
+                        <div class="projects">
+                            {projects.map((project, i) => (
+                                <article class="project">
+                                    <a
+                                        class="project-image"
+                                        href={assetUrl(
+                                            `/projects/${project.id}/`,
+                                        )}
+                                        aria-label={`${project.title} — ${labels.projectOverview}`}
+                                    >
+                                        <img
+                                            src={assetUrl(project.cover)}
+                                            alt={`${project.title} — ${labels.imageAltSuffix}`}
+                                            loading="lazy"
+                                            width="1280"
+                                            height="720"
+                                        />
+                                    </a>
+                                    <div class="project-content">
+                                        <p class="eyebrow">
+                                            {labels.projectPrefix}{" "}
+                                            {String(i + 1).padStart(2, "0")}
+                                        </p>
+                                        <h3>
+                                            <a
+                                                href={assetUrl(
+                                                    `/projects/${project.id}/`,
+                                                )}
+                                            >
+                                                {project.title}
+                                            </a>
+                                        </h3>
+                                        <ul
+                                            class="tags"
+                                            aria-label={labels.projectTags}
+                                        >
+                                            {project.tags.map((tag) => (
+                                                <li>{tag}</li>
+                                            ))}
+                                        </ul>
+                                        <div class="prose">
+                                            <project.Content />
+                                        </div>
+                                        <div class="links">
+                                            <a
+                                                class="button"
+                                                href={assetUrl(
+                                                    `/projects/${project.id}/`,
+                                                )}
+                                            >
+                                                {project.caseStudy
+                                                    ? labels.caseStudy
+                                                    : labels.projectOverview}{" "}
+                                                <span aria-hidden="true">
+                                                    →
+                                                </span>
+                                            </a>
+                                            {project.prototype && (
+                                                <a href={project.prototype}>
+                                                    {labels.prototype}{" "}
+                                                    <span aria-hidden="true">
+                                                        ↗
+                                                    </span>
+                                                </a>
+                                            )}
+                                        </div>
+                                    </div>
+                                </article>
+                            ))}
+                        </div>
+                    )}
+                    {section.id === "experience" && (
+                        <div class="timeline">
+                            {experience.map((item) => (
+                                <article class="entry">
+                                    <p class="period">{item.period}</p>
+                                    <div>
+                                        <h3>{item.role}</h3>
+                                        <p class="organization">
+                                            {item.company}
+                                        </p>
+                                        <div class="prose">
+                                            <item.Content />
+                                        </div>
+                                    </div>
+                                </article>
+                            ))}
+                        </div>
+                    )}
+                    {section.id === "education" && (
+                        <>
+                            {education.map((item) => (
+                                <article class="entry">
+                                    <p class="period">{item.year}</p>
+                                    <div>
+                                        <h3>{item.degree}</h3>
+                                        <p class="organization">
+                                            {item.institution}
+                                        </p>
+                                        <div class="prose">
+                                            <item.Content />
+                                        </div>
+                                    </div>
+                                </article>
+                            ))}
+                            <h3 class="subheading">
+                                {labels.certificatesHeading}
+                            </h3>
+                            <div class="certificates">
+                                {certificates.map((item) => (
+                                    <article>
+                                        <p class="period">{item.date}</p>
+                                        <h4>{item.name}</h4>
+                                        <p>{item.issuer}</p>
+                                        <div class="prose">
+                                            <item.Content />
+                                        </div>
+                                        {item.url && (
+                                            <a href={item.url}>
+                                                {labels.viewCertificate}{" "}
+                                                <span aria-hidden="true">
+                                                    ↗
+                                                </span>
+                                            </a>
+                                        )}
+                                    </article>
+                                ))}
+                            </div>
+                        </>
+                    )}
+                    {section.id === "contact" && (
+                        <div class="contact">
+                            <a class="email" href={`mailto:${profile.email}`}>
+                                {profile.email}{" "}
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                            <div class="links">
+                                {profile.socials.map((social) => (
+                                    <a href={social.url}>
+                                        {social.platform}{" "}
+                                        <span aria-hidden="true">↗</span>
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                </>
+            )}
+        </section>
+    ))}
+</Page>

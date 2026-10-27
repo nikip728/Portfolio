@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "enum": [
+          "about",
+          "skills",
+          "projects",
+          "experience",
+          "education",
+          "contact"
+        ]
+      },
+      "label": {
+        "type": "string",
+        "minLength": 1
+      },
+      "visible": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "id",
+      "label",
+      "visible"
+    ],
+    "additionalProperties": false
+  }
+}

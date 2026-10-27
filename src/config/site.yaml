@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=./editor-schemas/site.json
+language: en
+description: Papp Niki — UI/UX Designer & Front-End Developer. User-centered
+  digital experiences through design and code.
+labels:
+  skipToContent: Skip to content
+  home: home
+  mainNavigation: Main navigation
+  mobileNavigation: Mobile navigation
+  menu: Menu
+  exploreWork: Explore my work
+  getInTouch: Get in touch
+  projectPrefix: Project
+  projectTags: Project tags
+  prototype: Prototype
+  caseStudy: Case study
+  certificatesHeading: Certificates & continuing learning
+  viewCertificate: View certificate
+  backToTop: Back to top
+  imageAltSuffix: interface preview
+  caseStudyIntro: From research to the final design.
+  backToProjects: Back to projects
+  openImage: Open full-size image
+  caseStudyImageAlt: Design process and final interface
+  projectOverview: Project overview
+  enlargeImage: Enlarge case study
+  actualSize: Actual size
+  closeViewer: Close
+  imageRegion: Scrollable case study image
+  viewerHint: Read the full case study below, or enlarge it to explore the details.

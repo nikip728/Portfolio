@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "language": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-zA-Z]{2,8}(?:-[a-zA-Z0-9]{1,8})*$"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "labels": {
+      "type": "object",
+      "properties": {
+        "skipToContent": {
+          "type": "string",
+          "minLength": 1
+        },
+        "home": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mainNavigation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mobileNavigation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "menu": {
+          "type": "string",
+          "minLength": 1
+        },
+        "exploreWork": {
+          "type": "string",
+          "minLength": 1
+        },
+        "getInTouch": {
+          "type": "string",
+          "minLength": 1
+        },
+        "projectPrefix": {
+          "type": "string",
+          "minLength": 1
+        },
+        "projectTags": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prototype": {
+          "type": "string",
+          "minLength": 1
+        },
+        "caseStudy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "certificatesHeading": {
+          "type": "string",
+          "minLength": 1
+        },
+        "viewCertificate": {
+          "type": "string",
+          "minLength": 1
+        },
+        "backToTop": {
+          "type": "string",
+          "minLength": 1
+        },
+        "imageAltSuffix": {
+          "type": "string",
+          "minLength": 1
+        },
+        "caseStudyIntro": {
+          "type": "string",
+          "minLength": 1
+        },
+        "backToProjects": {
+          "type": "string",
+          "minLength": 1
+        },
+        "openImage": {
+          "type": "string",
+          "minLength": 1
+        },
+        "caseStudyImageAlt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "projectOverview": {
+          "type": "string",
+          "minLength": 1
+        },
+        "enlargeImage": {
+          "type": "string",
+          "minLength": 1
+        },
+        "actualSize": {
+          "type": "string",
+          "minLength": 1
+        },
+        "closeViewer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "imageRegion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "viewerHint": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "skipToContent",
+        "home",
+        "mainNavigation",
+        "mobileNavigation",
+        "menu",
+        "exploreWork",
+        "getInTouch",
+        "projectPrefix",
+        "projectTags",
+        "prototype",
+        "caseStudy",
+        "certificatesHeading",
+        "viewCertificate",
+        "backToTop",
+        "imageAltSuffix",
+        "caseStudyIntro",
+        "backToProjects",
+        "openImage",
+        "caseStudyImageAlt",
+        "projectOverview",
+        "enlargeImage",
+        "actualSize",
+        "closeViewer",
+        "imageRegion",
+        "viewerHint"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "language",
+    "description",
+    "labels"
+  ],
+  "additionalProperties": false
+}

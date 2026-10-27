@@ -1,0 +1,55 @@
+---
+import { assetUrl } from '../lib/urls';
+import '../styles/global.css';
+interface Props {
+  title: string;
+  description: string;
+  language: string;
+  name: string;
+  labels: Record<string, string>;
+  navigation: { id: string; label: string; visible: boolean }[];
+  home?: boolean;
+  image?: string;
+}
+const { title, description, language, name, labels, navigation, home = false, image = '/social-card.svg' }: Props = Astro.props;
+const sections = navigation.filter(section => section.visible);
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const homeLink = (id: string) => home ? `#${id}` : `${assetUrl('/')}#${id}`;
+---
+<!doctype html>
+<html lang={language}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="color-scheme" content="light dark" />
+        <meta name="theme-color" content="#f7f3ec" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#1c191b" media="(prefers-color-scheme: dark)" />
+    <title>{title}</title>
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href={assetUrl('/favicon.svg')} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(assetUrl(image), Astro.site)} />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <a class="skip" href="#main">{labels.skipToContent}</a>
+    <header class="header wrap">
+      <a class="brand" href={assetUrl('/')} aria-label={`${name}, ${labels.home}`}>{name}<span aria-hidden="true">.</span></a>
+      <nav class="desktop-nav" aria-label={labels.mainNavigation}>
+        {sections.map(section => <a href={homeLink(section.id)}>{section.label}</a>)}
+      </nav>
+      <details class="mobile-nav">
+        <summary>{labels.menu}</summary>
+        <nav aria-label={labels.mobileNavigation}>
+          {sections.map(section => <a href={homeLink(section.id)}>{section.label}</a>)}
+        </nav>
+      </details>
+    </header>
+    <main id="main" class="wrap"><slot /></main>
+    <footer class="wrap"><p>© {new Date().getFullYear()} {name}</p><a href="#main">{labels.backToTop} <span aria-hidden="true">↑</span></a></footer>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+---
+import type { InferGetStaticPropsType } from 'astro';
+import Page from '../../layouts/Page.astro';
+import CaseStudy from '../../components/CaseStudy.astro';
+import { getPortfolio } from '../../lib/content';
+import { assetUrl } from '../../lib/urls';
+export async function getStaticPaths() {
+  const portfolio = await getPortfolio();
+  return portfolio.projects.map(project => ({ params: { slug: project.id }, props: { project, portfolio } }));
+}
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const { project, portfolio }: Props = Astro.props;
+const { profile, site, navigation } = portfolio;
+const { labels } = site;
+const projectsVisible = navigation.some(section => section.id === 'projects' && section.visible);
+const backLink = `${assetUrl('/')}${projectsVisible ? '#projects' : ''}`;
+---
+<Page title={`${project.title} — ${profile.name}`} description={`${project.title} — ${site.description}`} language={site.language} name={profile.name} labels={labels} navigation={navigation} image={project.cover}>
+  <article class="project-detail">
+    <a class="back-link" href={backLink}><span aria-hidden="true">←</span> {projectsVisible ? labels.backToProjects : labels.home}</a>
+    <header class="project-heading">
+      <p class="eyebrow">{project.caseStudy ? labels.caseStudy : labels.projectOverview}</p>
+      <h1>{project.title}<span aria-hidden="true">.</span></h1>
+      <ul class="tags" aria-label={labels.projectTags}>{project.tags.map(tag => <li>{tag}</li>)}</ul>
+      {project.prototype && <a class="button" href={project.prototype}>{labels.prototype} <span aria-hidden="true">↗</span></a>}
+    </header>
+    <img class="project-cover" src={assetUrl(project.cover)} alt={`${project.title} — ${labels.imageAltSuffix}`} width="1280" height="720" fetchpriority="high" />
+    <section class="project-description" aria-labelledby="overview-title">
+      <h2 id="overview-title">{labels.projectOverview}</h2>
+      <div class="prose"><project.Content /></div>
+    </section>
+    {project.caseStudy && <CaseStudy image={project.caseStudy} title={project.title} labels={labels} />}
+    <a class="back-link" href={backLink}><span aria-hidden="true">←</span> {projectsVisible ? labels.backToProjects : labels.home}</a>
+  </article>
+</Page>

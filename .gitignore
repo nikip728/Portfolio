@@ -7,6 +7,10 @@ Desktop.ini
 # Dependencies
 node_modules/
 
+# Private legacy archive (contains original service configuration and history)
+/archive/
+.astro/
+
 # Build output and caches
 dist/
 build/
