@@ -107,7 +107,7 @@ There is no repository-wide GitHub switch to enable tracking: it is controlled b
 
 ## Checks and deployment
 
-These workflows build on GitHub-hosted runners, not on your computer or on the live Pages site. GitHub Pages serves the resulting static files; it does not build the application at request time.
+These workflows build on GitHub-hosted runners, not on your computer or on the live Pages site. GitHub Pages serves the resulting static files; it does not build the application at request time. All jobs pin `ubuntu-24.04` to avoid implicit operating-system migrations. Action versions use the Node 24 runtime; this is separate from the Node 22 version installed for building the application.
 
 ### Automatic checks
 
@@ -127,7 +127,7 @@ A failed install, validation, build, or test prevents artifact upload and deploy
 
 Configure these in the target repository, `nikip728/Portfolio`:
 
-1. **Settings → Pages → Build and deployment → Source:** select **GitHub Actions**.
+1. A repository owner or administrator must first enable Pages under **Settings → Pages → Build and deployment → Source: GitHub Actions**. Merely adding the workflow does not enable the Pages site. For private repositories, the owner's plan must support private-repository Pages (GitHub Pro, Team, or Enterprise); GitHub Free supports Pages from public repositories. Do not change repository visibility without reviewing its contents and history.
 2. **Settings → Environments → github-pages:** leave **Required reviewers** unset for manual-dispatch-only publishing. If reviewers were previously configured, remove that protection rule to avoid an additional approval step. Optionally restrict deployment branches to `main` as well; the workflow already checks the selected ref.
 3. Optionally protect `main` with a branch protection rule or ruleset requiring pull requests and the **Build and test** check before merging. Select the check after it has run at least once.
 
@@ -138,6 +138,14 @@ The default site URL is `https://nikip728.github.io/Portfolio/`. For a different
 ```sh
 BASE_PATH=/ SITE_URL=https://example.com npm run build
 ```
+
+### Troubleshooting first deployment
+
+If **Configure Pages** fails with `HttpError: Not Found` / `Get Pages site failed`, check the repository's Pages settings before changing application code. An administrator can inspect `GET /repos/{owner}/{repo}/pages`; a missing Pages site returns 404, while the repository metadata's `has_pages` field indicates whether Pages exists. A collaborator without sufficient access can also receive 404, so check permissions as well.
+
+Enable Pages with **GitHub Actions** as the source using an owner/admin account, and verify the owner's plan supports Pages for the repository visibility. This is a one-time administrative prerequisite. The workflow intentionally does not set `configure-pages`'s `enablement: true`: that action requires a separate privileged token to enable Pages, and a new broad-access secret is unnecessary for this setup.
+
+After committing and pushing workflow changes to `main`, start a **new manual deployment run** from `main`. Re-running an old failed run uses its original workflow revision and will not pick up action-version fixes. The automatic check can succeed while deployment fails because checks do not access Pages configuration or publish anything.
 
 ### Safe publishing and rollback
 
