@@ -1,5 +1,5 @@
 ---
-name: Papp Niki
+name: Papp Nikolett Eniko
 title: Ui/Ux Designer & Front-End Developer
 email: papp.nikolett.eniko@gmail.com
 socials:
