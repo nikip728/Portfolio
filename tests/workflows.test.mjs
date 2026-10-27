@@ -13,6 +13,9 @@ test('workflows pin the runner image and use Node 24-generation actions', () => 
   };
   for (const file of ['check', 'deploy']) {
     const workflow = yaml(`.github/workflows/${file}.yml`);
+    const setup = Object.values(workflow.jobs).flatMap(job => job.steps).find(step => step.uses?.startsWith('actions/setup-node@'));
+    assert.equal(setup?.with?.['node-version'], '24', 'Build on the supported Node 24 line');
+    assert.equal(setup?.with?.['check-latest'], true, 'Do not use an older preinstalled patch version');
     for (const job of Object.values(workflow.jobs)) {
       assert.equal(job['runs-on'], 'ubuntu-24.04', 'Avoid implicit ubuntu-latest migrations');
       for (const step of job.steps) {

@@ -4,7 +4,7 @@ A static Astro portfolio with Markdown content, YAML configuration, and local pr
 
 ## Development
 
-Requires Node.js **22.23.4 or later**. The workflows use the latest available Node 22 release.
+Requires Node.js **22.23.4 or later**. The workflows use Node 24 with `check-latest: true`, avoiding older preinstalled Node 22 patches that do not satisfy Astro's minimum version.
 
 ```sh
 npm ci
@@ -107,7 +107,7 @@ There is no repository-wide GitHub switch to enable tracking: it is controlled b
 
 ## Checks and deployment
 
-These workflows build on GitHub-hosted runners, not on your computer or on the live Pages site. GitHub Pages serves the resulting static files; it does not build the application at request time. All jobs pin `ubuntu-24.04` to avoid implicit operating-system migrations. Action versions use the Node 24 runtime; this is separate from the Node 22 version installed for building the application.
+These workflows build on GitHub-hosted runners, not on your computer or on the live Pages site. GitHub Pages serves the resulting static files; it does not build the application at request time. All jobs pin `ubuntu-24.04` to avoid implicit operating-system migrations. Both the action runtime and the application build use Node 24. The build explicitly resolves the latest patch on that line.
 
 ### Automatic checks
 
@@ -140,6 +140,10 @@ BASE_PATH=/ SITE_URL=https://example.com npm run build
 ```
 
 ### Troubleshooting first deployment
+
+**Jekyll errors mentioning `.astro` files:** the repository is being published using **Deploy from a branch**, which starts GitHub's legacy Jekyll build against the source tree. Astro's `---` blocks contain JavaScript/TypeScript, not YAML; do not rewrite those files to satisfy Jekyll or install Ruby gems. An owner/admin must change **Settings → Pages → Build and deployment → Source** to **GitHub Actions**. The Pages API should report `build_type: workflow`, not `legacy`. Do not add a `.nojekyll` file to the source root as a substitute: the deployment must publish the Astro-generated `dist/` artifact, not application source files.
+
+**Unsupported Node version:** both workflows use Node 24 with `check-latest: true`. A cached `22.23.3` does not meet Astro's `>=22.23.4` requirement. Run the updated workflow revision rather than retrying a run that still references the old Node configuration.
 
 If **Configure Pages** fails with `HttpError: Not Found` / `Get Pages site failed`, check the repository's Pages settings before changing application code. An administrator can inspect `GET /repos/{owner}/{repo}/pages`; a missing Pages site returns 404, while the repository metadata's `has_pages` field indicates whether Pages exists. A collaborator without sufficient access can also receive 404, so check permissions as well.
 
