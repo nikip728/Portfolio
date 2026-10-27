@@ -1,8 +1,10 @@
 ---
-period: 2026 (3 month internship)
-role: UI / UX Intern
+period: 2026 (3-month internship)
+role: UI/UX Intern
 company: Gaddr
 order: 5
 published: true
 ---
-During my 3 month internship at Gaddr, I collaborated on the development and maintenance of design systems in Figma. Worked on reviewing and refining UI components, improving consistency across interface elements, and supporting responsive design practices. Contributed to organizing and optimizing reusable components for a more scalable and cohesive user experience.
+Contributed to developing and maintaining design systems in Figma during a three-month internship. Reviewed and refined UI components, organized reusable components, and supported responsive design practices.
+
+This experience gave me a starting point for thinking about individual screens as parts of a wider system. I want to build on it by becoming more intentional about component consistency, reuse, and how layouts adapt to different screen sizes.

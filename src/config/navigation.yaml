@@ -2,14 +2,14 @@
 - id: about
   label: About
   visible: true
-- id: skills
-  label: Skills
-  visible: true
 - id: projects
-  label: Projects
+  label: Selected work
   visible: true
 - id: experience
   label: Experience
+  visible: true
+- id: skills
+  label: Skills
   visible: true
 - id: education
   label: Education

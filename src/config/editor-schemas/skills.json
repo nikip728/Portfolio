@@ -3,7 +3,25 @@
   "minItems": 1,
   "type": "array",
   "items": {
-    "type": "string",
-    "minLength": 1
+    "type": "object",
+    "properties": {
+      "category": {
+        "type": "string",
+        "minLength": 1
+      },
+      "items": {
+        "minItems": 1,
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "required": [
+      "category",
+      "items"
+    ],
+    "additionalProperties": false
   }
 }
