@@ -18,6 +18,36 @@ export function initPageInteractions() {
   backToTop?.addEventListener('blur', scheduleUpdate);
   updateBackToTop();
 
+  const projectBrowser = document.querySelector<HTMLElement>('[data-project-browser]');
+  const projectFilters = projectBrowser?.querySelectorAll<HTMLButtonElement>('[data-project-filter]') ?? [];
+  const projectCards = projectBrowser?.querySelectorAll<HTMLElement>('[data-project-tags]') ?? [];
+  const emptyProjects = projectBrowser?.querySelector<HTMLElement>('[data-project-empty]');
+  const projectFilterListeners: Array<[HTMLButtonElement, EventListener]> = [];
+  if (emptyProjects) {
+    const applyProjectFilter = (button: HTMLButtonElement) => {
+      const category = button.dataset.projectFilter;
+      if (!category) throw new Error('Project filter button is missing its category');
+      let visibleCount = 0;
+      for (const card of projectCards) {
+        const tags = card.dataset.projectTags?.split('|') ?? [];
+        const visible = category === 'all'
+          || tags.some(tag => tag.toLowerCase() === category.toLowerCase());
+        card.hidden = !visible;
+        if (visible) visibleCount++;
+      }
+      for (const filter of projectFilters) {
+        filter.setAttribute('aria-pressed', String(filter === button));
+      }
+      emptyProjects.hidden = visibleCount > 0;
+    };
+    for (const button of projectFilters) {
+      const listener: EventListener = () => applyProjectFilter(button);
+      button.addEventListener('click', listener);
+      projectFilterListeners.push([button, listener]);
+      if (button.getAttribute('aria-pressed') === 'true') applyProjectFilter(button);
+    }
+  }
+
   const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
   const animations = new Map<Element, Animation>();
   const revealed = new WeakSet<Element>();
@@ -90,6 +120,9 @@ export function initPageInteractions() {
     window.removeEventListener('resize', scheduleUpdate);
     window.removeEventListener('pageshow', scheduleUpdate);
     backToTop?.removeEventListener('blur', scheduleUpdate);
+    for (const [button, listener] of projectFilterListeners) {
+      button.removeEventListener('click', listener);
+    }
     document.removeEventListener('focusin', handleFocus);
     preference.removeEventListener('change', startReveals);
   };

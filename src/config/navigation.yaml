@@ -3,7 +3,7 @@
   label: About
   visible: true
 - id: projects
-  label: Selected work
+  label: Projects 
   visible: true
 - id: experience
   label: Experience

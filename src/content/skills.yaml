@@ -5,15 +5,24 @@
     - Wireframing
     - Prototyping
     - Design thinking
+    - Design Systems
+    - Responsive Design
 - category: Research & evaluation
   items:
     - User research
     - Usability testing
+    - Usability Evaluation
+    - Problem Solving
 - category: Front-end foundations
   items:
     - HTML
     - CSS
     - JavaScript
+    - Visual Studio Code
+    - Git & GitHub
+    - React
+    - Responsive Web Development
+    - Component-Based Development
 - category: Languages
   items:
     - Hungarian (Native)

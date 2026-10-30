@@ -5,4 +5,4 @@ company: Marshmallow
 order: 4
 published: true
 ---
-Support customers with UK insurance policy updates, payment plans, and general inquiries through clear, empathetic communication.
+Focused on customer retention through effective communication, problem-solving, and understanding customer needs. Monitored performance metrics such as customer satisfaction, chats per hour, and ticket handling to maintain service quality and support customer outcomes.

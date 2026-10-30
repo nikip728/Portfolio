@@ -20,6 +20,8 @@ function setup(t, { reducedMotion = false, intersectionObserver = true, animate 
   class FakeElement extends FakeNode {
     hidden = false;
     children = [];
+    dataset = {};
+    attributes = new Map();
     top = 1400;
     getBoundingClientRect() { return { top: this.top }; }
     constructor() {
@@ -29,6 +31,8 @@ function setup(t, { reducedMotion = false, intersectionObserver = true, animate 
     contains(node) {
       return node === this || this.children.some(child => child.contains(node));
     }
+    setAttribute(name, value) { this.attributes.set(name, value); }
+    getAttribute(name) { return this.attributes.get(name) ?? null; }
   }
   const animations = [];
   if (animate) {
@@ -83,6 +87,29 @@ function setup(t, { reducedMotion = false, intersectionObserver = true, animate 
   }
   const link = new FakeElement();
   const reveals = revealTops.map(top => Object.assign(new FakeElement(), { top }));
+  const projectFilters = ['all', 'UI/UX', 'Front-End'].map(category => {
+    const filter = new FakeElement();
+    filter.dataset.projectFilter = category;
+    filter.setAttribute('aria-pressed', String(category === 'all'));
+    return filter;
+  });
+  const projectCards = ['UI/UX', 'Front-end', 'UI/UX|Front-end', 'Figma'].map(tags => {
+    const card = new FakeElement();
+    card.dataset.projectTags = tags;
+    return card;
+  });
+  const emptyProjects = new FakeElement();
+  emptyProjects.hidden = true;
+  const projectBrowser = new FakeElement();
+  projectBrowser.querySelectorAll = selector => {
+    if (selector === '[data-project-filter]') return projectFilters;
+    if (selector === '[data-project-tags]') return projectCards;
+    throw new Error(`Unexpected project browser selector: ${selector}`);
+  };
+  projectBrowser.querySelector = selector => {
+    if (selector === '[data-project-empty]') return emptyProjects;
+    throw new Error(`Unexpected project browser selector: ${selector}`);
+  };
   const preference = { ...events(), matches: reducedMotion };
   const frames = new Map();
   let nextFrame = 0;
@@ -99,8 +126,9 @@ function setup(t, { reducedMotion = false, intersectionObserver = true, animate 
   const document = {
     ...events(), activeElement: null,
     querySelector: t.mock.fn(selector => {
-      assert.equal(selector, '[data-back-to-top]');
-      return link;
+      if (selector === '[data-back-to-top]') return link;
+      if (selector === '[data-project-browser]') return projectBrowser;
+      throw new Error(`Unexpected document selector: ${selector}`);
     }),
     querySelectorAll: t.mock.fn(selector => {
       assert.equal(selector, '[data-reveal]');
@@ -126,6 +154,7 @@ function setup(t, { reducedMotion = false, intersectionObserver = true, animate 
   cleanup = initPageInteractions();
   return {
     window, document, link, reveals, preference, observers, animations, FakeElement, frames, cleanup,
+    projectFilters, projectCards, emptyProjects,
     flushFrames() {
       const pending = [...frames.values()];
       frames.clear();
@@ -133,6 +162,28 @@ function setup(t, { reducedMotion = false, intersectionObserver = true, animate 
     },
   };
 }
+
+test('project filters match tags case-insensitively and report empty categories', t => {
+  const env = setup(t);
+  const [all, uiUx, frontEnd] = env.projectFilters;
+  assert.ok(env.projectCards.every(card => !card.hidden));
+  assert.equal(env.emptyProjects.hidden, true);
+  assert.equal(all.getAttribute('aria-pressed'), 'true');
+
+  uiUx.dispatch('click');
+  assert.deepEqual(env.projectCards.map(card => !card.hidden), [true, false, true, false]);
+  assert.equal(uiUx.getAttribute('aria-pressed'), 'true');
+  assert.equal(all.getAttribute('aria-pressed'), 'false');
+
+  frontEnd.dispatch('click');
+  assert.deepEqual(env.projectCards.map(card => !card.hidden), [false, true, true, false]);
+  assert.equal(env.emptyProjects.hidden, true);
+
+  for (const card of env.projectCards) card.dataset.projectTags = 'Figma';
+  uiUx.dispatch('click');
+  assert.ok(env.projectCards.every(card => card.hidden));
+  assert.equal(env.emptyProjects.hidden, false);
+});
 
 test('floating-top is hidden initially and updates at the scroll threshold through a coalesced RAF', t => {
   const env = setup(t);

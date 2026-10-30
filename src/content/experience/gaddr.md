@@ -5,6 +5,4 @@ company: Gaddr
 order: 5
 published: true
 ---
-Contributed to developing and maintaining design systems in Figma during a three-month internship. Reviewed and refined UI components, organized reusable components, and supported responsive design practices.
-
-This experience gave me a starting point for thinking about individual screens as parts of a wider system. I want to build on it by becoming more intentional about component consistency, reuse, and how layouts adapt to different screen sizes.
+Worked on UI/UX design tasks in Figma, contributing to the development and refinement of a consistent design system across multiple interfaces. Updated shared colors, styles, and reusable components to improve design consistency and simplify global updates. Also collaborated on responsive layouts and user-friendly interface solutions.

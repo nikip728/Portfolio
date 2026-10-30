@@ -5,4 +5,4 @@ issuer: Google, Coursera
 order: 2
 published: true
 ---
-My learning focus is on the foundations of UX design. I want to keep developing a thoughtful approach to design problems and become clearer about the reasoning behind my decisions.
+Developing a foundation in UX design, with a focus on user-centered thinking and structured problem-solving. I want to become more confident in evaluating design decisions and understanding the reasoning behind them.

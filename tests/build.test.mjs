@@ -53,6 +53,18 @@ test('project cards use summaries while detail pages keep the written case studi
   }
 });
 
+test('homepage project filters expose published tags and the empty state', () => {
+  const html = readFileSync(join(dist, 'index.html'), 'utf8');
+  const elements = tags(html);
+  const filters = elements.filter(tag => 'data-project-filter' in tag.attrs);
+  assert.deepEqual(filters.map(filter => filter.attrs['data-project-filter']), ['all', 'UI/UX', 'Front-End']);
+  assert.deepEqual(filters.map(filter => filter.attrs['aria-pressed']), ['true', 'false', 'false']);
+  for (const project of entries('projects').filter(entry => entry.data.published)) {
+    assert(elements.some(tag => tag.attrs['data-project-tags'] === project.data.tags.join('|')), `${project.slug}: missing filter tags`);
+  }
+  assert(html.includes('No projects found in this category yet.'));
+});
+
 test('homepage includes editable section introductions and an expanded contact invitation', () => {
   const html = readFileSync(join(dist, 'index.html'), 'utf8');
   const text = decode(html.replace(/<[^>]*>/g, ' ')).replace(/\s+/g, ' ');

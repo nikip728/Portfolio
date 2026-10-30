@@ -5,4 +5,4 @@ company: Wolt Hungary
 order: 3
 published: true
 ---
-Provided real-time support to customers and restaurant partners via chat and email, using knowledge of Wolt’s platform, policies, and service standards.
+Supported customers in a fast-paced environment, handling inquiries and resolving issues through clear, empathetic communication. Developed strong problem-solving skills while balancing response efficiency, service quality, and customer satisfaction.

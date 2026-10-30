@@ -6,4 +6,4 @@ name: "Meta Full Stack Developer: Front-End & Back-End from Scratch Specializati
 order: 4
 published: true
 ---
-An ongoing introduction to frontend and backend development through Meta's full-stack specialization. My goal is to understand how websites fit together, with frontend learning as a secondary interest alongside UI/UX design.
+An ongoing introduction to full-stack development through Meta's specialization, covering both frontend and backend fundamentals. My focus is on understanding how web applications are built and how their different components work together.

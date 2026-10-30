@@ -6,4 +6,4 @@ name: "Intermediate to Advanced: Professional Figma UI / UX Design Specializatio
 order: 3
 published: true
 ---
-An ongoing specialization focused on intermediate to advanced UI/UX design in Figma. My goal is to build on the essentials and develop a more considered, consistent design practice.
+An ongoing specialization focused on developing more advanced UI/UX design skills in Figma, including more complex design workflows, reusable components, and consistent design systems.
