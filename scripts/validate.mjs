@@ -3,7 +3,7 @@ import { readFileSync, readdirSync, realpathSync, statSync, mkdirSync, writeFile
 import { z } from 'astro/zod';
 import { resolve, sep } from 'node:path';
 import { parse } from 'yaml';
-import { contentSchemas, siteSchema, navigationSchema, skillsSchema } from '../src/config/schemas.mjs';
+import { contentSchemas, siteSchema, navigationSchema, skillsSchema, sectionContentIds } from '../src/config/schemas.mjs';
 
 // Explicit editor schemas prevent unrelated filename-based YAML schema associations.
 mkdirSync('src/config/editor-schemas', { recursive: true });
@@ -30,6 +30,7 @@ for (const [collection, schema] of Object.entries(contentSchemas)) {
   const files = readdirSync(directory).sort();
   assert(files.length > 0, `${directory}: empty collection`);
   if (collection === 'profile') assert.deepEqual(files, ['about.md']);
+    if (collection === 'sections') assert.deepEqual(files, sectionContentIds.map(id => `${id}.md`).sort(), 'sections: expected exactly one Markdown file for each homepage section');
   const orders = new Set();
   const ids = new Set();
   for (const file of files) {

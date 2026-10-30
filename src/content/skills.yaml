@@ -1,12 +1,30 @@
 # yaml-language-server: $schema=../config/editor-schemas/skills.json
-- JavaScript
-- Css
-- HTML
-- Figma
-- Wireframing
-- Design thinking
-- User Research
-- Prototyping
-- English (C1)
-- Italian (A2)
-- Hungarian (Native)
+- category: Design
+  items:
+    - Figma
+    - Wireframing
+    - Prototyping
+    - Design thinking
+    - Design Systems
+    - Responsive Design
+- category: Research & evaluation
+  items:
+    - User research
+    - Usability testing
+    - Usability Evaluation
+    - Problem Solving
+- category: Front-end foundations
+  items:
+    - HTML
+    - CSS
+    - JavaScript
+    - Visual Studio Code
+    - Git & GitHub
+    - React
+    - Responsive Web Development
+    - Component-Based Development
+- category: Languages
+  items:
+    - Hungarian (Native)
+    - English (C1)
+    - Italian (A2)

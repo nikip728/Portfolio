@@ -5,4 +5,4 @@ degree: Architecture
 order: 1
 published: true
 ---
-Studied Architecture, developing a strong foundation in design principles, structural planning, and attention to detail.
+Developed a foundation in visual communication, spatial thinking, and design principles through architectural studies. Gained experience working on collaborative design projects, contributing ideas and developing solutions as part of a team.

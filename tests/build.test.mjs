@@ -30,6 +30,77 @@ test('homepage collections render highest order first', () => {
   }
 });
 
+test('project cards use summaries while detail pages keep the written case studies', () => {
+  const home = decode(readFileSync(join(dist, 'index.html'), 'utf8').replace(/<[^>]*>/g, ' ')).replace(/\s+/g, ' ');
+  for (const project of entries('projects').filter(entry => entry.data.published)) {
+    assert(home.includes(project.data.summary.replace(/\s+/g, ' ')), `${project.slug}: missing card summary`);
+    const detail = readFileSync(join(dist, 'projects', project.slug, 'index.html'), 'utf8');
+    if (project.data.repository) assert(tags(detail).some(tag => tag.name === 'a' && tag.attrs.href === project.data.repository));
+        if (project.data.coverAlt) {
+          for (const html of [readFileSync(join(dist, 'index.html'), 'utf8'), detail]) {
+            assert(tags(html).some(tag => tag.name === 'img' && tag.attrs.alt === project.data.coverAlt), `${project.slug}: missing descriptive cover alt text`);
+          }
+        }
+        if (project.data.coverCaption) {
+          assert(tags(detail).some(tag => tag.name === 'figcaption'));
+          assert(decode(detail.replace(/<[^>]*>/g, ' ')).includes(project.data.coverCaption));
+        }
+    const heading = /^## (.+)$/m.exec(project.body)?.[1];
+    if (heading) {
+      assert(decode(detail.replace(/<[^>]*>/g, ' ')).includes(heading));
+      assert(!home.includes(heading), `${project.slug}: full case study leaked into homepage`);
+    }
+  }
+});
+
+test('homepage project filters expose published tags and the empty state', () => {
+  const html = readFileSync(join(dist, 'index.html'), 'utf8');
+  const elements = tags(html);
+  const filters = elements.filter(tag => 'data-project-filter' in tag.attrs);
+  assert.deepEqual(filters.map(filter => filter.attrs['data-project-filter']), ['all', 'UI/UX', 'Front-End']);
+  assert.deepEqual(filters.map(filter => filter.attrs['aria-pressed']), ['true', 'false', 'false']);
+  for (const project of entries('projects').filter(entry => entry.data.published)) {
+    assert(elements.some(tag => tag.attrs['data-project-tags'] === project.data.tags.join('|')), `${project.slug}: missing filter tags`);
+  }
+  assert(html.includes('No projects found in this category yet.'));
+});
+
+test('homepage includes editable section introductions and an expanded contact invitation', () => {
+  const html = readFileSync(join(dist, 'index.html'), 'utf8');
+  const text = decode(html.replace(/<[^>]*>/g, ' ')).replace(/\s+/g, ' ');
+  const navigation = yaml('src/config/navigation.yaml');
+  const plainText = source => decode(source.replace(/<[^>]*>/g, ' ')).replace(/\s+/g, ' ').trim();
+  for (const entry of entries('sections')) {
+    if (!navigation.find(item => item.id === entry.slug)?.visible) continue;
+    const section = new RegExp(String.raw`<section\b[^>]*\bid="${entry.slug}"[^>]*>([\s\S]*?)<\/section>`).exec(html);
+    assert(section, `Missing section ${entry.slug}`);
+    const heading = /<h2\b[^>]*>([\s\S]*?)<\/h2>/.exec(section[1]);
+    assert(heading, `${entry.slug}: missing main h2`);
+    const title = heading[1].replace(/<span\b[^>]*\baria-hidden=["']true["'][^>]*>[\s\S]*?<\/span>/gi, '');
+    assert.equal(plainText(title), entry.data.title.replace(/\s+/g, ' ').trim(), `${entry.slug}: incorrect section title`);
+    const normalizeQuotes = source => source.replace(/[‘’]/g, "'").replace(/[“”]/g, '"');
+    const sectionText = normalizeQuotes(plainText(section[1]));
+    for (const block of entry.body.trim().split(/\r?\n\s*\r?\n/)) {
+      const copy = block.replace(/^###\s+/gm, '').replace(/\s+/g, ' ').trim();
+      assert(sectionText.includes(normalizeQuotes(copy)), `${entry.slug}: missing paragraph or heading: ${copy}`);
+    }
+  }
+  assert(!/\b0[1-9]\s*\//.test(text), 'Sections must not display numerical prefixes');
+  assert(!/\bProject\s+0[1-9]\b/.test(text), 'Projects must not display numerical prefixes');
+});
+
+test('all pages keep a native top link and a progressively enhanced floating shortcut', () => {
+  for (const file of walk(dist).filter(file => extname(file) === '.html')) {
+    const elements = tags(readFileSync(file, 'utf8'));
+    assert(elements.some(tag => tag.attrs.id === 'top' && tag.attrs.tabindex === '-1'));
+    const floating = elements.find(tag => tag.name === 'a' && 'data-back-to-top' in tag.attrs);
+    assert(floating);
+    assert.equal(floating.attrs.href, '#top');
+    assert('hidden' in floating.attrs, 'Floating link must start hidden without JavaScript');
+    assert(elements.some(tag => tag.name === 'a' && tag.attrs.href === '#top' && !('data-back-to-top' in tag.attrs)), 'Keep a non-JavaScript footer link');
+  }
+});
+
 test('all pages declare system-aware browser theme colors', () => {
   for (const file of walk(dist).filter(file => extname(file) === '.html')) {
     const elements = tags(readFileSync(file, 'utf8'));

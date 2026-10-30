@@ -11,10 +11,12 @@ const {
     certificates,
     site,
     navigation,
+    sectionContent,
 } = await getPortfolio();
 const { labels } = site;
 const sections = navigation.filter((section) => section.visible);
 const projectsVisible = sections.some((section) => section.id === "projects");
+
 ---
 
 <Page
@@ -26,8 +28,9 @@ const projectsVisible = sections.some((section) => section.id === "projects");
     navigation={navigation}
     home
 >
-    {sections.map((section, index) => (
-        <section
+    {sections.map((section) => {
+        const content = sectionContent[section.id];
+        return <section
             id={section.id}
             class:list={["section", { hero: section.id === "about" }]}
             aria-labelledby={`${section.id}-title`}
@@ -66,99 +69,113 @@ const projectsVisible = sections.some((section) => section.id === "projects");
                 </>
             ) : (
                 <>
-                    <div class="section-heading">
-                        <p class="eyebrow">
-                            {String(index + 1).padStart(2, "0")} /{" "}
-                            {section.label}
-                        </p>
+                    <div class="section-heading" data-reveal>
+
                         <h2 id={`${section.id}-title`}>
-                            {section.label}
+                            {content.title}
                             <span aria-hidden="true">.</span>
                         </h2>
+                        {section.id !== "contact" && (
+                            <div class="section-intro prose"><content.Content /></div>
+                        )}
                     </div>
                     {section.id === "skills" && (
-                        <ul class="skills">
-                            {skills.map((skill) => (
-                                <li>{skill}</li>
+                        <div class="skill-groups">
+                            {skills.map((group) => (
+                                <div data-reveal>
+                                    <h3>{group.category}</h3>
+                                    <ul class="skills">
+                                        {group.items.map((skill) => <li>{skill}</li>)}
+                                    </ul>
+                                </div>
                             ))}
-                        </ul>
+                        </div>
                     )}
                     {section.id === "projects" && (
-                        <div class="projects">
-                            {projects.map((project, i) => (
-                                <article class="project">
-                                    <a
-                                        class="project-image"
-                                        href={assetUrl(
-                                            `/projects/${project.id}/`,
-                                        )}
-                                        aria-label={`${project.title} — ${labels.projectOverview}`}
-                                    >
-                                        <img
-                                            src={assetUrl(project.cover)}
-                                            alt={`${project.title} — ${labels.imageAltSuffix}`}
-                                            loading="lazy"
-                                            width="1280"
-                                            height="720"
-                                        />
-                                    </a>
-                                    <div class="project-content">
-                                        <p class="eyebrow">
-                                            {labels.projectPrefix}{" "}
-                                            {String(i + 1).padStart(2, "0")}
-                                        </p>
-                                        <h3>
-                                            <a
-                                                href={assetUrl(
-                                                    `/projects/${project.id}/`,
-                                                )}
-                                            >
-                                                {project.title}
-                                            </a>
-                                        </h3>
-                                        <ul
-                                            class="tags"
-                                            aria-label={labels.projectTags}
+                        <div data-project-browser>
+                            <div class="project-filters" role="group" aria-label="Filter projects">
+                                <button class="project-filter" type="button" data-project-filter="all" aria-pressed="true">All</button>
+                                <button class="project-filter" type="button" data-project-filter="UI/UX" aria-pressed="false">UI/UX</button>
+                                <button class="project-filter" type="button" data-project-filter="Front-End" aria-pressed="false">Front-End</button>
+                            </div>
+                            <div class="projects">
+                                {projects.map((project) => (
+                                    <article data-reveal data-project-tags={project.tags.join("|")} class:list={["project", { "project-text-only": !project.cover }]}>
+                                        {project.cover && <a
+                                            class="project-image"
+                                            href={assetUrl(
+                                                `/projects/${project.id}/`,
+                                            )}
+                                            aria-label={`${project.title} — ${labels.projectOverview}`}
                                         >
-                                            {project.tags.map((tag) => (
-                                                <li>{tag}</li>
-                                            ))}
-                                        </ul>
-                                        <div class="prose">
-                                            <project.Content />
-                                        </div>
-                                        <div class="links">
-                                            <a
-                                                class="button"
-                                                href={assetUrl(
-                                                    `/projects/${project.id}/`,
-                                                )}
+                                            <img
+                                                src={assetUrl(project.cover)}
+                                                alt={project.coverAlt ?? `${project.title} — ${labels.imageAltSuffix}`}
+                                                loading="lazy"
+                                                width="1280"
+                                                height="720"
+                                            />
+                                        </a>}
+                                        <div class="project-content">
+                                            <h3>
+                                                <a
+                                                    href={assetUrl(
+                                                        `/projects/${project.id}/`,
+                                                    )}
+                                                >
+                                                    {project.title}
+                                                </a>
+                                            </h3>
+                                            <ul
+                                                class="tags"
+                                                aria-label={labels.projectTags}
                                             >
-                                                {project.caseStudy
-                                                    ? labels.caseStudy
-                                                    : labels.projectOverview}{" "}
-                                                <span aria-hidden="true">
-                                                    →
-                                                </span>
-                                            </a>
-                                            {project.prototype && (
-                                                <a href={project.prototype}>
-                                                    {labels.prototype}{" "}
+                                                {project.tags.map((tag) => (
+                                                    <li>{tag}</li>
+                                                ))}
+                                            </ul>
+                                            <div class="prose">
+                                                <p>{project.summary}</p>
+                                            </div>
+                                            <div class="links">
+                                                <a
+                                                    class="button"
+                                                    href={assetUrl(
+                                                        `/projects/${project.id}/`,
+                                                    )}
+                                                >
+                                                    {project.caseStudy
+                                                        ? labels.caseStudy
+                                                        : labels.projectOverview}{" "}
                                                     <span aria-hidden="true">
-                                                        ↗
+                                                        →
                                                     </span>
                                                 </a>
-                                            )}
+                                                {project.repository && (
+                                                    <a href={project.repository}>
+                                                        Source repository <span aria-hidden="true">↗</span>
+                                                    </a>
+                                                )}
+                                                {project.prototype && (
+                                                    <a href={project.prototype}>
+                                                        {labels.prototype}{" "}
+                                                        <span aria-hidden="true">
+                                                            ↗
+                                                        </span>
+                                                    </a>
+                                                )}
+                                            </div>
                                         </div>
-                                    </div>
-                                </article>
-                            ))}
+                                    </article>
+                                ))}
+                                <p class="project-empty" data-project-empty hidden>No projects found in this category yet.</p>
+                            </div>
                         </div>
                     )}
                     {section.id === "experience" && (
                         <div class="timeline">
                             {experience.map((item) => (
-                                <article class="entry">
+                                <article class="entry" data-reveal>
                                     <p class="period">{item.period}</p>
                                     <div>
                                         <h3>{item.role}</h3>
@@ -176,7 +193,7 @@ const projectsVisible = sections.some((section) => section.id === "projects");
                     {section.id === "education" && (
                         <>
                             {education.map((item) => (
-                                <article class="entry">
+                                <article class="entry" data-reveal>
                                     <p class="period">{item.year}</p>
                                     <div>
                                         <h3>{item.degree}</h3>
@@ -194,8 +211,8 @@ const projectsVisible = sections.some((section) => section.id === "projects");
                             </h3>
                             <div class="certificates">
                                 {certificates.map((item) => (
-                                    <article>
-                                        <p class="period">{item.date}</p>
+                                    <article data-reveal>
+                                        <p class="period">{item.date}{item.status === "in-progress" && " · In progress"}</p>
                                         <h4>{item.name}</h4>
                                         <p>{item.issuer}</p>
                                         <div class="prose">
@@ -215,7 +232,10 @@ const projectsVisible = sections.some((section) => section.id === "projects");
                         </>
                     )}
                     {section.id === "contact" && (
-                        <div class="contact">
+                        <div class="contact" data-reveal>
+                            <div class="contact-intro prose">
+                                <content.Content />
+                            </div>
                             <a class="email" href={`mailto:${profile.email}`}>
                                 {profile.email}{" "}
                                 <span aria-hidden="true">↗</span>
@@ -232,6 +252,6 @@ const projectsVisible = sections.some((section) => section.id === "projects");
                     )}
                 </>
             )}
-        </section>
-    ))}
+        </section>;
+    })}
 </Page>

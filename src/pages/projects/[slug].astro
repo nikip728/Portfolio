@@ -15,19 +15,26 @@ const { labels } = site;
 const projectsVisible = navigation.some(section => section.id === 'projects' && section.visible);
 const backLink = `${assetUrl('/')}${projectsVisible ? '#projects' : ''}`;
 ---
-<Page title={`${project.title} — ${profile.name}`} description={`${project.title} — ${site.description}`} language={site.language} name={profile.name} labels={labels} navigation={navigation} image={project.cover}>
+<Page title={`${project.title} — ${profile.name}`} description={project.summary} language={site.language} name={profile.name} labels={labels} navigation={navigation} image={project.cover}>
   <article class="project-detail">
     <a class="back-link" href={backLink}><span aria-hidden="true">←</span> {projectsVisible ? labels.backToProjects : labels.home}</a>
     <header class="project-heading">
       <p class="eyebrow">{project.caseStudy ? labels.caseStudy : labels.projectOverview}</p>
       <h1>{project.title}<span aria-hidden="true">.</span></h1>
       <ul class="tags" aria-label={labels.projectTags}>{project.tags.map(tag => <li>{tag}</li>)}</ul>
-      {project.prototype && <a class="button" href={project.prototype}>{labels.prototype} <span aria-hidden="true">↗</span></a>}
+      <p class="project-summary">{project.summary}</p>
+            <div class="links">
+              {project.prototype && <a class="button" href={project.prototype}>{labels.prototype} <span aria-hidden="true">↗</span></a>}
+              {project.repository && <a href={project.repository}>Source repository <span aria-hidden="true">↗</span></a>}
+            </div>
     </header>
-    <img class="project-cover" src={assetUrl(project.cover)} alt={`${project.title} — ${labels.imageAltSuffix}`} width="1280" height="720" fetchpriority="high" />
+    {project.cover && <figure class="project-cover-figure">
+          <img class="project-cover" src={assetUrl(project.cover)} alt={project.coverAlt ?? `${project.title} — ${labels.imageAltSuffix}`} width="1280" height="720" fetchpriority="high" />
+          {project.coverCaption && <figcaption>{project.coverCaption}</figcaption>}
+        </figure>}
     <section class="project-description" aria-labelledby="overview-title">
       <h2 id="overview-title">{labels.projectOverview}</h2>
-      <div class="prose"><project.Content /></div>
+      <div class="prose project-prose"><project.Content /></div>
     </section>
     {project.caseStudy && <CaseStudy image={project.caseStudy} title={project.title} labels={labels} />}
     <a class="back-link" href={backLink}><span aria-hidden="true">←</span> {projectsVisible ? labels.backToProjects : labels.home}</a>

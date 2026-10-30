@@ -2,6 +2,11 @@
 
 A static Astro portfolio with Markdown content, YAML configuration, and local project images. No database or admin backend is required.
 
+UI/UX design is the portfolio's primary focus; front-end development is a secondary interest.
+
+- Website: https://nikip728.github.io/Portfolio/
+- Source reference: https://github.com/nikip728/Portfolio
+
 ## Development
 
 Requires Node.js **22.23.4 or later**. The workflows use Node 24 with `check-latest: true`, avoiding older preinstalled Node 22 patches that do not satisfy Astro's minimum version.
@@ -28,15 +33,16 @@ Astro content collections are defined in `src/content.config.ts`, with metadata 
 | File or directory | What to edit |
 | --- | --- |
 | `src/content/profile/about.md` | Profile metadata and introductory prose |
+| `src/content/sections/*.md` | Homepage section titles, introductory prose, and contact copy |
 | `src/content/projects/*.md` | Project metadata and project descriptions |
 | `src/content/experience/*.md` | Role metadata and experience descriptions |
 | `src/content/education/*.md` | Education metadata and descriptions |
 | `src/content/certificates/*.md` | Certificate metadata and descriptions |
 | `src/content/skills.yaml` | Ordered list of skills |
-| `src/config/site.yaml` | Language, SEO description, and interface labels |
+| `src/config/site.yaml` | Language, SEO description, and interface labels only |
 | `src/config/navigation.yaml` | Section labels, order, and visibility |
 
-Markdown files start with YAML metadata between `---` delimiters; the main prose belongs below the closing delimiter. Projects, experience, education, and certificates use a positive integer `order` and a boolean `published`. The profile has its own metadata schema, without those two fields.
+Markdown files start with YAML metadata between `---` delimiters; the main prose belongs below the closing delimiter. Projects, experience, education, and certificates use a positive integer `order` and a boolean `published`. The profile and section copy have their own metadata schemas, without those two fields.
 
 Ordered collections display the **highest `order` first**. To add a new first item, use the collection's current maximum plus one; existing files do not need renumbering. Values must be unique within each collection, but do not have to be consecutive (10, 20, 30 is valid). Navigation and skills keep their explicit YAML list order. Existing content numbers were migrated once to preserve the previous visible order.
 
@@ -45,7 +51,8 @@ For example, a new project can start as an unpublished draft:
 ```markdown
 ---
 title: New Project
-order: 4
+summary: A short homepage introduction describing the problem and project scope.
+order: 5
 published: false
 tags:
   - UI/UX
@@ -54,9 +61,38 @@ cover: /images/projects/new-project/cover.png
 Describe the problem, your contribution, and the outcome here.
 ```
 
-Create the referenced image before validating. Use a unique filename such as `new-project.md`; keep the filename stable because it identifies the project. Optional project fields include an HTTPS `prototype` URL and a local `caseStudy` image path. Omit optional fields rather than adding empty links. Set `published: true` when ready, then build, test, and review the result before deployment.
+Create the referenced image before validating. Use a unique filename such as `new-project.md`; keep the filename stable because it identifies the project. Every project requires a short `summary`, used on homepage cards and in project metadata. The Markdown body is reserved for the detailed project page. Optional project fields include HTTPS `prototype` and `repository` URLs, a local `cover`, and a local `caseStudy` image path. Optional `coverAlt` provides a specific image description on both the homepage and detail page; `coverCaption` adds a visible caption on the detail page. A project without a cover uses a text-only homepage card. Omit optional fields rather than adding empty links. Set `published: true` when ready, then build, test, and review the result before deployment.
 
 Preserve each content type's required metadata when editing existing files. In YAML, use spaces rather than tabs, keep booleans unquoted, and quote text containing a colon followed by a space. In `navigation.yaml`, keep every section ID exactly once; reorder entries or change `visible` rather than deleting sections.
+
+### Configuration versus editorial content
+
+Keep UI labels and site metadata in `src/config/site.yaml`, and navigation labels/order/visibility in `src/config/navigation.yaml`. Long-form editorial copy belongs in Markdown, not configuration YAML. This uses Astro's existing content collection mechanism, not a custom Markdown parser or special file format.
+
+`src/content/sections/` contains exactly these five entries:
+
+- `projects.md` — selected-work introduction
+- `experience.md` — experience introduction
+- `skills.md` — skills introduction
+- `education.md` — education introduction
+- `contact.md` — contact headline and invitation
+
+Each file has a required `title` in frontmatter, rendered as the section's main heading. Its Markdown body is the introduction, or the full contact copy. Navigation labels are independent short labels; changing one does not rename the section heading. About remains in `src/content/profile/about.md` to keep its metadata and biography together. Email and social URLs also remain in that profile, so contact links are not duplicated in Markdown.
+
+For example, `contact.md` uses this structure:
+
+```markdown
+---
+title: Contact
+---
+### Let's make something clearer.
+
+Write the contact introduction here.
+
+Add an invitation to get in touch.
+```
+
+Keep section filenames stable: they identify existing homepage sections and do not generate standalone pages. All five files are required, including when a section is hidden in navigation; validation rejects missing or unknown entries and empty bodies. Ordinary Markdown formatting is supported, and the schema validates frontmatter. [Astro content collections documentation](https://docs.astro.build/en/guides/content-collections/).
 
 ### Local images
 
@@ -65,16 +101,21 @@ Project images live under `public/images/projects/`:
 - `budgeting-app/cover.png` and `budgeting-app/case-study.png`
 - `pinterest-redesign/cover.png` and `pinterest-redesign/case-study.png`
 - `surfboard-store/cover.png`
+- `portfolio-website/cover.svg` (original interface illustration, not a screenshot)
 
 Reference them directly as `/images/projects/budgeting-app/cover.png`, for example. Image paths point directly to local files. Do not add `/public` or `/Portfolio` to content image paths; the application handles the deployment base path.
 
 ### Project pages and case studies
 
-Each published project has a page at `/projects/<filename-without-extension>/`. Its title, tags, prototype link, Markdown body, and optional case-study image come from the project's Markdown file. Links on the homepage lead to these pages, rather than opening a bare image.
+Each published project has a page at `/projects/<filename-without-extension>/`. Its title, summary, tags, prototype and repository links, Markdown body, and optional case-study image come from the project's Markdown file. Links on the homepage lead to these pages, rather than opening a bare image.
 
 Case-study images render at full width without cropping. **Enlarge case study** opens a keyboard-accessible dialog; **Actual size** toggles the original image dimensions, with scrolling for long or wide images. Close with the **Close** button or Escape; focus returns to the opening link. Without JavaScript, that link opens the local image directly. No third-party viewer service is used.
 
-The existing image-based case studies are not searchable or screen-reader-readable as prose. For better accessibility, add a written case study to the Markdown body; image zoom improves visual reading but does not replace a text alternative.
+The written case studies in Markdown describe the brief, decisions, limitations, and next steps. The original image-based studies remain supplementary visuals; image zoom does not replace the written explanation. Avoid inventing participant counts, measured outcomes, or personal contributions when expanding the text.
+
+`portfolio-website.md` introduces front-end development as a secondary learning interest, with a local desktop/mobile cover illustration, design decisions, verified technical details, and a repository reference. It appears after the design projects and does not claim implementation ownership. The early-career introductions, learning reflections, and contact invitation are editorial drafts: review personal goals and the types of opportunities mentioned before publication.
+
+Skills are grouped as `category` / `items` objects in `src/content/skills.yaml`. Certificates may use `status: in-progress` to distinguish ongoing learning from completed certificates; keep the year in `date`.
 
 ### Validation and editor support
 
@@ -87,6 +128,12 @@ Original exports remain in the private, Git-ignored `archive/` directory, not in
 ## Automatic light and dark themes
 
 The site follows the reader's system/browser color preference through CSS `prefers-color-scheme`. It starts in the matching theme, responds to preference changes while open, and requires no JavaScript or saved setting. Without a dark preference, the light palette is used. Theme colors live in `src/styles/global.css`; browser theme-color metadata is defined in `src/layouts/Page.astro`. Images retain their original colors.
+
+## Navigation and motion
+
+Sections and project cards use titles rather than visible numbers; collection `order` metadata still controls their sequence. The footer retains a normal **Back to top** anchor that works without JavaScript. A floating version appears after scrolling beyond 480 pixels or 80% of the viewport height, whichever is greater. It targets the focusable page header without drawing an outline around the entire header; links and buttons retain their focus indicators. It respects safe-area spacing and stays available while keyboard-focused. Footer space keeps the shortcut from covering its links.
+
+`src/lib/interactions.ts` prepares below-the-fold marked blocks with a paused animation held on its hidden first frame before observation starts. On entering the viewport, each block plays once: a 720 ms fade from zero to full opacity, with a 40-pixel rise and subtle scale change. It never appears at full opacity and then resets to hidden. Finished animations are removed, leaving the normal visible styles. Blocks already on screen when interactions initialize are left unchanged, and individual project paragraphs are not animated. Project-image hover feedback uses a stationary outline-like shadow instead of zooming. Without JavaScript or animation support, content is visible normally. Reduced motion, keyboard focus, and cleanup cancel paused or running effects to expose the content immediately. No animation dependency or scroll-jacking is used.
 
 ## Image storage
 

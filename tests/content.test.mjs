@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { cpSync, mkdtempSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
-import { contentSchemas, siteSchema, navigationSchema, skillsSchema } from '../src/config/schemas.mjs';
+import { contentSchemas, siteSchema, navigationSchema, skillsSchema, sectionContentIds } from '../src/config/schemas.mjs';
 import { entries, markdown, root, yaml } from './helpers.mjs';
 
 for (const [collection, schema] of Object.entries(contentSchemas)) {
@@ -45,6 +45,7 @@ test('YAML configuration is valid and rejects missing, duplicate and unknown met
     assert.equal(siteSchema.safeParse({ ...site, labels }).success, false);
   }
   assert.equal(siteSchema.safeParse({ ...site, unexpected: true }).success, false);
+  for (const key of ['introductions', 'contact']) assert.equal(siteSchema.safeParse({ ...site, [key]: {} }).success, false, `site must reject legacy ${key}`);
   assert.equal(navigationSchema.safeParse([...navigation, navigation[0]]).success, false);
   assert.equal(navigationSchema.safeParse(navigation.map(() => navigation[0])).success, false);
   assert.equal(navigationSchema.safeParse(navigation.slice(1)).success, false);
@@ -85,6 +86,23 @@ function validateFixture(mutate) {
     return result;
   } finally { rmSync(fixture, { recursive: true, force: true }); }
 }
+
+test('section content contains exactly the expected homepage entries', () => {
+  assert.deepEqual([...sectionContentIds].sort(), ['contact', 'education', 'experience', 'projects', 'skills']);
+  assert.deepEqual(entries('sections').map(entry => entry.slug).sort(), [...sectionContentIds].sort());
+});
+
+test('repository validator rejects missing, unknown and empty section content', () => {
+  const missing = validateFixture(directory => rmSync(join(directory, 'src/content/sections', `${sectionContentIds[0]}.md`)));
+  assert.notEqual(missing.status, 0);
+  assert.match(missing.stderr, /sections: expected exactly one Markdown file for each homepage section/);
+  const unknown = validateFixture(directory => writeFileSync(join(directory, 'src/content/sections/unknown.md'), '---\ntitle: Unknown\n---\nUnexpected section.\n'));
+  assert.notEqual(unknown.status, 0);
+  assert.match(unknown.stderr, /sections: expected exactly one Markdown file for each homepage section/);
+  const empty = validateFixture(directory => writeFileSync(join(directory, 'src/content/sections', `${sectionContentIds[0]}.md`), '---\ntitle: Empty\n---\n \n\t\n'));
+  assert.notEqual(empty.status, 0);
+  assert.match(empty.stderr, /sections\/.*: Markdown body must not be empty/);
+});
 
 test('repository validator accepts content and rejects duplicate orders and missing images', () => {
   const valid = validateFixture();

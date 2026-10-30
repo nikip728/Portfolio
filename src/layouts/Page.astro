@@ -37,7 +37,7 @@ const homeLink = (id: string) => home ? `#${id}` : `${assetUrl('/')}#${id}`;
   </head>
   <body>
     <a class="skip" href="#main">{labels.skipToContent}</a>
-    <header class="header wrap">
+    <header id="top" class="header wrap" tabindex="-1">
       <a class="brand" href={assetUrl('/')} aria-label={`${name}, ${labels.home}`}>{name}<span aria-hidden="true">.</span></a>
       <nav class="desktop-nav" aria-label={labels.mainNavigation}>
         {sections.map(section => <a href={homeLink(section.id)}>{section.label}</a>)}
@@ -50,6 +50,13 @@ const homeLink = (id: string) => home ? `#${id}` : `${assetUrl('/')}#${id}`;
       </details>
     </header>
     <main id="main" class="wrap"><slot /></main>
-    <footer class="wrap"><p>© {new Date().getFullYear()} {name}</p><a href="#main">{labels.backToTop} <span aria-hidden="true">↑</span></a></footer>
+    <footer class="wrap"><p>© {new Date().getFullYear()} {name}</p><a href="#top">{labels.backToTop} <span aria-hidden="true">↑</span></a></footer>
+        <a class="floating-top" href="#top" data-back-to-top hidden>
+          <span aria-hidden="true">↑</span> {labels.backToTop}
+        </a>
+        <script>
+          import { initPageInteractions } from '../lib/interactions';
+          initPageInteractions();
+        </script>
   </body>
 </html>
