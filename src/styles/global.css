@@ -63,7 +63,7 @@ h1 { font-size: clamp(48px, 6vw, 96px); letter-spacing: -.065em; margin-left: -.
 h2 { font-size: clamp(42px, 6vw, 65px); letter-spacing: -.04em; }
 h3 { font-size: 30px; }
 h4 { font-size: 23px; }
-.bio { font-size: clamp(19px, 2.5vw, 25px); max-width: 650px; margin-block: 32px 36px; color: var(--muted); }
+.bio { font-size: clamp(19px, 2.5vw, 25px); margin-block: 32px 36px; color: var(--muted); }
 .prose { overflow-wrap: anywhere; }
 .prose > :first-child { margin-top: 0; }
 .prose > :last-child { margin-bottom: 0; }
@@ -74,16 +74,15 @@ h4 { font-size: 23px; }
 .button { display: inline-block; background: var(--accent); color: var(--on-accent); padding: 13px 22px; text-decoration: none; }
 .button:hover { background: var(--ink); color: var(--paper); }
 .section-heading { margin-bottom: 45px; }
-.section-intro { max-width: 680px; color: var(--muted); margin: 24px 0 0; font-size: 17px; }
+.section-intro { color: var(--muted); margin: 24px 0 0; font-size: 17px; }
 .skills, .tags { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; }
-.skills { max-width: 850px; margin: 0; }
+.skills { margin: 0; }
 .skills li { border: 1px solid var(--line); padding: 12px 22px; border-radius: 2px; font-size: 17px; }
 .skill-groups { display: grid; gap: 30px; }
 .skill-groups h3 { font-size: 23px; margin-bottom: 16px; }
 .projects { display: grid; gap: 65px; }
 .projects .project-text-only { grid-template-columns: 1fr; border-top: 1px solid var(--line); padding-top: 35px; }
-.project-text-only .project-content { max-width: 720px; }
-.project-summary { color: var(--muted); max-width: 720px; margin-block: 24px; }
+.project-summary { color: var(--muted); margin-block: 24px; }
 .project-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 35px; }
 .project-filter { min-height: 44px; padding: 8px 18px; border: 1px solid var(--accent); background: transparent; color: var(--accent); }
 .project-filter:hover, .project-filter[aria-pressed='true'] { background: var(--accent); color: var(--on-accent); }
@@ -102,13 +101,13 @@ h4 { font-size: 23px; }
 .entry:first-child { padding-top: 0; border: 0; }
 .period { color: var(--accent); font-size: 13px; margin: 0 0 12px; }
 .organization { font-size: 15px; color: var(--accent); margin: 10px 0 20px; }
-.entry .prose { color: var(--muted); max-width: 720px; }
+.entry .prose { color: var(--muted); }
 .subheading { margin-block: 65px 30px; }
 .certificates { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; }
 .certificates article { border-top: 1px solid var(--line); padding-top: 24px; }
 .certificates article > p:not(.period) { color: var(--muted); font-size: 14px; }
 .certificates a { font-size: 14px; }
-.contact-intro { max-width: 680px; color: var(--muted); margin-block: 0 32px; font-size: 17px; }
+.contact-intro { color: var(--muted); margin-block: 0 32px; font-size: 17px; }
 .contact-intro h3 { color: var(--ink); margin-bottom: 24px; }
 .contact .links { margin-top: 28px; flex-wrap: nowrap; gap: clamp(16px, 4vw, 28px); }
 .contact .links a { display: inline-flex; align-items: center; gap: 8px; min-width: 0; font-size: 16px; font-weight: 600; }
@@ -126,7 +125,7 @@ footer p { margin: 0; }
 /* Project pages keep long case-study images uncropped and offer a native modal for closer reading. */
 .project-detail { padding-block: 40px 70px; }
 .back-link { display: inline-block; font-size: 14px; }
-.project-heading { max-width: 920px; padding-block: 60px 45px; }
+.project-heading { padding-block: 60px 45px; }
 .project-heading h1 { font-size: clamp(42px, 7vw, 88px); line-height: 1.08; letter-spacing: -.045em; overflow-wrap: anywhere; }
 .project-heading .tags { margin-block: 24px; }
 .project-cover { width: 100%; background: var(--surface); }
@@ -137,6 +136,21 @@ footer p { margin: 0; }
 .project-description { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; padding-block: 65px; }
 .project-description h2 { font-size: clamp(28px, 4vw, 40px); }
 .project-description .prose { color: var(--muted); }
+.case-study-project-heading { padding-bottom: 32px; }
+.case-study-project-heading .tags { margin-bottom: 0; }
+.project-about { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; padding-bottom: 38px; }
+.project-about h2, .project-details h2 { margin-bottom: 16px; font-size: clamp(28px, 4vw, 40px); }
+.project-about p { max-width: 760px; margin: 0; color: var(--muted); font-size: 17px; }
+.project-about .button { flex: none; }
+.project-details { margin-bottom: 42px; padding: 24px; border: 1px solid var(--line); background: var(--surface); }
+.project-details h2 { margin-bottom: 20px; font-size: 23px; }
+.project-details dl { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin: 0; }
+.project-details dl > div { min-width: 0; }
+.project-details dt { margin-bottom: 8px; color: var(--accent); font-size: 12px; font-weight: 600; }
+.project-details dd { margin: 0; font-size: 14px; overflow-wrap: anywhere; }
+.project-overview { display: block; }
+.project-overview > h2 { margin-bottom: 28px; }
+.project-overview .project-prose { font-size: 15px; }
 .case-study { margin-bottom: 50px; padding-top: 45px; border-top: 1px solid var(--line); }
 .case-study-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; }
 .case-study-heading h2 { font-size: clamp(28px, 4vw, 40px); max-width: 700px; }
@@ -181,6 +195,10 @@ body:has(.image-viewer[open]) { overflow: hidden; }
   .project h3 { font-size: 28px; }
   .bio { margin-block: 25px 30px; }
   .project-heading { padding-block: 45px 30px; }
+  .case-study-project-heading { padding-block: 45px 25px; }
+  .project-about { align-items: flex-start; flex-direction: column; gap: 20px; padding-bottom: 28px; }
+  .project-details { padding: 20px; }
+  .project-details dl { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 16px; }
   .project-description { grid-template-columns: 1fr; gap: 24px; padding-block: 40px; }
   .case-study-heading { flex-direction: column; align-items: flex-start; gap: 24px; }
   .viewer-toolbar { padding: 12px; }

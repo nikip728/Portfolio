@@ -12,6 +12,11 @@ cover: /images/projects/portfolio-website/cover.svg
 coverAlt: An illustrated desktop browser and mobile phone showing the Papp Niki portfolio's typography and project layouts.
 coverCaption: An interface illustration inspired by the portfolio's visual language, not a browser screenshot.
 repository: https://github.com/nikip728/Portfolio
+details:
+  role: Design and front-end development
+  workedWith: ""
+  scope: Portfolio design, content structure, and website implementation
+  platform: Responsive website
 ---
 ## A home for the work
 

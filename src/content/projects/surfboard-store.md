@@ -9,6 +9,11 @@ tags:
   - Course
 cover: /images/projects/surfboard-store/cover.png
 prototype: https://www.figma.com/proto/GQBKAxfNwkwaN5IdrgDJpB/Kormi-Ecom-V1?node-id=91-11&p=f&t=CECsww4BaxWsB0go-0&scaling=scale-down&content-scaling=fixed&page-id=91%3A9&starting-point-node-id=91%3A11
+details:
+  role: UI/UX design
+  workedWith: ""
+  scope: Mobile-first shopping interface for phone and desktop
+  platform: Mobile and desktop
 ---
 ## Brief
 

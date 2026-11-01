@@ -10,6 +10,11 @@ tags:
 cover: /images/projects/budgeting-app/cover.png
 prototype: https://www.figma.com/proto/v3IHIaiTSpbfXGCKbrcwPT/Google-1?node-id=34-10&p=f&t=eyqMIgViOzbOExZi-0&scaling=scale-down&content-scaling=fixed&page-id=34%3A10&starting-point-node-id=75%3A129
 caseStudy: /images/projects/budgeting-app/case-study.png
+details:
+  role: UX research and design
+  workedWith: Independent course project
+  scope: Research, sketching, wireframing, and early-stage prototyping
+  platform: Budgeting app and responsive website concept
 ---
 ## Brief and role
 
