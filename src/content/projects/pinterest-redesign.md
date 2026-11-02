@@ -1,7 +1,7 @@
 ---
 title: Pinterest Mobile Redesign — Discovery and Visual Clarity
 summary: A self-initiated Pinterest concept exploring clearer promoted content, simpler navigation, and the tradeoffs of removing chat.
-order: 3
+order: 2
 published: true
 tags:
   - Figma

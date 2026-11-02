@@ -1,7 +1,7 @@
 ---
 title: Portfolio Website — From Content to Interface
 summary: A design-led website built with Astro, Markdown, and CSS. A place to explore how typography, content structure, and small interactions come together in code.
-order: 1
+order: 4
 published: true
 tags:
   - Astro

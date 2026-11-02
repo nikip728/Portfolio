@@ -1,7 +1,7 @@
 ---
 title: Surfboard Store — Mobile and Desktop UI Design
 summary: An introductory Figma course project translating a surfboard-store brief into a trendy, mobile-first shopping interface.
-order: 2
+order: 1
 published: true
 tags:
   - Figma

@@ -1,7 +1,7 @@
 ---
 title: Household Budgeting App — Expenses and Shared Savings
-summary: A course project exploring household budgeting, shared savings goals, and a more direct route to adding expenses.
-order: 4
+summary: A simpler way to manage household expenses, stay on top of budgets, and understand everyday spending.
+order: 3
 published: true
 tags:
   - Figma
@@ -11,45 +11,63 @@ cover: /images/projects/budgeting-app/cover.png
 prototype: https://www.figma.com/proto/v3IHIaiTSpbfXGCKbrcwPT/Google-1?node-id=34-10&p=f&t=eyqMIgViOzbOExZi-0&scaling=scale-down&content-scaling=fixed&page-id=34%3A10&starting-point-node-id=75%3A129
 caseStudy: /images/projects/budgeting-app/case-study.png
 details:
-  role: UX research and design
+  role: UX Research & UI Design
   workedWith: Independent course project
-  scope: Research, sketching, wireframing, and early-stage prototyping
-  platform: Budgeting app and responsive website concept
+  scope: User Research, Ideation, Wireframing & Prototyping
+  platform: Mobile App & Responsive Web Concept
 ---
-## Brief and role
+## Project Background
 
-As part of the Google UI/UX Course, I designed a budgeting app and responsive website concept for friends or family managing a household budget and saving toward a shared goal, such as a vacation. The aim was to bring expense tracking, budgeting, and savings into one place. My role covered research, sketching, wireframing, and early-stage prototyping in Figma. This was an independent course project, not a launched product.
+Developed alongside the Google UX Design Certificate on Coursera, this project explored a budgeting app and responsive website concept for friends and family managing shared household expenses and saving towards common goals, such as a vacation.
 
-## Research and problem framing
+The concept aimed to bring expense tracking, budgeting, and shared savings into one place. Working through the course materials, I independently carried out the research, sketching, wireframing, and early-stage prototyping in Figma.
 
-I used course exercises and interviews to explore how people manage money together. The case study presents two personas: Katy, a mother balancing household expenses and saving for a home, and Anna, a cashier balancing limited income with travel goals. These personas helped frame different priorities rather than representing every potential user.
+This was a self-directed course project and a design concept, not a launched product.
 
-The central design question was how to help a household account for different incomes, keep track of expenses, and contribute toward shared savings. The concept brought together multiple income sources, shared savings and joint accounts, expense tracking, and visual progress toward goals.
+## Research and Problem framing
 
-The research was exploratory. The case study does not document recruitment, interview questions, or the size and composition of the research sample, so the findings should not be treated as representative of households in general.
+To explore how people manage money together, I started with informal conversations with people I knew, discussing their experiences with household expenses, budgeting, and shared financial goals. I also used online research to explore different financial situations and challenges.
 
-## From sketches to wireframes
+These findings informed two personas representing different user perspectives. Katy, a mother managing household expenses while saving for a home, and Anna, a cashier balancing a limited income with personal travel goals, helped illustrate different financial priorities and saving habits.
 
-I began with Crazy 8s sketches to explore layouts, then used storyboards to consider how someone might move through the app. Paper wireframes helped establish the screen structure before I moved into digital wireframes in Figma.
+This led to the central design challenge: creating an experience that helps people manage different income sources, track shared expenses, and work towards common savings goals. The concept brought these needs together through expense tracking, budgeting, joint accounts, and visual savings progress.
 
-The design focused on making the remaining monthly budget and savings progress visible, while providing routes into recording expenses and managing savings.
+The personas served as design references for the concept rather than representing all household budgeting needs.
+
+## From sketches to Wireframes
+
+Following the structured ideation process introduced in the Google UX Design Certificate, I used several design exercises to explore possible solutions and map out the app experience. I started with a user journey map to understand the steps involved in managing and setting aside money, followed by storyboards that explored how users could save towards a shared goal.
+
+Using the Crazy 8s method, I generated multiple layout ideas for the home screen, exploring different ways to organise key information and actions. I then translated these ideas into paper wireframes before developing and refining them digitally in Figma.
+
+Throughout this process, I focused on creating a clear layout and intuitive user flow. One area that required further consideration was expense entry: I initially placed the action deeper within the app, but later recognised the need to make it more accessible from the home screen.
 
 ## Usability feedback and the expense navigation change
 
-I conducted an unmoderated usability study around tasks such as adding expenses and managing savings. Feedback identified a problem with the expense flow: users had to enter the monthly section to add an expense, and the route involved too many clicks. Participants wanted to add expenses directly from the home screen and choose the relevant budget category there.
+I tested the low-fidelity Figma prototype with the same people I had spoken to during the initial research. Participants were asked to navigate the app, add an expense, and create a savings goal.
 
-The study also surfaced inconsistent navigation between screens, particularly when returning from the expense-entry page. In response, I placed an “Add expense” action alongside the monthly and total-savings actions on the home screen and refined navigation for greater consistency.
+The testing revealed two main usability issues. First, adding an expense required too many steps, making an important action harder to find than it should be. Participants suggested making expense entry more accessible directly from the home screen.
 
-The case study reports a second round of testing that confirmed the changes improved the experience. However, it does not provide the tasks, participant details, or comparative results needed to assess that conclusion independently. The clearest documented outcome is the design change itself: expense entry became directly accessible from the home screen.
+The second issue involved navigation between screens. Moving between different sections of the app was not always intuitive, so I refined the navigation by introducing consistent back buttons across the screens.
+
+Based on this feedback, I moved the “Add expense” action to the home screen, allowing users to access expense entry more directly. I also standardised the back-button placement and behaviour to make navigation more predictable.
+
+These changes informed the next design iteration, where I developed the revised wireframes into high-fidelity screens and an interactive Figma prototype.
 
 ## High-fidelity design and deliverable
 
-I developed the wireframes into high-fidelity screens and a linked Figma prototype. Existing finance and budgeting apps informed the visual direction, including a clean palette and interface elements intended to support clarity. The prototype expanded the original flow so that tasks had more complete routes through the design.
+Building on the second ideration of low-fidelity wireframes, I developed a more complete mobile app experience, refining existing screens and introducing additional sections to support the main budgeting and savings flows.
 
-The linked prototype and visual case study document the design work; they do not demonstrate a released service or an effect on users’ financial habits.
+For the visual direction, I chose a minimalist approach with a lively pastel green and purple palette, balanced by neutral tones and deep purple-based text colours instead of pure black. The goal was to create a clean, cohesive interface that felt approachable while keeping financial information easy to scan.
+
+I designed key UI elements such as savings progress bars, monthly spending statistics with month-to-month comparisons, and budget-setting controls. To maintain consistency throughout the app, I also created a reusable component set, including buttons, icons, and responsive back-button components.
+
+The final design brought these elements together into a cohesive experience, with a consistent visual language across screens. I connected the main user flows in a Figma prototype, allowing users to explore the budgeting and savings interactions. The prototype is linked at the beginning of this case study.
 
 ## Reflection and next steps
 
-This project helped me connect usability feedback to a concrete navigation decision rather than treating visual polish as the whole solution. It also showed how difficult it can be to make expense entry simple while supporting shared household goals.
+One of my biggest takeaways from this project was realising that what seems intuitive to me may not be intuitive to someone else. The initial testing challenged some of my assumptions and highlighted the importance of understanding users' perspectives before making design decisions.
 
-A next step would be to test the revised expense flow with clearly documented tasks and recruitment criteria, checking whether people can find the action, choose a category, and return to the budget without assistance. Further research should explore how households with different incomes agree on contributions and what information they are comfortable sharing before extending the shared-account concept.
+This also influenced how I approached the design process. After the research and testing phase, I paid particular attention to how screens connected, aiming to create clear, consistent transitions and an intuitive flow throughout the app. It reinforced the value of usability feedback and the importance of designing around actual user needs rather than personal assumptions.
+
+If I were to continue this project, I would conduct another round of usability testing, this time also evaluating the overall app experience after the individual tasks. I would also explore competing budgeting applications to identify missing features, alternative approaches, and opportunities to further improve the concept.
