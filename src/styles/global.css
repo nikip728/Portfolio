@@ -131,6 +131,8 @@ footer p { margin: 0; }
 .project-cover { width: 100%; background: var(--surface); }
 .project-cover-figure { margin: 0; }
 .project-cover-figure figcaption { max-width: 720px; margin-top: 16px; font-size: 13px; color: var(--muted); }
+.project-prose .budgeting-app-screens { margin: 28px 0; padding: 12px; border: 1px solid var(--line); background: var(--paper); }
+.project-prose .budgeting-app-screens img { width: 100%; height: auto; }
 .project-prose strong { color: var(--ink); }
 .project-prose li { margin-bottom: .75em; }
 .project-description { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; padding-block: 65px; }

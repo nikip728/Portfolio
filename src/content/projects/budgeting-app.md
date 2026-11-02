@@ -7,9 +7,9 @@ tags:
   - Figma
   - UI/UX
   - Case Study
-cover: /images/projects/budgeting-app/cover.png
+cover: /images/projects/budgeting-app/Budgeting.app_main.png
 prototype: https://www.figma.com/proto/v3IHIaiTSpbfXGCKbrcwPT/Google-1?node-id=34-10&p=f&t=eyqMIgViOzbOExZi-0&scaling=scale-down&content-scaling=fixed&page-id=34%3A10&starting-point-node-id=75%3A129
-caseStudy: /images/projects/budgeting-app/case-study.png
+caseStudy: /images/projects/budgeting-app/Budgeting.app_main.png
 details:
   role: UX Research & UI Design
   workedWith: Independent course project
@@ -57,6 +57,10 @@ These changes informed the next design iteration, where I developed the revised 
 ## High-fidelity design and deliverable
 
 Building on the second ideration of low-fidelity wireframes, I developed a more complete mobile app experience, refining existing screens and introducing additional sections to support the main budgeting and savings flows.
+
+<figure class="budgeting-app-screens">
+  <img src="/images/projects/budgeting-app/Budgeting.app_pages.png" alt="A collection of high-fidelity Household Budgeting App screens." />
+</figure>
 
 For the visual direction, I chose a minimalist approach with a lively pastel green and purple palette, balanced by neutral tones and deep purple-based text colours instead of pure black. The goal was to create a clean, cohesive interface that felt approachable while keeping financial information easy to scan.
 

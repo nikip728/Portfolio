@@ -7,7 +7,7 @@ const https = text.refine(value => {
     return url.protocol === 'https:' && !!url.hostname && !url.username && !url.password && !/\s/.test(value);
   } catch { return false; }
 }, 'Expected an HTTPS URL without credentials');
-const image = text.regex(/^\/images\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:png|jpe?g|webp|gif|svg|avif)$/);
+const image = text.regex(/^\/images\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+(?:\.[a-zA-Z0-9_-]+)*\.(?:png|jpe?g|webp|gif|svg|avif)$/);
 const ordered = { order: z.number().int().positive(), published: z.boolean() };
 export const sectionContentIds = ['projects', 'experience', 'skills', 'education', 'contact'];
 export const contentSchemas = {
