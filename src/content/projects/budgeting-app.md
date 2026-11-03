@@ -58,9 +58,7 @@ These changes informed the next design iteration, where I developed the revised 
 
 Building on the second ideration of low-fidelity wireframes, I developed a more complete mobile app experience, refining existing screens and introducing additional sections to support the main budgeting and savings flows.
 
-<figure class="budgeting-app-screens">
-  <img src="/images/projects/budgeting-app/Budgeting.app_pages.png" alt="A collection of high-fidelity Household Budgeting App screens." />
-</figure>
+!["A collection of high-fidelity Household Budgeting App screens."]("/images/projects/budgeting-app/Budgeting.app_pages.png")
 
 For the visual direction, I chose a minimalist approach with a lively pastel green and purple palette, balanced by neutral tones and deep purple-based text colours instead of pure black. The goal was to create a clean, cohesive interface that felt approachable while keeping financial information easy to scan.
 
