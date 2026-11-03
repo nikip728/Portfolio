@@ -58,13 +58,13 @@ These changes informed the next design iteration, where I developed the revised 
 
 Building on the second ideration of low-fidelity wireframes, I developed a more complete mobile app experience, refining existing screens and introducing additional sections to support the main budgeting and savings flows.
 
-!["A collection of high-fidelity Household Budgeting App screens."]("/images/projects/budgeting-app/Budgeting.app_pages.png")
-
 For the visual direction, I chose a minimalist approach with a lively pastel green and purple palette, balanced by neutral tones and deep purple-based text colours instead of pure black. The goal was to create a clean, cohesive interface that felt approachable while keeping financial information easy to scan.
 
 I designed key UI elements such as savings progress bars, monthly spending statistics with month-to-month comparisons, and budget-setting controls. To maintain consistency throughout the app, I also created a reusable component set, including buttons, icons, and responsive back-button components.
 
 The final design brought these elements together into a cohesive experience, with a consistent visual language across screens. I connected the main user flows in a Figma prototype, allowing users to explore the budgeting and savings interactions. The prototype is linked at the beginning of this case study.
+
+![A collection of high-fidelity Household Budgeting App screens.](/Portfolio/images/projects/budgeting-app/Budgeting.app_pages.png)
 
 ## Reflection and next steps
 
