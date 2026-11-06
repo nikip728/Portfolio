@@ -98,12 +98,12 @@ Keep section filenames stable: they identify existing homepage sections and do n
 
 Project images live under `public/images/projects/`:
 
-- `budgeting-app/cover.png` and `budgeting-app/case-study.png`
+- `budgeting-app/Budgeting.app_main.png` and `budgeting-app/case-study.png`
 - `pinterest-redesign/cover.png` and `pinterest-redesign/case-study.png`
 - `surfboard-store/cover.png`
 - `portfolio-website/cover.svg` (original interface illustration, not a screenshot)
 
-Reference them directly as `/images/projects/budgeting-app/cover.png`, for example. Image paths point directly to local files. Do not add `/public` or `/Portfolio` to content image paths; the application handles the deployment base path.
+Reference them directly as `/images/projects/budgeting-app/Budgeting.app_main.png`, for example. Image paths point directly to local files. Do not add `/public` or `/Portfolio` to content image paths; the application handles the deployment base path.
 
 ### Project pages and case studies
 
