@@ -8,7 +8,7 @@ tags:
   - TypeScript
   - CSS
   - Front-end
-cover: /images/projects/portfolio-website/cover.svg
+cover: /images/projects/portfolio-website/Portfolio.website-main.png
 coverAlt: An illustrated desktop browser and mobile phone showing the Papp Niki portfolio's typography and project layouts.
 coverCaption: An interface illustration inspired by the portfolio's first visual language, not a browser screenshot.
 repository: https://github.com/nikip728/Portfolio
@@ -35,6 +35,8 @@ The portfolio's visual presentation has also evolved over time. During a later u
 ## Under the hood
 
 The site uses Astro to generate static HTML pages. There is no database or admin backend: project descriptions live in Markdown, while YAML holds navigation, interface copy, and grouped skills. This keeps most content changes separate from the page templates.
+
+![A screenshot from the VScode.](/Portfolio/images/projects/portfolio-website/Portfolio.website-VScode.png)
 
 Shared schemas validate the metadata, including publication flags, ordering, local image paths, and HTTPS links. Project pages are generated from the published collection, so adding a project does not require creating a new page template.
 
