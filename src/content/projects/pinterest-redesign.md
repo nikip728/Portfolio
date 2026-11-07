@@ -16,7 +16,7 @@ details:
   scope: Survey, personas, wireframes, and high-fidelity interface design
   platform: Mobile app concept
 --- 
-## Brief and role
+## Project Background
 
 As a regular Pinterest user, I noticed that the growing amount of AI-generated and promoted content made it increasingly difficult to distinguish between different types of pins. This inspired me to explore how the app could offer a clearer and less distracting browsing experience.
 
