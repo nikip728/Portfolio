@@ -110,6 +110,16 @@ Project images live under `public/images/projects/`:
 
 Reference them directly as `/images/projects/budgeting-app/budgeting-app-main.png`, for example. Image paths point directly to local files. Do not add `/public` or `/Portfolio` to content image paths; the application handles the deployment base path.
 
+### CV
+
+Edit `output/pdf/Papp_Niki_UI_UX_CV.md`, then regenerate the one-page A4 PDF:
+
+```sh
+python3 tmp/pdfs/build_cv.py
+```
+
+This requires Pandoc and XeLaTeX with Arial installed. The generator uses `tmp/pdfs/cv-header.tex` for formatting and updates both the review PDF in `output/pdf/` and the public copy in `public/documents/`. The homepage opens the public PDF from the introduction and contact sections; the CV links back to the portfolio. Inspect the result after content changes to ensure it still fits on one page.
+
 ### Project pages and case studies
 
 Each published project has a page at `/projects/<filename-without-extension>/`. Its title, summary, tags, prototype and repository links, Markdown body, and optional case-study image come from the project's Markdown file. Links on the homepage lead to these pages, rather than opening a bare image.

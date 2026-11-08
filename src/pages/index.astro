@@ -61,6 +61,10 @@ const projectsVisible = sections.some((section) => section.id === "projects");
                                 <span aria-hidden="true">↗</span>
                             </a>
                         )}
+                        <a href={assetUrl("/documents/Papp_Niki_UI_UX_CV.pdf")} target="_blank" rel="noopener noreferrer">
+                            View CV (PDF){" "}
+                            <span aria-hidden="true">↗</span>
+                        </a>
                         <a href={`mailto:${profile.email}`}>
                             {labels.getInTouch}{" "}
                             <span aria-hidden="true">↗</span>
@@ -245,6 +249,10 @@ const projectsVisible = sections.some((section) => section.id === "projects");
                                 <content.Content />
                             </div>
                             <div class="links contact-links">
+                                <a href={assetUrl("/documents/Papp_Niki_UI_UX_CV.pdf")} target="_blank" rel="noopener noreferrer">
+                                    View CV (PDF){" "}
+                                    <span aria-hidden="true">↗</span>
+                                </a>
                                 <a href={`mailto:${profile.email}`}>
                                     {profile.email}{" "}
                                     <span aria-hidden="true">↗</span>
