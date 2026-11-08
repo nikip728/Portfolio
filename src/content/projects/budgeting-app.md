@@ -56,7 +56,7 @@ These changes informed the next design iteration, where I developed the revised 
 
 ## High-fidelity design and deliverable
 
-Building on the second ideration of low-fidelity wireframes, I developed a more complete mobile app experience, refining existing screens and introducing additional sections to support the main budgeting and savings flows.
+Building on the second iteration of low-fidelity wireframes, I developed a more complete mobile app experience, refining existing screens and introducing additional sections to support the main budgeting and savings flows.
 
 For the visual direction, I chose a minimalist approach with a lively pastel green and purple palette, balanced by neutral tones and deep purple-based text colours instead of pure black. The goal was to create a clean, cohesive interface that felt approachable while keeping financial information easy to scan.
 

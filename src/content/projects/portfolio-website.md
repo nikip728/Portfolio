@@ -9,8 +9,8 @@ tags:
   - CSS
   - Front-end
 cover: /images/projects/portfolio-website/Portfolio.website-main.png
-coverAlt: An illustrated desktop browser and mobile phone showing the Papp Niki portfolio's typography and project layouts.
-coverCaption: An interface illustration inspired by the portfolio's first visual language, not a browser screenshot.
+coverAlt: Desktop screenshot of the Papp Niki portfolio homepage, showing the navigation, introduction, and contact buttons.
+coverCaption: A desktop screenshot of the portfolio homepage.
 repository: https://github.com/nikip728/Portfolio
 details:
   role: Design and front-end development

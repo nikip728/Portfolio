@@ -25,7 +25,7 @@ The goal of this self-initiated redesign was to improve the overall user experie
 
 ## Research and its limits
 
-To better understand how people use Pinterest, I conducted a short Google Forms survey with approximately 25 participants. The questions focused on their usage habits, what they liked and disliked about the platform, and what they would change.
+To better understand how people use Pinterest, I conducted a short Google Forms survey with 20 respondents. I shared the questionnaire in a group intended for this purpose at my workplace at the time. The questions focused on their usage habits, what they liked and disliked about the platform, and what they would change.
 
 One recurring concern was the lack of clear visual distinction between AI-generated content, promoted posts, and external links. Their labels were not prominent enough, making it harder for users to immediately identify the type and source of the content they were viewing.
 
@@ -35,7 +35,7 @@ Based on the responses, I created two simplified user personas representing diff
 
 The survey responses helped inform the redesign direction, particularly the improvements aimed at making content labels more noticeable and the browsing experience clearer. I also treated my own experience with Pinterest as one perspective among many rather than assuming it represented the wider user base.
 
-The research had limitations. With approximately 25 participants and no documented recruitment strategy, the findings cannot be considered representative of Pinterest's broader audience. A larger and more diverse participant group would have provided a stronger foundation for validating the identified patterns and design decisions.
+The research had limitations. With 20 respondents recruited through a workplace group, the findings cannot be considered representative of Pinterest's broader audience. A larger and more diverse participant group would have provided a stronger foundation for validating the identified patterns and design decisions.
 
 ## Problem framing
 
@@ -67,6 +67,6 @@ The prototype and visual case study present the final design concept. However, t
 
 ## Reflection and next steps
 
-The project gave me practice connecting early research to interface decisions and presenting a complete redesign concept. 
+The project gave me practice connecting early research to interface decisions and presenting a complete redesign concept.
 
 A next step would be to compare the concept with the existing experience using tasks around identifying promoted content, saving ideas, and finding saved pins. Research should include people who use messaging as well as those who do not, so the cost of removing chat can be evaluated rather than assumed away.

@@ -17,7 +17,7 @@ details:
 ---
 ## Project Background
 
-ign Essentials, where each student received a randomly generated design brief. Mine was to create a surfboard store with a trendy visual direction.
+This project was my introduction to UI/UX design through the Udemy course “Figma UI UX Design Essentials,” where each student received a randomly generated design brief. Mine was to create a surfboard store with a trendy visual direction.
 
 The goal was to practise the fundamentals of UI design in Figma, translating the brief into a cohesive shopping experience across mobile and desktop screens.
 
@@ -48,8 +48,6 @@ I adapted the designs for both mobile and MacBook-sized desktop screens. Althoug
 I connected the individual screens into a clickable Figma prototype, bringing the store together as a navigable experience.
 
 ## Conclusion & Reflection
-
-Conclusion & Reflection
 
 This project introduced me to the fundamentals of UI design and helped me become comfortable working with Figma. I gained practical experience in wireframing, high-fidelity design, component organisation, responsive layouts and prototyping.
 
