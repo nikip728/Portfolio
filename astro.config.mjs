@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import { satteri } from '@astrojs/markdown-satteri';
 
-const base = process.env.BASE_PATH ?? '/Portfolio';
+const base = process.env.BASE_PATH ?? '/portfolio';
 
 export default defineConfig({
   site: process.env.SITE_URL || 'https://nikip728.github.io',
