@@ -35,6 +35,12 @@ test('project cards use summaries while detail pages keep the written case studi
   for (const project of entries('projects').filter(entry => entry.data.published)) {
     assert(home.includes(project.data.summary.replace(/\s+/g, ' ')), `${project.slug}: missing card summary`);
     const detail = readFileSync(join(dist, 'projects', project.slug, 'index.html'), 'utf8');
+    const elements = tags(detail);
+    const canonical = elements.find(tag => tag.name === 'link' && tag.attrs.rel === 'canonical').attrs.href;
+    const base = new URL(canonical).pathname.split('/projects/')[0];
+    for (const [, alt, src] of project.body.matchAll(/!\[([^\]]*)\]\((\/images\/[^\s)]+)(?:\s+"[^"]*")?\)/g)) {
+      assert(elements.some(tag => tag.name === 'img' && tag.attrs.src === `${base}${src}` && tag.attrs.alt === alt), `${project.slug}: missing base-prefixed Markdown image ${src}`);
+    }
     if (project.data.repository) assert(tags(detail).some(tag => tag.name === 'a' && tag.attrs.href === project.data.repository));
         if (project.data.coverAlt) {
           for (const html of [readFileSync(join(dist, 'index.html'), 'utf8'), detail]) {
@@ -51,6 +57,49 @@ test('project cards use summaries while detail pages keep the written case studi
       assert(!home.includes(heading), `${project.slug}: full case study leaked into homepage`);
     }
   }
+});
+
+test('all project case studies share the editorial layout and project-specific details', () => {
+  const homeHtml = readFileSync(join(dist, 'index.html'), 'utf8');
+  for (const project of entries('projects').filter(entry => entry.data.published)) {
+    const detailHtml = readFileSync(join(dist, 'projects', project.slug, 'index.html'), 'utf8');
+    const positions = [
+      detailHtml.indexOf(`<h1>${project.data.title}`),
+      detailHtml.indexOf('id="project-about-title"'),
+      detailHtml.indexOf('class="project-cover-figure"'),
+      detailHtml.indexOf('id="overview-title"'),
+      detailHtml.indexOf('id="project-details-title"'),
+      detailHtml.indexOf('<div class="prose project-prose">'),
+    ];
+    assert(positions.every(position => position >= 0), `${project.slug}: missing case-study section`);
+    assert.deepEqual(positions, [...positions].sort((a, b) => a - b), `${project.slug}: incorrect section order`);
+    assert.match(detailHtml, /<h2 id="overview-title">Project overview<\/h2><section class="project-details" aria-labelledby="project-details-title"><h2 id="project-details-title">Project Details<\/h2>[\s\S]*?<\/section><div class="prose project-prose">/, `${project.slug}: details must directly follow overview heading`);
+    assert.equal((detailHtml.match(/<section class="project-details"/g) ?? []).length, 1, `${project.slug}: expected one details card`);
+    assert.equal((detailHtml.match(/<h2 id="project-details-title">/g) ?? []).length, 1, `${project.slug}: expected one details heading`);
+    assert.doesNotMatch(detailHtml, /\b0[1-9]\s*\//, `${project.slug}: numbered section labels are not allowed`);
+
+    for (const tag of project.data.tags) assert(detailHtml.includes(`<li>${tag}</li>`), `${project.slug}: missing tag ${tag}`);
+    for (const [field, label] of [['role', 'Role'], ['workedWith', 'Worked with'], ['scope', 'Scope'], ['platform', 'Platform']]) {
+      const value = new RegExp(`<dt>${label}</dt><dd>([\\s\\S]*?)</dd>`).exec(detailHtml)?.[1];
+      assert.notEqual(value, undefined, `${project.slug}: missing ${label} details`);
+      assert.equal(decode(value), project.data.details[field], `${project.slug}: incorrect ${label} details`);
+    }
+
+    const homeCover = tags(homeHtml).find(tag => tag.name === 'img' && tag.attrs.src?.includes(project.data.cover));
+    const detailCover = tags(detailHtml).find(tag => tag.name === 'img' && tag.attrs.class === 'project-cover');
+    assert(homeCover && detailCover, `${project.slug}: missing matching cover image`);
+    assert.equal(detailCover.attrs.src, homeCover.attrs.src, `${project.slug}: detail cover differs from homepage cover`);
+
+    const projectLink = project.data.prototype ?? project.data.repository;
+    if (projectLink) {
+      const aboutLink = tags(detailHtml).find(tag => tag.name === 'a' && tag.attrs.href === projectLink);
+      assert(aboutLink, `${project.slug}: missing existing prototype or project link from About`);
+    }
+  }
+
+  const surfboardCard = /<article\b(?:(?!<\/article>)[\s\S])*?href="[^"]*\/projects\/surfboard-store\/"(?:(?!<\/article>)[\s\S])*<\/article>/.exec(homeHtml)?.[0];
+  assert(surfboardCard);
+  assert.match(surfboardCard, /Case Study\s*<span aria-hidden="true">→<\/span>/);
 });
 
 test('homepage project filters expose published tags and the empty state', () => {

@@ -7,14 +7,14 @@ import { parse } from 'yaml';
 export const root = fileURLToPath(new URL('../', import.meta.url));
 export const read = path => readFileSync(join(root, path), 'utf8');
 export const yaml = path => parse(read(path));
-export function markdown(source) {
+export function markdown(source, path = 'Markdown') {
   const match = /^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/.exec(source);
-  assert(match, 'Markdown requires YAML frontmatter');
+  assert(match, `${path}: Markdown requires YAML frontmatter`);
   return { data: parse(match[1]), body: source.slice(match[0].length) };
 }
 export function entries(collection) {
   return readdirSync(join(root, 'src/content', collection)).filter(name => name.endsWith('.md')).map(name => ({
-    slug: name.slice(0, -3), ...markdown(read(`src/content/${collection}/${name}`)),
+    slug: name.slice(0, -3), ...markdown(read(`src/content/${collection}/${name}`), `src/content/${collection}/${name}`),
   }));
 }
 export function walk(directory) {

@@ -59,6 +59,10 @@ test('frontmatter rejects absent delimiters, malformed YAML and duplicate keys',
 
 test('image paths and HTTPS fields reject unsafe or legacy values', () => {
   const project = entries('projects')[0].data;
+  const budgetingImage = '/images/projects/budgeting-app/Budgeting.app_main.png';
+  for (const field of ['cover', 'caseStudy']) {
+    assert.equal(contentSchemas.projects.safeParse({ ...project, [field]: budgetingImage }).success, true);
+  }
   for (const field of ['cover', 'caseStudy']) {
     for (const value of ['https://example.com/image.png', '//example.com/image.png', '/images/../secret.png', '/images/%2e%2e/secret.png', '/images/a.png?x=1', '/images/a.png#x', '/images/a\\b.png', '/elsewhere/a.png', '/images/a.html', '']) {
       assert.equal(contentSchemas.projects.safeParse({ ...project, [field]: value }).success, false, `${field}: ${value}`);

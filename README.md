@@ -98,12 +98,12 @@ Keep section filenames stable: they identify existing homepage sections and do n
 
 Project images live under `public/images/projects/`:
 
-- `budgeting-app/cover.png` and `budgeting-app/case-study.png`
+- `budgeting-app/Budgeting.app_main.png` and `budgeting-app/case-study.png`
 - `pinterest-redesign/cover.png` and `pinterest-redesign/case-study.png`
 - `surfboard-store/cover.png`
-- `portfolio-website/cover.svg` (original interface illustration, not a screenshot)
+- `portfolio-website/Portfolio.website-main.png` (desktop homepage screenshot); `portfolio-website/cover.svg` is the original interface illustration
 
-Reference them directly as `/images/projects/budgeting-app/cover.png`, for example. Image paths point directly to local files. Do not add `/public` or `/Portfolio` to content image paths; the application handles the deployment base path.
+Reference them directly as `/images/projects/budgeting-app/Budgeting.app_main.png`, for example. Image paths point directly to local files. Do not add `/public` or `/Portfolio` to content image paths; the application handles the deployment base path.
 
 ### Project pages and case studies
 
@@ -113,7 +113,7 @@ Case-study images render at full width without cropping. **Enlarge case study** 
 
 The written case studies in Markdown describe the brief, decisions, limitations, and next steps. The original image-based studies remain supplementary visuals; image zoom does not replace the written explanation. Avoid inventing participant counts, measured outcomes, or personal contributions when expanding the text.
 
-`portfolio-website.md` introduces front-end development as a secondary learning interest, with a local desktop/mobile cover illustration, design decisions, verified technical details, and a repository reference. It appears after the design projects and does not claim implementation ownership. The early-career introductions, learning reflections, and contact invitation are editorial drafts: review personal goals and the types of opportunities mentioned before publication.
+`portfolio-website.md` presents the portfolio's visual design and front-end implementation, with a local desktop homepage screenshot, design decisions, technical details, and a repository reference. Project order is controlled by its `order` metadata. The early-career introductions, learning reflections, and contact invitation are editorial drafts: review personal goals and the types of opportunities mentioned before publication.
 
 Skills are grouped as `category` / `items` objects in `src/content/skills.yaml`. Certificates may use `status: in-progress` to distinguish ongoing learning from completed certificates; keep the year in `date`.
 

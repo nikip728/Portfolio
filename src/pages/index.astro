@@ -144,7 +144,9 @@ const projectsVisible = sections.some((section) => section.id === "projects");
                                                         `/projects/${project.id}/`,
                                                     )}
                                                 >
-                                                    {project.caseStudy
+                                                    {project.id === "surfboard-store"
+                                                        ? "Case Study"
+                                                        : project.caseStudy
                                                         ? labels.caseStudy
                                                         : labels.projectOverview}{" "}
                                                     <span aria-hidden="true">

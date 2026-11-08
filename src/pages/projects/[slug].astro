@@ -18,25 +18,36 @@ const backLink = `${assetUrl('/')}${projectsVisible ? '#projects' : ''}`;
 <Page title={`${project.title} — ${profile.name}`} description={project.summary} language={site.language} name={profile.name} labels={labels} navigation={navigation} image={project.cover}>
   <article class="project-detail">
     <a class="back-link" href={backLink}><span aria-hidden="true">←</span> {projectsVisible ? labels.backToProjects : labels.home}</a>
-    <header class="project-heading">
+    <header class="project-heading case-study-project-heading">
       <p class="eyebrow">{project.caseStudy ? labels.caseStudy : labels.projectOverview}</p>
       <h1>{project.title}<span aria-hidden="true">.</span></h1>
       <ul class="tags" aria-label={labels.projectTags}>{project.tags.map(tag => <li>{tag}</li>)}</ul>
-      <p class="project-summary">{project.summary}</p>
-            <div class="links">
-              {project.prototype && <a class="button" href={project.prototype}>{labels.prototype} <span aria-hidden="true">↗</span></a>}
-              {project.repository && <a href={project.repository}>Source repository <span aria-hidden="true">↗</span></a>}
-            </div>
     </header>
+    <section class="project-about" aria-labelledby="project-about-title">
+      <div>
+        <h2 id="project-about-title">About</h2>
+        <p>{project.summary}</p>
+      </div>
+      {project.prototype && <a class="button" href={project.prototype}>{labels.prototype} <span aria-hidden="true">↗</span></a>}
+      {!project.prototype && project.repository && <a class="button" href={project.repository}>Source repository <span aria-hidden="true">↗</span></a>}
+    </section>
     {project.cover && <figure class="project-cover-figure">
           <img class="project-cover" src={assetUrl(project.cover)} alt={project.coverAlt ?? `${project.title} — ${labels.imageAltSuffix}`} width="1280" height="720" fetchpriority="high" />
           {project.coverCaption && <figcaption>{project.coverCaption}</figcaption>}
         </figure>}
-    <section class="project-description" aria-labelledby="overview-title">
+    <section class="project-description project-overview" aria-labelledby="overview-title">
       <h2 id="overview-title">{labels.projectOverview}</h2>
-      <div class="prose project-prose"><project.Content /></div>
+      <section class="project-details" aria-labelledby="project-details-title">
+        <h2 id="project-details-title">Project Details</h2>
+        <dl>
+          <div><dt>Role</dt><dd>{project.details.role}</dd></div>
+          <div><dt>Worked with</dt><dd>{project.details.workedWith}</dd></div>
+          <div><dt>Scope</dt><dd>{project.details.scope}</dd></div>
+          <div><dt>Platform</dt><dd>{project.details.platform}</dd></div>
+        </dl>
+      </section>
+     <div class="prose project-prose"><project.Content /></div>
     </section>
     {project.caseStudy && <CaseStudy image={project.caseStudy} title={project.title} labels={labels} />}
-    <a class="back-link" href={backLink}><span aria-hidden="true">←</span> {projectsVisible ? labels.backToProjects : labels.home}</a>
   </article>
 </Page>

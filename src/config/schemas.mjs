@@ -7,13 +7,13 @@ const https = text.refine(value => {
     return url.protocol === 'https:' && !!url.hostname && !url.username && !url.password && !/\s/.test(value);
   } catch { return false; }
 }, 'Expected an HTTPS URL without credentials');
-const image = text.regex(/^\/images\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:png|jpe?g|webp|gif|svg|avif)$/);
+const image = text.regex(/^\/images\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+(?:\.[a-zA-Z0-9_-]+)*\.(?:png|jpe?g|webp|gif|svg|avif)$/);
 const ordered = { order: z.number().int().positive(), published: z.boolean() };
 export const sectionContentIds = ['projects', 'experience', 'skills', 'education', 'contact'];
 export const contentSchemas = {
   sections: z.object({ title: text }).strict(),
   profile: z.object({ name: text, title: text, email: z.string().email(), avatar: image.optional(), socials: z.array(z.object({ platform: text, url: https }).strict()) }).strict(),
-  projects: z.object({ title: text, summary: text, ...ordered, tags: z.array(text), cover: image.optional(), coverAlt: text.optional(), coverCaption: text.optional(), prototype: https.optional(), repository: https.optional(), caseStudy: image.optional() }).strict(),
+  projects: z.object({ title: text, summary: text, ...ordered, tags: z.array(text), cover: image.optional(), coverAlt: text.optional(), coverCaption: text.optional(), prototype: https.optional(), repository: https.optional(), caseStudy: image.optional(), details: z.object({ role: z.string().trim(), workedWith: z.string().trim(), scope: z.string().trim(), platform: z.string().trim() }).strict() }).strict(),
   experience: z.object({ role: text, company: text, period: text, ...ordered }).strict(),
   education: z.object({ degree: text, institution: text, year: text, ...ordered }).strict(),
   certificates: z.object({ name: text, issuer: text, date: text, ...ordered, status: z.enum(['completed', 'in-progress']).optional(), url: https.optional() }).strict(),
