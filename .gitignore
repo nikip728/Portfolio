@@ -38,3 +38,10 @@ pnpm-debug.log*
 *.swp
 *.swo
 *~
+
+# Temporary artifacts; retain the CV generation sources.
+/tmp/*
+!/tmp/pdfs/
+/tmp/pdfs/*
+!/tmp/pdfs/build_cv.py
+!/tmp/pdfs/cv-header.tex
