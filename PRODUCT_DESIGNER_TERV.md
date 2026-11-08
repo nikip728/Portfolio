@@ -1,12 +1,36 @@
-# Felkészülésem a junior Product Designer szerepre
+# Felkészülésem a junior UI/UX Designer szerepre
 
 Rögzítve: 2026. november 8.
 
-**A célom olyan junior vagy associate Product Designer állás megszerzése, amelyben tapasztalt tervezők mellett valódi termékproblémákon dolgozhatok, és fokozatosan önálló tervezővé válhatok.** Ehhez a meglévő tapasztalataimra épülő szakmai történetre, meggyőző munkákra és további gyakorlati tudásra van szükségem.
+Utolsó állapotfrissítés: 2026. november 8., a portfólió- és CV-frissítések után.
+
+**Az elsődleges célom junior UI/UX Designer állás megszerzése; junior vagy associate Product Designer szerepekre is nyitott vagyok.** Olyan csapatot keresek, amelyben tapasztalt tervezők mellett valódi termékproblémákon dolgozhatok, és fokozatosan önálló tervezővé válhatok. Ehhez a meglévő tapasztalataimra épülő szakmai történetre, meggyőző munkákra és további gyakorlati tudásra van szükségem.
 
 A hátterem alapján ez reális pályairány. A legerősebb alapot az ügyfélszolgálati tapasztalatom, a Gaddrnál végzett UI/UX-gyakorlatom, a tervezési tanulmányaim és a már elkészített projektjeim együttese adja. A következő lépésem ezekből követhető bizonyítékot építeni: milyen problémát értettem meg, milyen lehetőségeket mérlegeltem, mit terveztem, mit tanultam a használatból, és hogyan javítottam a megoldást.
 
-Az alábbi terv a portfólió két megvizsgált változatának tanulságait, a szakmai felkészülést és az álláskeresést rendezi közös sorrendbe. A javasolt új feladatok még elvégzendő munkák. A honlap módosításai, az új kutatás és a jelentkezések külön végrehajtandó lépések.
+Az alábbi terv a portfólió két megvizsgált változatának tanulságait, a szakmai felkészülést és az álláskeresést rendezi közös sorrendbe. A megbeszélt portfólió- és CV-frissítések helyben elkészültek. A publikálás, az új kutatás és a jelentkezések külön következő lépések; a korábbi vizsgálatok megállapításai történeti feljegyzések.
+
+### Jelenlegi állapot
+
+A kész jelölés az adott tartalmi vagy technikai feladatra vonatkozik, nem a teljes szakmai felkészülés lezárására.
+
+- [x] Egyértelmű junior UI/UX fókusz, Product Designer irányú nyitottsággal és frontend-érdeklődéssel; rövid bemutatkozás „customer-facing roles” megfogalmazással.
+- [x] Budgeting: a kutatás és a két tesztkör körülményeinek pontosítása, az eredeti és javított lo-fi képek összevetése, a kiadásfelvétel és a visszanavigálás módosításainak leírása. A képek asztali nézetben négy, mobilon két oszlopba rendezve jelennek meg.
+- [x] Pinterest: a három mind map feldolgozása, a 20 válaszadós kérdőív és a tervezési döntések leírása; saját képernyők és forrással jelölt hivatalos referenciák összehasonlítása. A várt hatásokat elkülönítettem a nem tesztelt eredményektől.
+- [x] Gaddr: a kereső- és profilkomponenseken végzett saját feladataim, a központi alapértékek használata, a fő designer felülvizsgálata és az NDA miatti bemutatási korlátok tisztázva.
+- [x] Portfolio Website: saját vizuális döntéseim, a mentor induló kódja, a ChatGPT és Copilot segítsége, a kézi tartalmi munka és az ellenőrzés szerepe leírva; valódi asztali képernyőkép került a borítóra.
+- [x] Surfboard Store: a színpaletta, a logó, gombok és ikonok, valamint a mobil–asztali elrendezések leírása; About Us összehasonlítás azonos képmagassággal, a képekhez igazított feliratokkal és középre rendezett képcsoporttal.
+- [x] Képfájlnevek és képmappák egységesítve: kisbetűs, kötőjeles, szóköz és ékezet nélküli nevek; a hivatkozások frissítve, a képtartalom változatlan.
+- [x] Képzések: a befejezett és folyamatban lévő kurzusok elkülönítve, a jelenlegi tartalomban használt teljes nevekkel.
+- [x] Projektszűrés és rendezés: Recommended = Budgeting → Portfolio → Pinterest → Surfboard; Latest = Portfolio → Budgeting → Pinterest → Surfboard. Az aktív választás rózsaszín kiemelést kap.
+- [x] Egyoldalas, szövegként olvasható A4-es angol CV Markdown-forrással és Pandoc + XeLaTeX generálással; AI tools külön sorban. A CV-ből kattintható a portfólió, a főoldal bemutatkozásából és kapcsolat részéből új lapon nyitható a PDF.
+- [x] Helyi technikai ellenőrzés: `npm run build` sikeres, az Astro ellenőrzésben 0 hiba és 0 figyelmeztetés; `npm test`: 38/38 sikeres teszt. A generált oldalak CV-linkjei és a közzétételre szánt PDF-példány egyezése ellenőrizve.
+- [x] A portfólió, a CV és az ideiglenes fájlok kizárásának változtatásai külön helyi commitokban rögzítve; a tervfrissítés külön dokumentációs commitba kerül.
+- [x] A `Development` ág helyben és GitHubon `development` névre átnevezve, a távoli követés frissítve. A repo továbbra is `Portfolio`: átnevezéséhez a jelenlegi fióknak nincs adminjoga, ezért a webcímek változatlanok.
+- [ ] A helyi commitok feltöltése, szükség szerint merge és publikálás; utána az éles linkek ellenőrzése.
+- [ ] LinkedIn egyeztetése, angol projektbemutató gyakorlása és külső szakmai visszajelzés.
+- [ ] A prototípusok nyitott folyamatproblémáinak javítása és új, dokumentált résztvevős teszt; ezek nem készültek el a szövegfrissítéssel.
+- [ ] A Figma Advanced kurzusprojekt és a saját wardrobe app elkészítése. A wardrobe appban UI/UX és frontend munka is szerepel majd; ezek még tervezett projektek.
 
 ## Tartalom
 
@@ -25,9 +49,9 @@ Az alábbi terv a portfólió két megvizsgált változatának tanulságait, a s
 
 ## 1 Célpozíció és szakmai elvárások
 
-Elsődleges célom a **Junior Product Designer**, **Associate Product Designer**, illetve olyan **Junior UX/UI Designer** szerep, amely valódi termékcsapatban ad kutatási, tervezési és együttműködési tapasztalatot. A pozíció megnevezése mellett a feladatkört és a szakmai támogatást is meg kell vizsgálnom.
+Elsődleges célom a **Junior UI/UX Designer**, illetve a feladatkörhöz illeszkedő **Junior UI Designer** szerep. **Junior Product Designer** és **Associate Product Designer** lehetőségekre is nyitott vagyok, ha támogatással szerezhetek kutatási, tervezési és együttműködési tapasztalatot. A pozíció megnevezése mellett a feladatkört és a szakmai támogatást is meg kell vizsgálnom.
 
-A frontend-fejlesztés is érdekel. Az egyetem megkezdéséig a Junior Product Designer és Junior UX/UI Designer irány az elsődleges szakmai célom; emellett a frontend iránti érdeklődésemet is szeretném továbbvinni.
+A frontend-fejlesztés is érdekel. Az egyetem megkezdéséig a junior UI/UX álláskeresés az elsődleges szakmai célom, a Product Designer lehetőségeket is figyelem; emellett a frontend iránti érdeklődésemet és tudásomat is szeretném továbbfejleszteni.
 
 Jó első környezet lehet számomra egy olyan csapat, ahol van tapasztalt designer, rendszeres szakmai visszajelzés, hozzáférés felhasználói problémákhoz, és együttműködés termékmenedzserrel és fejlesztőkkel. Egy teljes termék önálló tervezési felelősségét adó, mentorálás nélküli első designer szerepet későbbi lépcsőnek tekintek.
 
@@ -130,15 +154,17 @@ Javasolt fókusz: **közös kiadás rögzítése, kategorizálása és utólagos
 
 A november 8-i előzetes ellenőrzés alapján a jelenlegi prototípusban a kiadásfelvételi képernyő elérhető, de az adatbevitel és a mentés eredménye még nincs érdemben modellezve. Az új résztvevős teszt előtt a kijelölt feladatot végigjárhatóvá kell tenni; a konkrét megfigyelések a 7. fejezetben szerepelnek.
 
-Elvégzendő munka:
+Állapot és további munka:
 
-1. A korábbi kutatás és tesztelés tényeinek pontosítása a 8. fejezet szerint.
-2. Az eredeti folyamat és a problémás pont bemutatása valódi képekkel.
-3. Két vagy három megoldás összevetése. Például közvetlen kezdőképernyős művelet, globális hozzáadás vagy az adott költségvetéshez kötött bevitel.
-4. A választás indoklása: megtalálhatóság, szükséges kontextus, félrerögzítés esélye és megvalósítási költség.
-5. Tesztelhető adatbevitel, kategóriaválasztás és mentési eredmény kialakítása. A kijelölt feladathoz tartozó állapotok megtervezése: nincs még költségvetés, hibás összeg, hiányzó kategória, sikertelen mentés, módosítás vagy törlés visszajelzése.
-6. A folyamat technikai végigpróbálása után egy rövid, új résztvevős tesztkör, majd módosítás és ellenőrzés.
-7. Az eredmény bemutatása olvasható képekkel, saját hozzájárulással és további kérdésekkel.
+- [x] A korábbi kutatás és tesztelés tényeinek pontosítása a 8. fejezet szerint.
+- [x] Az eredeti folyamat és a problémás pont bemutatása valódi képekkel.
+
+A további prototípus-fejlesztés még nyitott feladatai:
+1. Két vagy három megoldás összevetése. Például közvetlen kezdőképernyős művelet, globális hozzáadás vagy az adott költségvetéshez kötött bevitel.
+2. A választás indoklása: megtalálhatóság, szükséges kontextus, félrerögzítés esélye és megvalósítási költség.
+3. Tesztelhető adatbevitel, kategóriaválasztás és mentési eredmény kialakítása. A kijelölt feladathoz tartozó állapotok megtervezése: nincs még költségvetés, hibás összeg, hiányzó kategória, sikertelen mentés, módosítás vagy törlés visszajelzése.
+4. A folyamat technikai végigpróbálása után egy rövid, új résztvevős tesztkör, majd módosítás és ellenőrzés.
+5. Az új fejlesztés eredményének bemutatása olvasható képekkel, saját hozzájárulással és további kérdésekkel. A korábbi munka szöveges és képi bemutatása már elkészült.
 
 A közös háztartás további termékkérdéseket is felvet: ki láthatja a kiadásokat, ki javíthatja őket, és mitől közös egy tétel? Ezekből annyit kell feldolgozni, amennyi a választott kis folyamat megértéséhez szükséges.
 
@@ -146,7 +172,7 @@ A közös háztartás további termékkérdéseket is felvet: ki láthatja a kia
 
 A legerősebb kiindulópont a tartalomtípusok megkülönböztetése. Egy konkrét cél lehet annak vizsgálata, hogy a résztvevő felismeri-e a promóciós tartalmat és az alkalmazáson kívülre vezető elemet.
 
-- Legyen olvasható összehasonlítás az eredeti és a tervezett megoldás között, az összehasonlított eredeti állapot dátumával.
+- [x] Elkészült a saját Home és Search terveim összehasonlítása hivatalos Pinterest-referenciákkal, forrással és hozzáférési dátummal. A referencia készítési ideje ismeretlen, ezért nem nevezem a projektem igazolt eredeti állapotának.
 - A feliratok és jelölések érthetőségét külön feladatokkal kell ellenőrizni.
 - A chat eltávolítása mellett jelenjen meg egy kisebb változtatást jelentő alternatíva is, például a funkció kevésbé hangsúlyos elhelyezése.
 - A hirdetéseknél mérlegelendő a felhasználói átláthatóság és az üzleti szerep. Az eltávolításuk vagy háttérbe szorításuk hatását nem lehet automatikusan pozitívnak tekinteni.
@@ -155,7 +181,7 @@ A legerősebb kiindulópont a tartalomtípusok megkülönböztetése. Egy konkr�
 
 ### Gaddr mint csapatban szerzett tapasztalat
 
-A három hónapos gyakorlatom kapjon konkrétabb szerepet. Egy rövid példa is értékes lehet: melyik komponens vagy stílus volt következetlen, mit változtattam, kivel egyeztettem, és mi alapján fogadták el a módosításomat.
+A gyakorlatom konkrét feladatleírása és a saját szerepem pontosítása elkészült. Egy rövid példa is értékes lehet: melyik komponens vagy stílus volt következetlen, mit változtattam, kivel egyeztettem, és mi alapján fogadták el a módosításomat.
 
 Bemutatható anyag esetén egy rövid szakmai esettanulmány készülhet. Ha a képek nem használhatók nyilvánosan, a saját feladat és együttműködés tényszerű leírása is hasznos. A teljes céges design system kialakítását nem szabad saját eredményként feltüntetni, ha a feladat annak egy részére terjedt ki.
 
@@ -163,7 +189,7 @@ Bemutatható anyag esetén egy rövid szakmai esettanulmány készülhet. Ha a k
 
 A Surfboard Store rövidebb, vizuális munka maradhat: reszponzív elrendezések, komponensek és egy érthető vásárlási folyamat. A következő fejlesztés a termékválasztás és a kosártartalom összhangjának javítása, majd a kijelölt vásárlási folyamat következetes végigépítése legyen a 7. fejezet megfigyelései alapján. A borítón a bolt termékei vagy vásárlási felülete erősebb bemutatás, mint egy bejelentkező képernyő.
 
-A Portfolio Website a megvalósítás és a design–fejlesztés együttműködésének kiegészítő bizonyítéka. A saját hozzájárulást, a mentori segítséget és a ténylegesen működő funkciókat pontosan kell leírni. A borítóra valódi asztali és mobilképernyők kerüljenek a 7. fejezet szerinti módon.
+A Portfolio Website a megvalósítás és a design–fejlesztés együttműködésének kiegészítő bizonyítéka. A saját hozzájárulást, a mentori segítséget és a ténylegesen működő funkciókat pontosan kell leírni. A borítóra már valódi asztali képernyőkép került. Az asztali és mobilnézet közös kompozíciója további, opcionális finomítás.
 
 Az AI szerepe ebben a projektben már most megemlíthető, például **„AI-assisted website development”** megjelöléssel. A rövid projektleírásban négy dolgot érdemes tisztázni:
 
@@ -178,9 +204,11 @@ Az alábbi angol minta kitöltendő vázlat; csak igazolható saját feladatokka
 
 Ha az AI-val közvetlenül a segítő dolgozott, az „I used…” mondat helyett az ő hozzájárulását kell leírni. A bemutatóban a működő oldal és a saját döntések kapjanak hangsúlyt; néhány célzott példa elegendő az AI szerepének megértéséhez.
 
-Javasolt alapértelmezett sorrend: Budgeting App, Pinterest, Surfboard Store, Portfolio Website. Egy erős, bemutatható Gaddr-példa vagy az új valós projekt később előrébb kerülhet. A sorrendet a célálláshoz illeszkedő bizonyíték határozza meg.
+A jóváhagyott ajánlott sorrendem: Budgeting App, Portfolio Website, Pinterest, Surfboard Store. A szűrők mellett külön rendezési lehetőség választja szét az ajánlott és a legújabb projektek nézetét. Az elkészülés általam megadott sorrendje alapján a legújabb szerinti nézet: Portfolio Website, Budgeting App, Pinterest, Surfboard Store. A kiválasztott rendezés a szűrőkkel azonos erősebb rózsaszín jelölést kap. A rendezés megtartja a kiválasztott típusszűrőt; egy szövegfrissítés nem teszi új projektté a munkát.
 
 ## 5 Új projekt valódi terméktapasztalathoz
+
+Két következő munkát tervezek: a Figma Advanced kurzushoz tartozó UI/UX-projektet és egy önálló Wardrobe appot, UI/UX-tervezéssel és frontend-megvalósítással. Ezek még tervezett projektek; a bemutatási sorrendjükről az elkészült munkák alapján döntök.
 
 **Érdemes további munkát vállalni egy kicsi, valódi felhasználókkal és lehetőleg fejlesztővel végigvitt projekten.** Ez új tapasztalatot adhat az együttműködésről, a korlátokról és a működő megoldás használatáról. Az alábbi lehetőségek közül egyszerre egyet célszerű választani.
 
@@ -294,13 +322,13 @@ A beszélgetésben két futó állapotot vizsgáltunk. Az elnevezések a megteki
 - **Újabb, részletesebb változat:** „UI/UX Designer & Front-End Developer” bemutatkozás, első helyen Portfolio Website, projektszűrők, projektadatblokk és tartalom közé helyezett képek. A képnézegető nem volt jelen.
 - **Régebbi, képnézegetős változat:** „UI/UX Designer” bemutatkozás, első helyen Budgeting App, „Selected work”, keskenyebb szövegoszlop és teljes vizuális esettanulmányok nagyítható nézettel.
 
-A mentéskor olvasott helyi forrás a második, képnézegetős felépítést tartalmazta. A korábbi verzió hibáit ezért nem szabad automatikusan a jelenlegi fájlok hibájaként kezelni.
+A korábbi feljegyzés készítésekor olvasott helyi forrás a második, képnézegetős felépítést tartalmazta. Azóta a fenti állapotlistában jelölt tartalmi és technikai frissítések elkészültek. A korábbi verzió hibáit ezért nem szabad automatikusan a jelenlegi fájlok hibájaként kezelni.
 
 ### Mit érdemes egyesíteni
 
 | Terület | Megfigyelés | Javasolt irány |
 | --- | --- | --- |
-| Szakmai fókusz | A régi egyértelműbben UI/UX-központú | Product Designer cél, UI/UX-alapok, frontend mint kiegészítő erősség |
+| Szakmai fókusz | A régi egyértelműbben UI/UX-központú | Elsődleges junior UI/UX cél, nyitottság Product Designer szerepekre, frontend iránti érdeklődés |
 | Bemutatkozás | A régi személyesebb, de túl hosszú; az újabb rövidebb és általánosabb | A személyes hátteret két rövid bekezdésben megtartani, a munkákhoz vezető gombot korán megmutatni |
 | Projektsorrend | A régi a Budgeting Appot emeli ki | Az álláshoz legjobban illeszkedő, legerősebb esettanulmány legyen az első |
 | Projektadatok | Az újabb külön szerep-, együttműködés-, feladat- és platformblokkot adott | Rövid áttekintő blokk, pontos saját hozzájárulással |
@@ -320,7 +348,7 @@ Javasolt felépítés: olvasható HTML-szöveg, mellette külön nagyítható r�
 
 ### A Portfolio Website valódi borítója
 
-**A jelenlegi oldal valódi asztali és mobilképernyőképeiből készüljön a borító.** A megvizsgált illusztráció más elrendezést, navigációt és mintatartalmat mutatott, mint a megvalósított oldal. Az illusztrációként való megjelölés korrekt volt, de a kész munka bizonyítására a valódi kép alkalmasabb.
+**Részben kész:** a borítón már a megvalósított oldal valódi asztali képernyőképe szerepel, hozzá igazított alternatív szöveggel és képaláírással. A mobilnézettel közös kompozíció opcionális további feladat. A megvizsgált illusztráció más elrendezést, navigációt és mintatartalmat mutatott, mint a megvalósított oldal. Az illusztrációként való megjelölés korrekt volt, de a kész munka bizonyítására a valódi kép alkalmasabb.
 
 Javasolt kivitel:
 
@@ -380,14 +408,15 @@ A részletes szöveg és a régi vizuális esettanulmányok egyesítése előtt 
 | Budgeting módszer | A résztvevők a barátaim voltak. Egymással nem kezelték közösen a kiadásaikat, de volt köztük olyan, aki az élettársával közösen kezeli azokat. Konkrét feladatokat adtam nekik: kiadás hozzáadását és új megtakarítási („savings”) kategória létrehozását. Jelen voltam, és azonnal kaptam visszajelzést; ez nem moderálatlan teszt volt. A megosztott képeimen látható az eredeti és a továbbfejlesztett lo-fi verzió, valamint egy kérdéseket és visszajelzéseket tartalmazó jegyzet. A jegyzet említi a kiadásrögzítés túl sok lépését, javasolja a kezdőképernyős elérést és a vissza gombok következetes használatát. A második tesztkör pozitív visszajelzése egyelőre a visszaemlékezésemen alapul. |
 | Budgeting visszajelzés és módosítás | Az első körben az „Add expense” nehezen volt megtalálható, ezért a kezdőképernyőre helyeztem. A képernyők közötti navigáció sem volt elég egyértelmű: a vissza gomb nem minden oldalon ugyanott jelent meg, néhol pedig hiányzott, például egy olyan fülön, ahol az eszköztár ikonjaival is lehetett navigálni. Ez nem minden résztvevőnek volt logikus, ezért egységesítettem a vissza gomb elhelyezését és jelenlétét az érintett képernyőkön. |
 | Budgeting képi bizonyíték | A két megosztott lo-fi képernyősor összevetése igazolja a kezdőképernyős „Add expense” gomb hozzáadását, a „Pocket” mező megjelenését a kiadásűrlapon és a belső képernyők bal alsó vissza gombjainak egységesítését. Az esettanulmányba bekerült két előtte–utána összehasonlítás angol képaláírásokkal: kezdőképernyő és kiadásűrlap; Month és Savings navigáció. Az oldal az eredeti exportokból veszteségmentesen kivágott képernyőket mutatja négyoszlopos Markdown-táblázatokban, mobilon két-két képre tördelve, a hozzájuk tartozó feliratokkal; a képfájlok külön szerkeszthetők, a leírás nem igényel HTML-t vagy CSS-alapú képkivágást. A teljes eredeti és javított képernyősor fájljai megmaradnak; az esettanulmányban csak a kiválasztott részletek jelennek meg. |
-| Kutatási personák | Mely adatokból készültek, és mely részletek voltak szemléltető feltételezések? |
-| Pinterest kutatás | A Google Formson készített kérdőívemet 20 ember töltötte ki. A kérdőívet az akkori munkahelyem erre szolgáló közös csoportjában osztottam meg. A válaszokról akkor mind mapet készítettem, amelyre visszaemlékezésem szerint pontosan kiírtam a válaszokat. Úgy emlékszem, az eredeti kérdőív és válaszok megvannak, de a helyüket még meg kell keresnem. A korábbi, körülbelül 25 résztvevőre utaló szöveget ennek megfelelően kell javítanom. A mind map és lehetőség szerint az eredeti anyag áttekintésével még tisztáznom kell a kérdéssort, a válaszadók Pinterest-használatát és a válaszokból levont következtetéseimet. |
-| Pinterest következtetések | Visszaemlékezésem szerint a válaszokban leggyakrabban az AI-képek, valamint a reklámokra és weboldalakra vezető linkek okozta problémák merültek fel. Második leggyakoribb témaként a chat funkció feleslegessége jelent meg. A tervemben minden link és AI-kép külön jelölést kapott, hogy azonnal megkülönböztethetők legyenek a hagyományos, emberek által feltöltött képektől. A beépített chatet eltávolítottam, majd egy kérdőívkitöltő javaslatára a beállításokban fiókösszekapcsolási („account linking”) lehetőséget terveztem: a hasonló érdeklődésű felhasználók külső szolgáltatáson keresztül beszélgethetnének. Ez tervezett működés, nem igazoltan megvalósított integráció. A válaszokat rögzítő mind mapem megvan Figmában; ebből még ellenőriznem kell a pontos megfogalmazásokat és említési gyakoriságokat. |
+| Kutatási personák | A Pinterest mindkét personájának minden részletét a kérdőíves válaszokból állítottam össze, nem adtam hozzá kitalált részleteket. A Budgeting App personáit informális beszélgetések és internetes tájékozódás alapján készítettem. Az internetes tájékozódásból nem őriztem meg forráslinkeket vagy jegyzeteket, ezért az egyes personarészletek online forrásait nem tudom visszakeresni. Ezt a részt informális háttértájékozódásként mutatom be. |
+| Pinterest kutatás | A Google Formson készített kérdőívemet 20 ember töltötte ki. A kérdőívet az akkori munkahelyem erre szolgáló közös csoportjában osztottam meg. A válaszokat három megőrzött mind mapen rendeztem a kedvelt tulajdonságok, a zavaró tényezők és a változtatási javaslatok köré; ezek képei már rendelkezésre állnak. Az eredeti kérdőív és válaszok helyét még meg kell keresnem. A térképeken nincs válaszadónkénti bontás vagy említési gyakoriság, ezért ezek alapján nem állíthatok fel számszerű rangsort. A Pinterest leírásában már 20 válaszadó szerepel. |
+| Pinterest következtetések | A megőrzött térképeimen az inspiráció, a képek változatossága, a személyre szabott ajánlások, a keresés és a végtelen görgetés kedvelt tulajdonságként jelenik meg. A problémák között szerepel a reklámok összetéveszthetősége más tartalommal, a sok reklám és AI-tartalom, a rejtett weboldallinkek, az értesítések és a pin alatti ajánlások minősége. A javaslatok között szerepel a reklámok egyértelmű jelölése, a kisebb értesítésjelző, a képközpontúság, a pontosabb és személyre szabott keresés, valamint a Meta-fiókösszekapcsolás. A tervemben külön jelölést adtam a linkeknek és AI-képeknek; az AI-képek mennyiségének problémáját ez önmagában nem oldja meg. A chat feleslegességére és a témák gyakorisági sorrendjére vonatkozó állításaim egyelőre a visszaemlékezésemen alapulnak, ezeket a három térkép nem dokumentálja. A chatet eltávolítottam, és egy kitöltő javaslatára a beállításokban külső szolgáltatáshoz kapcsolódó fiókösszekapcsolást terveztem. Ez felületi koncepció, nem megvalósított integráció. A fő navigációs műveleteket, köztük a keresés indítóikonját, egyszerűsített alsó sávba rendeztem, hogy egykezes használatnál könnyebben elérhetők legyenek hüvelykujjal. A keresőmező a keresőoldal tetején marad. Ezt az ergonómiai szándékot nem teszteltem; a kevesebb koppintást sem igazoltam. A felületen megjelenő véletlenszerű ajánlások számát is csökkenteni szerettem volna. Ez kizárólag felületterv és Figma-prototípus, backend és megvalósított keresési vagy ajánlási rendszer nélkül; a változtatások a bemutatott felületre vonatkoznak. A chat eltávolításától kevesebb chattel kapcsolatos értesítést vártam, de ezt nem mértem vagy teszteltem, és ez a többi értesítést nem kezeli. |
+| Pinterest képi összehasonlítás | A kezdőképernyőmet és a Search tervemet választottam ki az összehasonlításhoz. Melléjük a Pinterest Business „How to make Pins” oldaláról származó hivatalos Home és Search referenciaképek kerültek, 2026. november 8-i hozzáférési dátummal és forrással. A képek készítési ideje nincs megadva, ezért nem a projektem igazolt eredeti állapotaként szerepelnek. A saját kezdőképernyőmön látható az „Ad” jelölés; a keresésnél a két felület elrendezése hasonlítható össze. A kevesebb lépést ezek a statikus képek nem igazolják, mert a referenciában is van keresőikon és keresőmező. |
 | Pinterest tesztelés | Az áttervezett felület elkészítése után nem végeztem külön tesztet. A módosításokat a kérdőíves visszajelzésekre épülő tervezési döntéseimként mutathatom be; érthetőségük és használhatóságuk javulását utólagos teszt nem igazolta. |
 | Gaddr | Egy meglévő, nagy design system komponenseinek egységesítésén dolgoztam másokkal együtt. A feladatom a színek, formák és betűtípusok frissítése volt úgy, hogy a komponensek közvetlenül megadott értékek helyett a megfelelő központi, alapértelmezett elemekre hivatkozzanak. Főleg a keresőfülhöz tartozó komponenseken, valamint a profil linkjeit és egyéb elemeit tartalmazó komponensen dolgoztam. A munkámat a fő designer nézte át. Titoktartási kötelezettség miatt nem mutathatok be képernyőképeket vagy Figma-anyagot; a portfóliómban a megosztható szöveges feladatleírásra, a saját hozzájárulásomra és az együttműködésre kell építenem. |
-| Portfolio Website | A vizuális megjelenést önállóan találtam ki. A kód első verzióját a mentorom készítette; ettől kezdve közvetlenül AI-val dolgoztam tovább az oldalon, ChatGPT-t és Copilotot használva. A kódolás nagyobb részét AI-ra bíztam; kézzel például képeket szúrtam be és tartalmat szerkesztettem. A szövegeket is AI segítségével írtam, hogy a saját gondolataimat érthetőbben adjam át. Az ellenőrzéshez localhoston megnyitottam az oldalt, és AI által készített unit teszteket futtattam. A tesztek vizsgálati körét és eredményét még pontosítanom kell. |
-| Tanulmányok | A bemutatkozásomban és a CV-mben „építészeti tanulmányok” megfogalmazást használok, a képzés lezárásának külön hangsúlyozása nélkül. Befejezett képzéseim: Udemy – Figma Basics; Coursera – Google UI/UX. Folyamatban lévő képzéseim: Coursera – Meta Full Stack; Coursera – Figma Advanced. A képzésnevek egyelőre a saját megnevezéseim; a végleges CV-mhez a hivatalos címeket a képzési felületen vagy a tanúsítványokon kell ellenőriznem. |
-| Technikai állítások | A végleges verzióban ténylegesen jelen van-e minden bemutatott funkció és ellenőrzés? |
+| Portfolio Website | A vizuális megjelenést önállóan találtam ki. A kód első verzióját a mentorom készítette; ettől kezdve közvetlenül AI-val dolgoztam tovább az oldalon, ChatGPT-t és Copilotot használva. A kódolás nagyobb részét AI-ra bíztam; kézzel például képeket szúrtam be és tartalmat szerkesztettem. A szövegeket is AI segítségével írtam, hogy a saját gondolataimat érthetőbben adjam át. Az ellenőrzéshez localhoston megnyitottam az oldalt, és AI által készített unit teszteket futtattam. A jelenlegi ellenőrzésben a build és az Astro diagnosztika sikeres, a 38 automatikus teszt mind átment. A tesztek tartalmi sémákat, generált oldalakat és helyi hivatkozásokat, szűrést és rendezést, animációs és fókuszkezelést, valamint workflow-beállításokat vizsgálnak; nem helyettesítik az új böngészős vagy résztvevős vizsgálatot. |
+| Tanulmányok | A bemutatkozásomban és a CV-mben „építészeti tanulmányok” megfogalmazást használok, a képzés lezárásának külön hangsúlyozása nélkül. Befejezett képzéseim: Udemy – Figma Basics; Coursera – Google UI/UX. Folyamatban lévő képzéseim: Coursera – Meta Full Stack; Coursera – Figma Advanced. A portfólióban és a CV-ben már a teljes képzésnevek szerepelnek, a befejezett és folyamatban lévő státusz elkülönítésével. A tanúsítványokkal való végső személyes egyeztetés még hátravan. |
+| Technikai állítások | A helyi build és a 38 automatikus teszt sikeres. A CV mindkét irányú linkelése és a statikus PDF-példány ellenőrizve. A publikált változatot kiadás után külön kell ellenőriznem; a prototípusok és a teljes akadálymentesség vizsgálata továbbra is nyitott. |
 
 Ismeretlen adat helyére ne kerüljön becsült tény. Ha egy korábbi részlet nem állapítható meg, szűkebb állítás vagy egy új, megfelelően dokumentált vizsgálat használható. A később elvégzett új munka dátuma és szerepe különüljön el az eredeti kurzusprojekttől.
 
@@ -408,26 +437,28 @@ A fő cél az érdemi szakmai fejlődés és a jelentkezéshez szükséges bizon
 
 Az állások feltérképezése és a meglévő anyaggal vállalható jelentkezések már az első szakaszokban elindulhatnak. Egy különleges, megfelelő junior lehetőséget nem szükséges a teljes terv végéig halasztani.
 
-### Az első három munkalépés
+### A következő három munkalépésem
 
-1. Megválaszolom a 8. fejezet ténykérdéseit, és kiválasztom a főként megcélzott szerepeket.
-2. A Budgeting Apphoz készüljön egyoldalas probléma- és feladatleírás, valamint lista a rendelkezésre álló bizonyítékokról.
-3. Legyen kijelölve egy szakmai visszajelzést adó személy és az első új teszt megszervezésének módja.
+1. Átnézem a kiadásba kerülő fájlokat, majd külön engedélyezett lépésben commit, feltöltés, szükség szerint merge és publikálás következik. A publikált főoldalt, a projektoldalakat és a CV mindkét irányú linkjét ellenőrzöm.
+2. A CV és a portfólió alapján egyeztetem a LinkedIn-profilt, majd gyakorlom a Budgeting projekt 2–3 perces angol bemutatóját, és szakmai visszajelzést kérek.
+3. Kijelölök egy következő mélyebb feladatot: a Budgeting tesztelhető kiadásrögzítési folyamatát vagy az új wardrobe app egy kis folyamatát. Előre rögzítem a feladathatárt és a teszt kérdését.
 
-A weboldal további látványbeli finomítása ezekhez képest másodlagos. Egy új színpaletta vagy újabb animáció akkor kapjon időt, ha konkrét olvasási vagy használati problémát old meg.
+### Jelenlegi időkeret és a következő hét
 
-### Jelenlegi időkeret és az első hét
+Jelenleg körülbelül heti 10 órát tudok a portfóliómra és az álláskeresésre fordítani. A korábbi első heti tartalmi feladatok elkészültek: a Budgeting képi összevetése és tesztleírása, a Pinterest mind mapjeinek feldolgozása, valamint a bemutatkozás, a Gaddr és a Portfolio Website saját szerepeinek pontosítása. Az álláskeresés elvégzését még nem rögzítettem.
 
-Jelenleg körülbelül heti 10 órát tudok a portfóliómra és az álláskeresésre fordítani. Az alábbi beosztás javaslat; az időigények becslések, a rendelkezésre álló anyagok áttekintése után pontosíthatók.
+Az alábbi új beosztás becslés, nem elvégzett munka; a válaszokra és időpontokra várakozás nincs beleszámítva.
 
-| Feladat | Tervezett idő | Kézzelfogható eredmény |
-| --- | --- | --- |
-| Budgeting: eredeti és továbbfejlesztett lo-fi anyag összevetése | 2 óra | Válogatott előtte–utána képek az „Add expense” és a vissza gomb változásáról |
-| Budgeting: a meglévő tesztelés és döntések leírása | 3 óra | Rövid esettanulmány-szöveg a 8. fejezetben pontosított tények alapján |
-| Pinterest: a Figmában meglévő mind map áttekintése | 2 óra | A fő visszajelzések és a hozzájuk kapcsolódó tervezési döntések kigyűjtése |
-| Bemutatkozás, Gaddr és Portfolio Website rövid leírásának pontosítása | 1 óra | Saját szerepet és kapott segítséget egyértelműen bemutató szövegjavaslatok |
-| Álláskeresés | 1 óra | Célhoz illő lehetőségek áttekintése, megfelelő pályázat esetén jelentkezés |
-| Tartalék és heti áttekintés | 1 óra | Nyitott kérdések rendezése és a következő hét három fő feladata |
+| Sorrend | Nyitott feladat | Becsült idő | Elvárt eredmény |
+| --- | --- | --- | --- |
+| 1 | LinkedIn, CV és portfólió tényeinek személyes egyeztetése | 30–60 perc | Egyező szerepek, dátumok és képzésnevek |
+| 2 | Kiadási fájlok áttekintése, engedélyezett Git-lépések, publikálás és éles ellenőrzés | 1–2 óra | Elérhető friss oldal, működő projekt- és CV-linkek |
+| 3 | Friss mobilos és asztali kézi ellenőrzés, billentyűzet, nagyítás és témák | 1–2 óra | Rövid megfigyelési lista; a szükséges javítások külön becsülhetők |
+| 4 | Rövid angol Budgeting-bemutató és külső szakmai visszajelzés előkészítése | 1–2 óra | Elmondható történet és konkrét kérdések a visszajelzőnek |
+| 5 | Célzott álláskeresés és jelentkezési nyilvántartás | 1 óra | Releváns lehetőségek és követhető következő lépések |
+| 6 | Egy következő projektfolyamat feladatleírása és tesztterve | 2 óra | Kis, vállalható feladathatár; a prototípus és a teszt külön későbbi munka |
+
+A nagyobb fejlesztések — Budgeting állapotok és új teszt, Surfboard kosárfolyamat, Pinterest utóteszt, Figma Advanced projekt, wardrobe app — több alkalmat igényelnek. Ezek nem feltételei a most elkészült portfólió publikálásának, de a korlátaikat továbbra is pontosan jelzem.
 
 ### A haladás követése
 
@@ -437,15 +468,15 @@ Hetente röviden rögzítem: mi készült el, mit tanultam, milyen döntésem v�
 
 ### A szakmai bemutatkozás
 
-A célpozíciómként megnevezhetem a Junior Product Designert. A korábbi munkaköreimet és a projektjeim kurzusjellegét pontosan kell feltüntetnem.
+A bemutatkozásomban a **Junior UI/UX Designer** megnevezést használom. A szövegben megemlítem, hogy junior Product Designer szerepekre is nyitott vagyok, és a frontend-fejlesztés is érdekel. A korábbi munkaköreimet és a projektjeim kurzusjellegét pontosan kell feltüntetnem.
 
 Lehetséges angol nyitómondat, személyes átnézésre:
 
-> I’m an early-career designer with a background in customer support and a UI/UX internship. I’m looking for a junior product design role where I can turn user problems into clear, testable interfaces and learn from an experienced team.
+> I’m a junior UI/UX designer with a background in customer-facing roles and a UI/UX internship. I’m also open to junior Product Designer roles and interested in front-end development. I’m looking for a team where I can contribute to real projects and learn from experienced designers.
 
 A főoldalon legyen gyorsan elérhető a legerősebb munka, az önéletrajz és a kapcsolatfelvétel. A CV-ben a Gaddr-gyakorlat és a releváns projektek kapjanak hangsúlyt. Az ügyfélszolgálati tapasztalatból a konkrét feladat, a megértett problémák és az együttműködés jelenjen meg. Üzleti eredményt csak alátámasztható adattal érdemes feltüntetni.
 
-Az AI-tapasztalat jelenleg a Portfolio Website projekthez kapcsolva, „AI-assisted website development” megjelöléssel és a saját szerep pontosításával mutatható be. Az „AI-assisted prototyping” készség az 5. fejezet gyakorlatának elvégzése után kerülhet mellé. A szakmai bemutatkozás középpontjában továbbra is a Product Designer irány és a tervezői munka maradjon.
+Az AI-tapasztalat jelenleg a Portfolio Website projekthez kapcsolva, „AI-assisted website development” megjelöléssel és a saját szerep pontosításával mutatható be. Az „AI-assisted prototyping” készség az 5. fejezet gyakorlatának elvégzése után kerülhet mellé. A szakmai bemutatkozás középpontjában a junior UI/UX irány és a tervezői munka álljon; a Product Designer irányú nyitottság és a frontend iránti érdeklődés ezt egészítse ki.
 
 ### Milyen csapatot érdemes keresni
 
@@ -487,20 +518,24 @@ Az első állásban a fejlődés folytatódik: kezdetben a termék és a csapat 
 
 A lista a rendezett pályázati csomag célállapotát írja le. A tények pontossága, a saját szerep érthetősége és a munkák hozzáférhetősége elsődleges. Az új borító és a képnézegető további finomítása nem indokolja egy egyébként megfelelő jelentkezés elhalasztását.
 
-- [ ] A célpozícióm és a saját szakmai történetem egyértelmű.
+- [x] A célpozícióm és a saját szakmai történetem egyértelmű.
 - [ ] Legalább egy projektben követhető a probléma, az alternatívák, a döntés, a teszt és a változtatás.
 - [ ] A szerepek, résztvevőszámok, tesztkörök, dátumok és tanulmányi státuszok egyeznek a valósággal.
-- [ ] A saját munkám és a kapott segítség elkülöníthető.
-- [ ] Az AI-használat leírása csak ténylegesen elvégzett munkára vonatkozik; a saját döntés, az eszköz és a segítők szerepe követhető, a jövőbeli gyakorlat nem szerepel megszerzett tapasztalatként.
+- [x] A saját munkám és a kapott segítség elkülöníthető.
+- [x] Az AI-használat leírása csak ténylegesen elvégzett munkára vonatkozik; a saját döntés, az eszköz és a segítők szerepe követhető, a jövőbeli gyakorlat nem szerepel megszerzett tapasztalatként.
 - [ ] A legfontosabb képernyők olvashatók, a szükséges állapotok és műveletek megtervezettek.
 - [ ] A szöveg és a képes esettanulmány nem mond ellent egymásnak.
-- [ ] A Portfolio Website borítója a bemutatott megvalósítást mutatja.
+- [x] A Portfolio Website borítója a bemutatott megvalósítást mutatja.
 - [ ] Mobilon és asztali nézetben is ellenőrizve vannak a szövegek, képek, navigáció és nagyítás.
 - [ ] A prototípusok jelentkezéshez megfelelő hozzáféréssel megnyithatók, és a bemutatni kívánt feladatok végigjárhatók.
 - [ ] Az ellenőrzésből kiválasztott javításokat újra kipróbáltam; az elvégzett és a még hiányzó vizsgálatokat pontosan megnevezem.
-- [ ] Az önéletrajzom, a LinkedIn-profilom és a portfólióm ugyanazokat a lényeges szakmai tényeket tartalmazza.
+- [x] Elkészült az egyoldalas CV Markdown- és PDF-változata, Pandoc-generálással és kölcsönös portfóliólinkekkel.
+- [ ] Az önéletrajzom és a portfólióm lényeges szakmai tényeit a LinkedIn-profilommal is egyeztettem.
 - [ ] Angolul is be tudom mutatni a fő munkámat, és válaszolni tudok a döntéseimmel kapcsolatos kérdésekre.
 - [ ] Egy külső olvasó vagy szakmai visszajelző átnézte az anyagot.
+- [x] A helyi build, a 38 automatikus teszt és a generált CV-linkek ellenőrzése sikeres.
+- [x] A jelenlegi portfólió- és CV-módosítások külön helyi commitokban rögzítve; az ideiglenes fájlok kizárva.
+- [ ] A commitok feltöltve és publikálva vannak; az éles oldalt újra ellenőriztem.
 
 ## 12 Források és a folytatáshoz fontos fájlok
 
@@ -529,6 +564,10 @@ A repo következő fájljai kapcsolódnak a későbbi szerkesztéshez:
 | [pinterest-redesign.md](src/content/projects/pinterest-redesign.md) | Második esettanulmány |
 | [surfboard-store.md](src/content/projects/surfboard-store.md) | UI és reszponzív tervezés |
 | [portfolio-website.md](src/content/projects/portfolio-website.md) | Megvalósítás, saját szerep és valódi borító |
+| [CV Markdown](output/pdf/Papp_Niki_UI_UX_CV.md) | Az önéletrajz szerkeszthető tartalmi forrása |
+| [CV PDF](output/pdf/Papp_Niki_UI_UX_CV.pdf) | Ellenőrzött, egyoldalas pályázati változat |
+| [build_cv.py](tmp/pdfs/build_cv.py) | Pandoc + XeLaTeX generálás és a publikus PDF-példány frissítése |
+| [Publikus CV](public/documents/Papp_Niki_UI_UX_CV.pdf) | A portfólióról megnyitható PDF |
 | [CaseStudy.astro](src/components/CaseStudy.astro) | A képnézegetős változat jelenlegi megjelenítője |
 
 Egy későbbi tartalmi frissítésnél a teljes esettanulmányt, a kapcsolódó képeket és a CV-re kerülő állításokat együtt érdemes ellenőrizni. A korábbi anyagokat meg kell őrizni, hogy az eredeti munka és a mostani továbbfejlesztés később is megkülönböztethető legyen.
