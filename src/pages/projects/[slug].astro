@@ -1,6 +1,7 @@
 ---
 import type { InferGetStaticPropsType } from 'astro';
 import Page from '../../layouts/Page.astro';
+import CaseStudy from '../../components/CaseStudy.astro';
 import { getPortfolio } from '../../lib/content';
 import { assetUrl } from '../../lib/urls';
 export async function getStaticPaths() {
@@ -47,5 +48,6 @@ const backLink = `${assetUrl('/')}${projectsVisible ? '#projects' : ''}`;
       </section>
      <div class="prose project-prose"><project.Content /></div>
     </section>
+    {project.caseStudy && <CaseStudy image={project.caseStudy} title={project.title} labels={labels} />}
   </article>
 </Page>

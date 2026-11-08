@@ -15,7 +15,7 @@ details:
   workedWith: "Independent portfolio project"
   scope: Survey, personas, wireframes, and high-fidelity interface design
   platform: Mobile app concept
---- 
+---
 ## Project Background
 
 As a regular Pinterest user, I noticed that the growing amount of AI-generated and promoted content made it increasingly difficult to distinguish between different types of pins. This inspired me to explore how the app could offer a clearer and less distracting browsing experience.
@@ -31,7 +31,7 @@ One recurring concern was the lack of clear visual distinction between AI-genera
 
 Based on the responses, I created two simplified user personas representing different usage patterns. Janet reflects users who primarily browse Pinterest for inspiration and save visually appealing content, while Matthew represents users who actively collect and organise ideas into boards and value a more structured browsing experience.
 
-![A Picture of the 2 personas](/Portfolio/images/projects/pinterest-redesign/Pinterest.redesign-personas.png)
+![A Picture of the 2 personas](/images/projects/pinterest-redesign/Pinterest.redesign-personas.png)
 
 The survey responses helped inform the redesign direction, particularly the improvements aimed at making content labels more noticeable and the browsing experience clearer. I also treated my own experience with Pinterest as one perspective among many rather than assuming it represented the wider user base.
 

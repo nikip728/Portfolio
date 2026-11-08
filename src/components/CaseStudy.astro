@@ -1,0 +1,52 @@
+---
+import { assetUrl } from '../lib/urls';
+interface Props { image: string; title: string; labels: Record<string, string> }
+const { image, title, labels } = Astro.props;
+const alt = `${title} — ${labels.caseStudyImageAlt}`;
+---
+<section class="case-study" aria-labelledby="case-study-title">
+  <div class="case-study-heading">
+    <div><p class="eyebrow">{labels.caseStudy}</p><h2 id="case-study-title">{labels.caseStudyIntro}</h2></div>
+    <a class="button" href={assetUrl(image)} data-viewer-open>{labels.enlargeImage} <span aria-hidden="true">↗</span></a>
+  </div>
+  <p class="viewer-hint">{labels.viewerHint}</p>
+  <a class="case-study-preview" href={assetUrl(image)} data-viewer-open aria-label={`${labels.enlargeImage} — ${title}`}>
+    <img class="case-study-image" src={assetUrl(image)} alt={alt} loading="lazy" width="1280" />
+  </a>
+  <dialog class="image-viewer" aria-labelledby="viewer-title">
+    <header class="viewer-toolbar">
+      <h2 id="viewer-title">{title}</h2>
+      <div class="viewer-controls">
+        <button type="button" data-viewer-zoom aria-pressed="false">{labels.actualSize}</button>
+        <a href={assetUrl(image)} target="_blank" rel="noopener">{labels.openImage}</a>
+        <form method="dialog"><button autofocus>{labels.closeViewer} <span aria-hidden="true">×</span></button></form>
+      </div>
+    </header>
+    <div class="viewer-scroll" tabindex="0" role="region" aria-label={labels.imageRegion}>
+      <img src={assetUrl(image)} alt={alt} width="1280" />
+    </div>
+  </dialog>
+</section>
+<script>
+  for (const section of document.querySelectorAll('.case-study')) {
+    const dialog = section.querySelector('dialog');
+    const zoom = section.querySelector('[data-viewer-zoom]');
+    const scroll = section.querySelector('.viewer-scroll');
+    if (!(dialog instanceof HTMLDialogElement) || !(zoom instanceof HTMLButtonElement) || !(scroll instanceof HTMLElement)) continue;
+    for (const link of section.querySelectorAll('[data-viewer-open]')) {
+      link.addEventListener('click', event => {
+        if (event instanceof MouseEvent && (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0)) return;
+        if (typeof dialog.showModal !== 'function') return;
+        event.preventDefault();
+        dialog.classList.remove('actual-size');
+        zoom.setAttribute('aria-pressed', 'false');
+        dialog.showModal();
+        scroll.scrollTo(0, 0);
+      });
+    }
+    zoom.addEventListener('click', () => {
+      const actualSize = dialog.classList.toggle('actual-size');
+      zoom.setAttribute('aria-pressed', String(actualSize));
+    });
+  }
+</script>

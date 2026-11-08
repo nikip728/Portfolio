@@ -35,6 +35,12 @@ test('project cards use summaries while detail pages keep the written case studi
   for (const project of entries('projects').filter(entry => entry.data.published)) {
     assert(home.includes(project.data.summary.replace(/\s+/g, ' ')), `${project.slug}: missing card summary`);
     const detail = readFileSync(join(dist, 'projects', project.slug, 'index.html'), 'utf8');
+    const elements = tags(detail);
+    const canonical = elements.find(tag => tag.name === 'link' && tag.attrs.rel === 'canonical').attrs.href;
+    const base = new URL(canonical).pathname.split('/projects/')[0];
+    for (const [, alt, src] of project.body.matchAll(/!\[([^\]]*)\]\((\/images\/[^\s)]+)(?:\s+"[^"]*")?\)/g)) {
+      assert(elements.some(tag => tag.name === 'img' && tag.attrs.src === `${base}${src}` && tag.attrs.alt === alt), `${project.slug}: missing base-prefixed Markdown image ${src}`);
+    }
     if (project.data.repository) assert(tags(detail).some(tag => tag.name === 'a' && tag.attrs.href === project.data.repository));
         if (project.data.coverAlt) {
           for (const html of [readFileSync(join(dist, 'index.html'), 'utf8'), detail]) {
@@ -74,7 +80,9 @@ test('all project case studies share the editorial layout and project-specific d
 
     for (const tag of project.data.tags) assert(detailHtml.includes(`<li>${tag}</li>`), `${project.slug}: missing tag ${tag}`);
     for (const [field, label] of [['role', 'Role'], ['workedWith', 'Worked with'], ['scope', 'Scope'], ['platform', 'Platform']]) {
-      assert(detailHtml.includes(`<dt>${label}</dt><dd>${project.data.details[field]}</dd>`), `${project.slug}: incorrect ${label} details`);
+      const value = new RegExp(`<dt>${label}</dt><dd>([\\s\\S]*?)</dd>`).exec(detailHtml)?.[1];
+      assert.notEqual(value, undefined, `${project.slug}: missing ${label} details`);
+      assert.equal(decode(value), project.data.details[field], `${project.slug}: incorrect ${label} details`);
     }
 
     const homeCover = tags(homeHtml).find(tag => tag.name === 'img' && tag.attrs.src?.includes(project.data.cover));

@@ -36,7 +36,7 @@ The portfolio's visual presentation has also evolved over time. During a later u
 
 The site uses Astro to generate static HTML pages. There is no database or admin backend: project descriptions live in Markdown, while YAML holds navigation, interface copy, and grouped skills. This keeps most content changes separate from the page templates.
 
-![A screenshot from the VScode.](/Portfolio/images/projects/portfolio-website/Portfolio.website-VScode.png)
+![A screenshot from the VScode.](/images/projects/portfolio-website/Portfolio.website-VScode.png)
 
 Shared schemas validate the metadata, including publication flags, ordering, local image paths, and HTTPS links. Project pages are generated from the published collection, so adding a project does not require creating a new page template.
 

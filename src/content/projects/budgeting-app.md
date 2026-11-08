@@ -64,7 +64,7 @@ I designed key UI elements such as savings progress bars, monthly spending stati
 
 The final design brought these elements together into a cohesive experience, with a consistent visual language across screens. I connected the main user flows in a Figma prototype, allowing users to explore the budgeting and savings interactions. The prototype is linked at the beginning of this case study.
 
-![A collection of high-fidelity Household Budgeting App screens.](/Portfolio/images/projects/budgeting-app/Budgeting.app_pages.png)
+![A collection of high-fidelity Household Budgeting App screens.](/images/projects/budgeting-app/Budgeting.app_pages.png)
 
 ## Reflection and next steps
 

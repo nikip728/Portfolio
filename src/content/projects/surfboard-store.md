@@ -39,7 +39,7 @@ The high-fidelity designs brought the visual direction together through consiste
 
 I also created a dedicated design system in Figma, organising reusable components while keeping copies of their original versions separate to avoid accidental modifications.
 
-![A screenshot of the components page.](/Portfolio/images/projects/surfboard-store/Surfing.app-components.png)
+![A screenshot of the components page.](/images/projects/surfboard-store/Surfing.app-components.png)
 
 ## Responsive Design & Prototyping
 
