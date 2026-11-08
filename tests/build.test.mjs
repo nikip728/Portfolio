@@ -234,11 +234,7 @@ test('built site has complete local links, assets, anchors and published project
     assert(links.some(path => path.replace(/\/$/, '') === `${base}projects/${project.slug}`), `${project.slug}: homepage must link to project detail`);
     const elements = pages.get(route);
     assert(elements, `${project.slug}: route is not an HTML page`);
-    if (project.data.caseStudy) {
-      const images = elements.filter(tag => tag.name === 'img' && (tag.attrs.class ?? '').split(/\s+/).includes('case-study-image'));
-      assert(images.length > 0, `${project.slug}: missing case-study-image`);
-      assert(images.some(tag => new URL(tag.attrs.src, site).pathname === `${base}${project.data.caseStudy.slice(1)}`), `${project.slug}: case study must use metadata image`);
-      assert(elements.some(tag => tag.name === 'dialog' && (tag.attrs.class ?? '').split(/\s+/).includes('image-viewer')), `${project.slug}: missing image-viewer dialog`);
-    }
+    assert(!elements.some(tag => (tag.attrs.class ?? '').split(/\s+/).includes('case-study-image')), `${project.slug}: supplementary case-study image must not render`);
+    assert(!elements.some(tag => tag.name === 'dialog' && (tag.attrs.class ?? '').split(/\s+/).includes('image-viewer')), `${project.slug}: image viewer must not render`);
   }
 });
