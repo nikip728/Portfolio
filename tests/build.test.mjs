@@ -108,6 +108,14 @@ test('homepage project filters expose published tags and the empty state', () =>
   const filters = elements.filter(tag => 'data-project-filter' in tag.attrs);
   assert.deepEqual(filters.map(filter => filter.attrs['data-project-filter']), ['all', 'UI/UX', 'Front-End']);
   assert.deepEqual(filters.map(filter => filter.attrs['aria-pressed']), ['true', 'false', 'false']);
+  const sorts = elements.filter(tag => 'data-project-sort' in tag.attrs);
+  assert.deepEqual(sorts.map(sort => sort.attrs['data-project-sort']), ['recommended', 'latest']);
+  assert.deepEqual(sorts.map(sort => sort.attrs['aria-pressed']), ['true', 'false']);
+  assert(sorts.every(sort => sort.name === 'button' && sort.attrs.class === 'project-filter'));
+  const cards = elements.filter(tag => 'data-project-tags' in tag.attrs);
+  const publishedProjects = entries('projects').filter(entry => entry.data.published).sort((a, b) => b.data.order - a.data.order);
+  assert.deepEqual(cards.map(card => Number(card.attrs['data-project-recency'])), publishedProjects.map(project => project.data.recencyOrder));
+  assert.deepEqual(cards.map(card => Number(card.attrs['data-project-order'])), publishedProjects.map(project => project.data.order));
   for (const project of entries('projects').filter(entry => entry.data.published)) {
     assert(elements.some(tag => tag.attrs['data-project-tags'] === project.data.tags.join('|')), `${project.slug}: missing filter tags`);
   }

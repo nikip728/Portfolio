@@ -1,19 +1,20 @@
 ---
 title: Portfolio Website — From Content to Interface
 summary: A design-led website built with Astro, Markdown, and CSS. A place to explore how typography, content structure, and small interactions come together in code.
-order: 4
+order: 3
+recencyOrder: 4
 published: true
 tags:
   - Astro
   - TypeScript
   - CSS
   - Front-end
-cover: /images/projects/portfolio-website/Portfolio.website-main.png
+cover: /images/projects/portfolio-website/portfolio-website-main.png
 coverAlt: Desktop screenshot of the Papp Niki portfolio homepage, showing the navigation, introduction, and contact buttons.
 coverCaption: A desktop screenshot of the portfolio homepage.
 repository: https://github.com/nikip728/Portfolio
 details:
-  role: Design and front-end development
+  role: Visual design and AI-assisted implementation
   workedWith: "I worked alongside my mentor"
   scope: Portfolio design, content structure, and website implementation
   platform: Responsive website
@@ -23,6 +24,12 @@ details:
 The goal of this project was to bring my UI/UX design and front-end development work together in one polished, easy-to-navigate portfolio. I wanted to create a personal space where visitors could explore my projects, understand the thinking behind each one, and learn more about my skills and background.
 
 The portfolio is designed to present both sides of my interests: visual design and front-end development. Rather than focusing on advanced engineering, the project gave me an opportunity to explore how these two areas can come together in a single, cohesive experience.
+
+## My role and collaboration
+
+I developed the visual direction myself. My mentor created the first version of the code; I then continued working on the site using ChatGPT and Copilot for most of the coding. I also made manual changes, including inserting images and editing content.
+
+I used AI to help express my own ideas more clearly in the written content. To check the site, I opened it locally and ran AI-generated unit tests. This project gave me experience with AI-assisted website development; the implementation combined my decisions and edits with my mentor's initial code and AI-generated contributions.
 
 ## Design choices
 
@@ -36,15 +43,15 @@ The portfolio's visual presentation has also evolved over time. During a later u
 
 The site uses Astro to generate static HTML pages. There is no database or admin backend: project descriptions live in Markdown, while YAML holds navigation, interface copy, and grouped skills. This keeps most content changes separate from the page templates.
 
-![A screenshot from the VScode.](/images/projects/portfolio-website/Portfolio.website-VScode.png)
+![A screenshot from the VScode.](/images/projects/portfolio-website/portfolio-website-vscode.png)
 
 Shared schemas validate the metadata, including publication flags, ordering, local image paths, and HTTPS links. Project pages are generated from the published collection, so adding a project does not require creating a new page template.
 
-TypeScript supports the page interactions, and CSS handles the responsive layouts and colour themes. Small browser-native enhancements add entry animations, a floating back-to-top link, and a dialog for enlarging visual case studies, without an animation framework.
+TypeScript supports the page interactions, and CSS handles the responsive layouts and colour themes. Small browser-native enhancements add entry animations and a floating back-to-top link, without an animation framework.
 
 ## Details that support reading
 
-The portfolio includes keyboard focus styles and a skip link to support navigation. Content remains visible without JavaScript, and case-study images can still be opened as original files if the dialog is unavailable.
+The portfolio includes keyboard focus styles and a skip link to support navigation. Content remains visible without JavaScript. Selected screens appear alongside the written explanations; the Budgeting App includes before-and-after comparisons of the wireframes.
 
 The site also respects the reduced-motion preference, and focusing a block cancels its entry animation. These are deliberate implementation choices, not a claim that the site has passed a full accessibility audit.
 

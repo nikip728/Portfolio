@@ -1,0 +1,13 @@
+\definecolor{cvaccent}{HTML}{7F2943}
+\definecolor{cvink}{HTML}{222222}
+\color{cvink}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}{0pt}{5pt}{\fontsize{23}{26}\selectfont\bfseries}}
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}{8pt}{3pt}{\fontsize{10}{13}\selectfont\bfseries\color{cvaccent}}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{0pt}{3pt}{2pt}{\fontsize{10}{13}\selectfont\bfseries}}
+\makeatother
+\AtBeginDocument{\hypersetup{colorlinks=true,urlcolor=cvink}}
+\raggedright
