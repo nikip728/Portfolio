@@ -377,14 +377,15 @@ A részletes szöveg és a régi vizuális esettanulmányok egyesítése előtt 
 | Téma | Tisztázandó kérdés |
 | --- | --- |
 | Budgeting tesztelés | Niki visszaemlékezése szerint körülbelül 4–5 ember vett részt, és körülbelül két tesztkör történt, ugyanazokkal a résztvevőkkel. A második körben már jónak találták a megoldást. Az eredmény értelmezésénél figyelembe kell venni, hogy ekkor már ismerték a prototípust; az esetleges tanulási hatás nem különíthető el a módosítások hatásától. |
-| Budgeting módszer | A résztvevők Niki barátai voltak. Egymással nem kezelték közösen a kiadásaikat, de volt köztük olyan, aki az élettársával közösen kezeli azokat. Niki jelen volt, és azonnal kapott visszajelzést; ez nem moderálatlan teszt volt. Még tisztázandó, milyen feladatokat kaptak, és mi maradt meg a visszajelzésekből. |
+| Budgeting módszer | A résztvevők Niki barátai voltak. Egymással nem kezelték közösen a kiadásaikat, de volt köztük olyan, aki az élettársával közösen kezeli azokat. Konkrét feladatokat kaptak: kiadás hozzáadását és új megtakarítási („savings”) kategória létrehozását. Niki jelen volt, és azonnal kapott visszajelzést; ez nem moderálatlan teszt volt. Az eredeti és a továbbfejlesztett lo-fi verzió is megmaradt, így ezekből előtte–utána összehasonlítás készíthető. Külön tesztjegyzet vagy visszajelzést rögzítő anyag megléte még nincs tisztázva. |
 | Budgeting visszajelzés és módosítás | Niki beszámolója szerint az első körben az „Add expense” nehezen volt megtalálható, ezért a kezdőképernyőre helyezte. A képernyők közötti navigáció sem volt elég egyértelmű: a vissza gomb nem minden oldalon ugyanott jelent meg, néhol pedig hiányzott, például egy olyan fülön, ahol az eszköztár ikonjaival is lehetett navigálni. Ez nem minden résztvevőnek volt logikus, ezért Niki egységesítette a vissza gomb elhelyezését és jelenlétét az érintett képernyőkön. |
 | Kutatási personák | Mely adatokból készültek, és mely részletek voltak szemléltető feltételezések? |
-| Pinterest kutatás | Az újabb szöveg körülbelül 25 résztvevőt említett. Mi volt a tényleges létszám, toborzás és kérdéssor? |
-| Pinterest következtetések | Mi támasztotta alá a címkézés módosítását és a chat eltávolítását? Mi volt személyes preferencia? |
-| Gaddr | Mely konkrét feladatok, időpontok és együttműködések mutathatók be? Mi volt Niki önálló hozzájárulása? |
-| Portfolio Website | Mit tervezett és valósított meg Niki, miben segített mentor, fejlesztő vagy AI eszköz? |
-| Tanulmányok | Az építészeti képzésnél tanulmányok vagy megszerzett végzettség szerepeljen? Mely tanúsítványok lezártak, melyek folyamatban lévők? |
+| Pinterest kutatás | Niki Google Formson készített kérdőívét 20 ember töltötte ki. A kérdőívet az akkori munkahelye erre szolgáló közös csoportjában osztotta meg. A válaszokról akkor mind mapet készített, amelyre beszámolója szerint pontosan kiírta a válaszokat. Az eredeti kérdőív és válaszok Niki szerint megvannak, de a helyüket még meg kell keresni. A korábbi, körülbelül 25 résztvevőre utaló szöveget ennek megfelelően kell javítani. A mind map és lehetőség szerint az eredeti anyag áttekintésével még tisztázandó a kérdéssor, a válaszadók Pinterest-használata és a válaszokból levont következtetések. |
+| Pinterest következtetések | Niki visszaemlékezése szerint a válaszokban leggyakrabban az AI-képek, valamint a reklámokra és weboldalakra vezető linkek okozta problémák merültek fel. Második leggyakoribb témaként a chat funkció feleslegessége jelent meg. A tervben minden link és AI-kép külön jelölést kapott, hogy azonnal megkülönböztethetők legyenek a hagyományos, emberek által feltöltött képektől. Niki a beépített chatet eltávolította, majd egy kérdőívkitöltő javaslatára a beállításokban fiókösszekapcsolási („account linking”) lehetőséget tervezett: a hasonló érdeklődésű felhasználók külső szolgáltatáson keresztül beszélgethetnének. Ez tervezett működés, nem igazoltan megvalósított integráció. A válaszokat rögzítő mind map megvan Figmában; ebből még ellenőrizendők a pontos megfogalmazások és említési gyakoriságok. |
+| Pinterest tesztelés | Az áttervezett felület elkészítése után nem történt külön teszt. A módosítások a kérdőíves visszajelzésekre épülő tervezési döntésekként mutathatók be; érthetőségük és használhatóságuk javulását utólagos teszt nem igazolta. |
+| Gaddr | Niki egy meglévő, nagy design system komponenseinek egységesítésén dolgozott másokkal együtt. A feladat a színek, formák és betűtípusok frissítése volt úgy, hogy a komponensek közvetlenül megadott értékek helyett a megfelelő központi, alapértelmezett elemekre hivatkozzanak. Niki főleg a keresőfülhöz tartozó komponenseken, valamint a profil linkjeit és egyéb elemeit tartalmazó komponensen dolgozott. A munkáját a fő designer nézte át. Niki tájékoztatása szerint titoktartási kötelezettség miatt nem mutathat be képernyőképeket vagy Figma-anyagot; a portfólióban a megosztható szöveges feladatleírásra, saját hozzájárulásra és együttműködésre kell építeni. |
+| Portfolio Website | A vizuális megjelenést Niki önállóan találta ki. A kód első verzióját a mentora készítette; ettől kezdve Niki közvetlenül AI-val dolgozott tovább az oldalon, ChatGPT-t és Copilotot használva. A kódolás nagyobb részét AI-ra bízta; kézzel például képeket szúrt be és tartalmat szerkesztett. A szövegeket is AI segítségével írta, hogy a saját gondolatait érthetőbben adja át. Az ellenőrzéshez localhoston megnyitotta az oldalt, és AI által készített unit teszteket futtatott. A tesztek vizsgálati köre és eredménye még pontosítandó. |
+| Tanulmányok | A bemutatkozásban és a CV-ben „építészeti tanulmányok” megfogalmazás szerepeljen, a képzés lezárásának külön hangsúlyozása nélkül. Niki beszámolója szerint befejezett képzések: Udemy – Figma Basics; Coursera – Google UI/UX. Folyamatban lévő képzések: Coursera – Meta Full Stack; Coursera – Figma Advanced. A képzésnevek egyelőre Niki megnevezései; a végleges CV-hez a hivatalos címeket a képzési felületen vagy a tanúsítványokon kell ellenőrizni. |
 | Technikai állítások | A végleges verzióban ténylegesen jelen van-e minden bemutatott funkció és ellenőrzés? |
 
 Ismeretlen adat helyére ne kerüljön becsült tény. Ha egy korábbi részlet nem állapítható meg, szűkebb állítás vagy egy új, megfelelően dokumentált vizsgálat használható. A később elvégzett új munka dátuma és szerepe különüljön el az eredeti kurzusprojekttől.
@@ -413,6 +414,19 @@ Az állások feltérképezése és a meglévő anyaggal vállalható jelentkezé
 3. Legyen kijelölve egy szakmai visszajelzést adó személy és az első új teszt megszervezésének módja.
 
 A weboldal további látványbeli finomítása ezekhez képest másodlagos. Egy új színpaletta vagy újabb animáció akkor kapjon időt, ha konkrét olvasási vagy használati problémát old meg.
+
+### Jelenlegi időkeret és az első hét
+
+Niki jelenleg körülbelül heti 10 órát tud a portfólióra és az álláskeresésre fordítani. Az alábbi beosztás javaslat; az időigények becslések, a rendelkezésre álló anyagok áttekintése után pontosíthatók.
+
+| Feladat | Tervezett idő | Kézzelfogható eredmény |
+| --- | --- | --- |
+| Budgeting: eredeti és továbbfejlesztett lo-fi anyag összevetése | 2 óra | Válogatott előtte–utána képek az „Add expense” és a vissza gomb változásáról |
+| Budgeting: a meglévő tesztelés és döntések leírása | 3 óra | Rövid esettanulmány-szöveg a 8. fejezetben pontosított tények alapján |
+| Pinterest: a Figmában meglévő mind map áttekintése | 2 óra | A fő visszajelzések és a hozzájuk kapcsolódó tervezési döntések kigyűjtése |
+| Bemutatkozás, Gaddr és Portfolio Website rövid leírásának pontosítása | 1 óra | Saját szerepet és kapott segítséget egyértelműen bemutató szövegjavaslatok |
+| Álláskeresés | 1 óra | Célhoz illő lehetőségek áttekintése, megfelelő pályázat esetén jelentkezés |
+| Tartalék és heti áttekintés | 1 óra | Nyitott kérdések rendezése és a következő hét három fő feladata |
 
 ### A haladás követése
 
