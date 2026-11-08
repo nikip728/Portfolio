@@ -133,6 +133,18 @@ footer p { margin: 0; }
 .project-cover-figure figcaption { max-width: 720px; margin-top: 16px; font-size: 13px; color: var(--muted); }
 .project-prose .budgeting-app-screens { margin: 28px 0; padding: 12px; border: 1px solid var(--line); background: var(--paper); }
 .project-prose .budgeting-app-screens img { width: 100%; height: auto; }
+.project-prose table { width: 100%; max-width: 880px; table-layout: fixed; border-collapse: collapse; margin: 24px auto; }
+.project-prose th, .project-prose td { padding: 12px; border: 1px solid var(--line); text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.project-prose td img { width: 100%; height: auto; }
+@media (max-width: 750px) {
+  .project-prose table { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project-prose table :is(thead, tbody, tr) { display: contents; }
+  .project-prose th, .project-prose td { min-width: 0; padding: 8px; }
+  .project-prose th { grid-row: 1; }
+  .project-prose td { grid-row: 2; }
+  .project-prose th:nth-child(n + 3) { grid-row: 3; }
+  .project-prose td:nth-child(n + 3) { grid-row: 4; }
+}
 .project-prose strong { color: var(--ink); }
 .project-prose li { margin-bottom: .75em; }
 .project-description { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; padding-block: 65px; }

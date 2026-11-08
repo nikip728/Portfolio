@@ -1,10 +1,10 @@
-# Niki felkészülése a junior Product Designer szerepre
+# Felkészülésem a junior Product Designer szerepre
 
 Rögzítve: 2026. november 8.
 
-**A cél olyan junior vagy associate Product Designer állás megszerzése, amelyben Niki tapasztalt tervezők mellett valódi termékproblémákon dolgozhat, és fokozatosan önálló tervezővé válhat.** Ehhez a meglévő tapasztalataira épülő szakmai történetre, meggyőző munkákra és további gyakorlati tudásra van szüksége.
+**A célom olyan junior vagy associate Product Designer állás megszerzése, amelyben tapasztalt tervezők mellett valódi termékproblémákon dolgozhatok, és fokozatosan önálló tervezővé válhatok.** Ehhez a meglévő tapasztalataimra épülő szakmai történetre, meggyőző munkákra és további gyakorlati tudásra van szükségem.
 
-A bemutatott háttér alapján ez reális pályairány. A legerősebb alap az ügyfélszolgálati tapasztalat, a Gaddrnál végzett UI/UX-gyakorlat, a tervezési tanulmányok és a már elkészített projektek együttese. A következő lépés ezekből követhető bizonyítékot építeni: milyen problémát értett meg, milyen lehetőségeket mérlegelt, mit tervezett, mit tanult a használatból, és hogyan javította a megoldást.
+A hátterem alapján ez reális pályairány. A legerősebb alapot az ügyfélszolgálati tapasztalatom, a Gaddrnál végzett UI/UX-gyakorlatom, a tervezési tanulmányaim és a már elkészített projektjeim együttese adja. A következő lépésem ezekből követhető bizonyítékot építeni: milyen problémát értettem meg, milyen lehetőségeket mérlegeltem, mit terveztem, mit tanultam a használatból, és hogyan javítottam a megoldást.
 
 Az alábbi terv a portfólió két megvizsgált változatának tanulságait, a szakmai felkészülést és az álláskeresést rendezi közös sorrendbe. A javasolt új feladatok még elvégzendő munkák. A honlap módosításai, az új kutatás és a jelentkezések külön végrehajtandó lépések.
 
@@ -25,11 +25,11 @@ Az alábbi terv a portfólió két megvizsgált változatának tanulságait, a s
 
 ## 1 Célpozíció és szakmai elvárások
 
-Elsődleges cél a **Junior Product Designer**, **Associate Product Designer**, illetve olyan **Junior UX/UI Designer** szerep, amely valódi termékcsapatban ad kutatási, tervezési és együttműködési tapasztalatot. A pozíció megnevezése mellett a feladatkört és a szakmai támogatást kell megvizsgálni.
+Elsődleges célom a **Junior Product Designer**, **Associate Product Designer**, illetve olyan **Junior UX/UI Designer** szerep, amely valódi termékcsapatban ad kutatási, tervezési és együttműködési tapasztalatot. A pozíció megnevezése mellett a feladatkört és a szakmai támogatást is meg kell vizsgálnom.
 
-Nikit a frontend-fejlesztés is érdekli. Az egyetem megkezdéséig a Junior Product Designer és Junior UX/UI Designer irány az elsődleges szakmai célja; emellett a frontend iránti érdeklődését is szeretné továbbvinni.
+A frontend-fejlesztés is érdekel. Az egyetem megkezdéséig a Junior Product Designer és Junior UX/UI Designer irány az elsődleges szakmai célom; emellett a frontend iránti érdeklődésemet is szeretném továbbvinni.
 
-Jó első környezet lehet egy olyan csapat, ahol van tapasztalt designer, rendszeres szakmai visszajelzés, hozzáférés felhasználói problémákhoz, és együttműködés termékmenedzserrel és fejlesztőkkel. Egy teljes termék önálló tervezési felelősségét adó, mentorálás nélküli első designer szerepet későbbi lépcsőnek tekintenénk.
+Jó első környezet lehet számomra egy olyan csapat, ahol van tapasztalt designer, rendszeres szakmai visszajelzés, hozzáférés felhasználói problémákhoz, és együttműködés termékmenedzserrel és fejlesztőkkel. Egy teljes termék önálló tervezési felelősségét adó, mentorálás nélküli első designer szerepet későbbi lépcsőnek tekintek.
 
 A Product Designer munkájában összekapcsolódik:
 
@@ -43,7 +43,7 @@ Junior szinten mindez támogatással is történhet. A budapesti UX studio junio
 
 Az SRS Acquiom associate szerepleírása 0–3 év tapasztalatot említ, a gyakornokságot is beleértve, és senior designerekkel, termékmenedzserekkel és fejlesztőkkel közös munkát ír le. Ez amerikai munkavégzéshez kötött példa, nem magyarországi állásajánlás. [SRS Acquiom](https://job-boards.greenhouse.io/srsacquiom/jobs/5244378007)
 
-**A felkészülés kézzelfogható eredménye:** egy mélyen bemutatott fő projekt, egy azt kiegészítő munka, pontos önéletrajz, működő portfólió és olyan projektbemutató, amelyben Niki önállóan el tudja magyarázni a döntéseit. A jelentkezést és a tanulást párhuzamosan érdemes végezni; az elhelyezkedés időpontjára ez a terv nem ad garanciát.
+**A felkészülésem kézzelfogható eredménye:** egy mélyen bemutatott fő projekt, egy azt kiegészítő munka, pontos önéletrajz, működő portfólió és olyan projektbemutató, amelyben önállóan el tudom magyarázni a döntéseimet. A jelentkezést és a tanulást párhuzamosan érdemes végeznem; az elhelyezkedés időpontjára ez a terv nem ad garanciát.
 
 ## 2 Meglévő erősségek és fejlesztendő területek
 
@@ -64,12 +64,12 @@ Az ügyfélszolgálat jó megkülönböztető erősség lehet. Érdemes megmutat
 
 A megvizsgált portfólió alapján a következő területeket kell erősíteni:
 
-- **Döntések és alternatívák:** miért az adott megoldás született, és milyen más irányt vetett el?
+- **Döntések és alternatívák:** miért az adott megoldást választottam, és milyen más irányt vetettem el?
 - **Dokumentált kutatás:** kik vettek részt, milyen feladatot kaptak, mi volt tényleges megfigyelés?
 - **Termékszempontok:** kinek fontos a probléma, milyen értéket ad a megoldás, mit érdemes először megépíteni?
 - **UI és interakciós minőség:** tipográfia, gombhierarchia, olvashatóság, következetesség és hiányzó állapotok.
 - **Megvalósítás és eredmény:** mi készült el a tervből, mi változott a teszt vagy a fejlesztői visszajelzés után?
-- **Saját hozzájárulás:** mit végzett Niki, és miben kapott mentori, fejlesztői vagy más segítséget?
+- **Saját hozzájárulásom:** mit végeztem el, és miben kaptam mentori, fejlesztői vagy más segítséget?
 
 A rendezett portfólióoldal jó keretet ad. A benne szereplő appképernyők részleteit is ugyanilyen gondosan kell kidolgozni, mert a szakmai értékelés ezekre is kiterjedhet.
 
@@ -86,7 +86,7 @@ A tanulást lehetőleg ugyanazon a kis projekten kell gyakorolni. Így a megszer
 | 5 | Mérés és üzleti gondolkodás | Előre megfogalmazott sikerkritérium, megfigyelt eredmény és tervezett későbbi mérés elkülönítése. |
 | 6 | Együttműködés és megvalósítás | Egy fejlesztővel vagy mentorral átnézett folyamat, dokumentált kompromisszumok és lehetőleg egy működő részlet. |
 
-Minden fontos készséghez válassz egy konkrét projektpéldát: milyen döntést hoztál, mire alapoztad, kivel dolgoztál együtt, és mit módosítottál a visszajelzések után.
+Minden fontos készséghez választok egy konkrét projektpéldát: milyen döntést hoztam, mire alapoztam, kivel dolgoztam együtt, és mit módosítottam a visszajelzések után.
 
 ### Kutatás és tesztelés
 
@@ -94,7 +94,7 @@ A résztvevőket a vizsgált probléma alapján érdemes kiválasztani. A Budget
 
 Egy első, kicsi minőségi tesztkör indulhat például 4–6 releváns résztvevővel. Ez javasolt gyakorlási lépték, nem reprezentatív kutatás vagy általánosan elegendő mintanagyság. Eltérő célcsoportokhoz és új kérdésekhez további vizsgálat kellhet.
 
-A feladat a használati célt írja le. Például: „Rögzítsd a tegnapi közös bevásárlást, majd javítsd az összeget.” A feladat szövegében ne szerepeljen előre a megtalálandó gomb neve. A jegyzet különítse el a megfigyelt viselkedést, a résztvevő véleményét és Niki értelmezését. A módosított tervet újra érdemes kipróbálni, lehetőség szerint olyanokkal is, akik nem ismerik az előző változatot.
+A feladat a használati célt írja le. Például: „Rögzítsd a tegnapi közös bevásárlást, majd javítsd az összeget.” A feladat szövegében ne szerepeljen előre a megtalálandó gomb neve. A jegyzetben elkülönítem a megfigyelt viselkedést, a résztvevő véleményét és a saját értelmezésemet. A módosított tervet újra érdemes kipróbálnom, lehetőség szerint olyanokkal is, akik nem ismerik az előző változatot.
 
 ### UI és akadálymentesség
 
@@ -112,9 +112,9 @@ Egy később működő terméknél vizsgálható a használat, a feladat megszak
 
 A frontend-tudás fő szerepe most a megvalósíthatóság megértése és a prototípusok kipróbálhatósága. Egy kicsi, értelmezett megvalósítás értékes gyakorlat lehet. A teljes backend-fejlesztés vagy új keretrendszerek hosszú sora alacsonyabb prioritású a kutatásnál, a UI-nál és az együttműködésnél.
 
-**Jelenlegi tapasztalat:** Niki eddig kizárólag a portfólióoldal elkészítéséhez használt AI-t. A meglévő tervezési esettanulmányokhoz nem kapcsolódik elvégzett AI-használat; az alábbi prototípusos gyakorlat jövőbeli tanulási feladat.
+**Jelenlegi tapasztalatom:** eddig kizárólag a portfólióoldal elkészítéséhez használtam AI-t. A meglévő tervezési esettanulmányaimhoz nem kapcsolódik elvégzett AI-használat; az alábbi prototípusos gyakorlat jövőbeli tanulási feladatom.
 
-Az AI használata kiegészítő erősségként jelenjen meg, konkrét munkával alátámasztva. Azt érdemes bizonyítani, hogy Niki értelmes feladatot ad az eszköznek, mérlegeli a javaslatokat, felismeri a hibákat és ellenőrzi a megoldást. A Product Designer felkészülésben továbbra is a problémamegértés, a tervezési döntések és a használatból származó visszajelzés kapjon elsőbbséget.
+Az AI használatát kiegészítő erősségként mutatom be, konkrét munkával alátámasztva. Azt érdemes bizonyítanom, hogy értelmes feladatot adok az eszköznek, mérlegelem a javaslatokat, felismerem a hibákat és ellenőrzöm a megoldást. A Product Designer felkészülésemben továbbra is a problémamegértés, a tervezési döntések és a használatból származó visszajelzés kapjon elsőbbséget.
 
 Az AI-tudás értékét jelzi például a Wise Staff Product Designer szerepleírása, amely napi, mérlegelő AI-használatot vár el. Ez tapasztalt tervezői szerep, nem általános junior belépési követelmény. A Figma 2027-es Early Career Product Designer hirdetése a vizuális és interakciós alapokat, a megvalósított munkát és a prototípuskészítést hangsúlyozza, külön AI-követelmény nélkül. A két példa alapján érdemes a használható AI-tapasztalatot bemutatni, de a junior alapokkal együtt. [Wise](https://wise.jobs/job/staff-product-designer-wise-business-in-london-jid-4222), [Figma](https://job-boards.greenhouse.io/figma/jobs/6180053004?gh_jid=6180053004)
 
@@ -155,7 +155,7 @@ A legerősebb kiindulópont a tartalomtípusok megkülönböztetése. Egy konkr�
 
 ### Gaddr mint csapatban szerzett tapasztalat
 
-A három hónapos gyakorlat kapjon konkrétabb szerepet. Egy rövid példa is értékes lehet: melyik komponens vagy stílus volt következetlen, mit változtatott Niki, kivel egyeztetett, és mi alapján fogadták el a módosítást.
+A három hónapos gyakorlatom kapjon konkrétabb szerepet. Egy rövid példa is értékes lehet: melyik komponens vagy stílus volt következetlen, mit változtattam, kivel egyeztettem, és mi alapján fogadták el a módosításomat.
 
 Bemutatható anyag esetén egy rövid szakmai esettanulmány készülhet. Ha a képek nem használhatók nyilvánosan, a saját feladat és együttműködés tényszerű leírása is hasznos. A teljes céges design system kialakítását nem szabad saját eredményként feltüntetni, ha a feladat annak egy részére terjedt ki.
 
@@ -167,10 +167,10 @@ A Portfolio Website a megvalósítás és a design–fejlesztés együttműköd�
 
 Az AI szerepe ebben a projektben már most megemlíthető, például **„AI-assisted website development”** megjelöléssel. A rövid projektleírásban négy dolgot érdemes tisztázni:
 
-1. **Niki saját munkája:** melyik célt, tartalmi struktúrát, felületet vagy működést határozta meg személyesen? Csak a ténylegesen végzett feladatokat sorolja fel.
-2. **Az AI és a segítők hozzájárulása:** melyik eszköz miben segített, és mit végzett mentor vagy fejlesztő? Kódgenerálás, hibakeresés vagy szövegezés csak akkor szerepeljen, ha valóban történt. Az is legyen pontos, hogy Niki vagy a segítő dolgozott közvetlenül az AI-val.
-3. **Egy konkrét saját döntés:** mit fogadott el, módosított vagy vetett el a javaslatokból, és miért? Egy valódi előtte–utána példa és rövid indok jól bemutathatja ezt.
-4. **Ellenőrzött eredmény:** mit próbált ki, mit talált, és mit javított? A más által végzett ellenőrzést annak megfelelően kell megnevezni; a 7. fejezet előzetes megállapításai még nem jelentenek Niki által elvégzett javítást vagy teljes auditot.
+1. **Saját munkám:** melyik célt, tartalmi struktúrát, felületet vagy működést határoztam meg személyesen? Csak a ténylegesen végzett feladataimat sorolom fel.
+2. **Az AI és a segítőim hozzájárulása:** melyik eszköz miben segített, és mit végzett mentor vagy fejlesztő? Kódgenerálás, hibakeresés vagy szövegezés csak akkor szerepeljen, ha valóban történt. Az is legyen pontos, hogy én dolgoztam-e közvetlenül az AI-val, vagy a segítőm.
+3. **Egy konkrét saját döntésem:** mit fogadtam el, módosítottam vagy vetettem el a javaslatokból, és miért? Egy valódi előtte–utána példa és rövid indok jól bemutathatja ezt.
+4. **Ellenőrzött eredmény:** mit próbáltam ki, mit találtam, és mit javítottam? A más által végzett ellenőrzést annak megfelelően nevezem meg; a 7. fejezet előzetes megállapításai még nem jelentenek általam elvégzett javítást vagy teljes auditot.
 
 Az alábbi angol minta kitöltendő vázlat; csak igazolható saját feladatokkal és ténylegesen elvégzett ellenőrzéssel használható:
 
@@ -223,23 +223,23 @@ Ha ehhez a témához nem érhetők el megfelelő résztvevők, az eredeti önkis
 
 Megvalósítható a kiadás hozzáadása és szerkesztése egy szűk bemutatóban. Ez egyben a javasolt első **AI-val támogatott prototípuskészítési gyakorlat**, amely a 4. fejezetben kijelölt fejlesztést viszi tovább. Még elvégzendő feladat: az eredeti kurzusmunkát megőrizve, külön dátumú továbbfejlesztésként kell majd bemutatni.
 
-Niki feleljen a problémáért, a folyamatért, a tervért és annak ellenőrzéséért. Az AI segíthet a működő prototípus megépítésében; fejlesztő vagy mentor bevonásával a megvalósíthatóság és a bizonytalan technikai részletek is átbeszélhetők. A segítség pontos szerepét végig rögzíteni kell.
+A problémáért, a folyamatért, a tervért és annak ellenőrzéséért én felelek majd. Az AI segíthet a működő prototípus megépítésében; fejlesztő vagy mentor bevonásával a megvalósíthatóságot és a bizonytalan technikai részleteket is átbeszélhetem. A segítség pontos szerepét végig rögzítenem kell.
 
 **Gyakorlati feladat: közös kiadás hozzáadása, majd az összeg javítása.** Kitalált háztartási adatokkal, böngészőben működő bemutató elegendő. A lépések:
 
 1. **Rövid feladatleírás:** célcsoport, használati helyzet és sikerkritérium. Például a résztvevő rögzít egy bevásárlást, majd segítség nélkül kijavítja az összeget és felismeri a módosított végösszeget.
-2. **Saját tervezési alap:** a folyamat, két lehetséges elrendezés és a választás indoka. Az AI-tól kérhet további alternatívát vagy kritikát, de a döntési szempontokat és a végső választást Niki fogalmazza meg.
-3. **AI-val támogatott megvalósítás:** a választott tervből kis lépésekben készítsen prototípust. Minden lépésnél írja le az elvárt viselkedést, próbálja ki a kapott megoldást, és konkrét hibák vagy hiányok alapján kérjen módosítást. Őrizzen meg néhány tanulságos utasítást, eredményt és saját döntést.
+2. **Saját tervezési alap:** a folyamat, két lehetséges elrendezés és a választás indoka. Az AI-tól kérhetek további alternatívát vagy kritikát, de a döntési szempontokat és a végső választást én fogalmazom majd meg.
+3. **AI-val támogatott megvalósítás:** a választott tervből kis lépésekben készítek majd prototípust. Minden lépésnél leírom az elvárt viselkedést, kipróbálom a kapott megoldást, és konkrét hibák vagy hiányok alapján kérek módosítást. Megőrzök néhány tanulságos utasítást, eredményt és saját döntést.
 4. **Végigjárható állapotok:** összegbevitel, kategóriaválasztás, hiányos vagy hibás adat jelzése, mentési visszajelzés, megjelenő tétel, szerkesztés és frissülő összesítés. A hibajelzés után maradjanak meg a már megadott adatok; a szerkesztés a meglévő tételt módosítsa. Az esetleges szimulált mentési hibát a bemutatóban is szimulációként kell megnevezni.
-5. **Technikai végigpróbálás:** üres és hibás bevitel, sikeres mentés, összegmódosítás és helyes összesítés; mobil- és asztali használat, billentyűzetes elérés, címkék és fókusz. Niki tudja elmagyarázni a működést és a korlátokat; szükség esetén kérjen fejlesztői segítséget. Ez a kör még nem felhasználói teszt és nem teljes akadálymentességi audit.
-6. **Valódi résztvevős teszt és javítás:** a működő folyamatot a 3. fejezet szerint releváns emberekkel próbálja ki. Jegyezze fel az elakadásokat és a szükséges segítséget, módosítsa a tervet, majd ellenőrizze újra. Az AI véleménye nem számít résztvevői visszajelzésnek.
-7. **Rövid esettanulmány-kiegészítés:** eredeti és módosított folyamat, saját és AI-val támogatott feladatok, két-három valós döntés, tényleges tesztmegfigyelések és az eredmény korlátai. Javulást csak a megfigyelések alapján állítson.
+5. **Technikai végigpróbálás:** üres és hibás bevitel, sikeres mentés, összegmódosítás és helyes összesítés; mobil- és asztali használat, billentyűzetes elérés, címkék és fókusz. El kell tudnom magyarázni a működést és a korlátokat; szükség esetén fejlesztői segítséget kérek. Ez a kör még nem felhasználói teszt és nem teljes akadálymentességi audit.
+6. **Valódi résztvevős teszt és javítás:** a működő folyamatot a 3. fejezet szerint releváns emberekkel próbálom majd ki. Feljegyzem az elakadásokat és a szükséges segítséget, módosítom a tervet, majd újra ellenőrzöm. Az AI véleménye nem számít résztvevői visszajelzésnek.
+7. **Rövid esettanulmány-kiegészítés:** eredeti és módosított folyamat, saját és AI-val támogatott feladatok, két-három valós döntés, tényleges tesztmegfigyelések és az eredmény korlátai. Javulást csak a megfigyelések alapján állítok majd.
 
-**A gyakorlat akkor érte el a célját**, ha a kijelölt feladat végigjárható, Niki önállóan meg tudja indokolni a megoldást, be tud mutatni egy AI-javaslatról hozott saját döntést, és a valódi használatból származó tanulságot is rögzítette. Az elkészült anyag után már konkrét bizonyítékkal beszélhet AI-val támogatott prototípuskészítési tapasztalatról.
+**A gyakorlat akkor érte el a célját**, ha a kijelölt feladat végigjárható, önállóan meg tudom indokolni a megoldást, be tudok mutatni egy AI-javaslatról hozott saját döntést, és a valódi használatból származó tanulságot is rögzítettem. Az elkészült anyag után már konkrét bizonyítékkal beszélhetek AI-val támogatott prototípuskészítési tapasztalatról.
 
 ### Harmadik lehetőség egy belső együttműködés
 
-Ha a munkahelyén nyílik rá lehetőség, érdemes érdeklődni egy termékcsapat munkájának megismerése, kutatási megfigyelés vagy kisebb tervezési feladat iránt. Az ügyfélszolgálat és a termékcsapat közötti tudásátadás is jó kiindulópont lehet. Ez jelenleg lehetőségkeresési ötlet, nem meglévő belső pozíció vagy feladat.
+Ha a munkahelyemen nyílik rá lehetőség, érdemes érdeklődnöm egy termékcsapat munkájának megismerése, kutatási megfigyelés vagy kisebb tervezési feladat iránt. Az ügyfélszolgálat és a termékcsapat közötti tudásátadás is jó kiindulópont lehet. Ez jelenleg lehetőségkeresési ötletem, nem meglévő belső pozíció vagy feladat.
 
 **Elkészültnek akkor tekinthető az új projekt**, ha a probléma, a saját szerep, az alternatívák, a teszt, a változtatások és a tényleges végállapot egyaránt bemutathatók. A megépített funkció mennyisége önmagában nem döntő.
 
@@ -250,15 +250,15 @@ A fő projekt néhány perc alatt áttekinthető legyen, a részletek pedig seg�
 Javasolt szerkezet:
 
 1. **Rövid áttekintés:** felhasználó, probléma, feladat, saját szerep, együttműködők és tényleges végállapot.
-2. **Kiinduló helyzet:** mit tudtunk a problémáról, és mi volt még feltételezés?
+2. **Kiinduló helyzet:** mit tudtam a problémáról, és mi volt még feltételezés?
 3. **Korlátok és cél:** rendelkezésre álló idő, hozzáférés, megvalósítási feltételek és a vállalt feladathatár.
 4. **Kutatás:** módszer, résztvevők, feladatok, lényeges megfigyelések és azok határai.
 5. **Alternatívák:** két vagy három érdemi megoldás és az összehasonlítás szempontjai.
-6. **Választás:** miért ezt az irányt vitte tovább, milyen kompromisszumot vállalt?
+6. **Választás:** miért ezt az irányt vittem tovább, milyen kompromisszumot vállaltam?
 7. **Terv és használat:** olvasható képernyők, folyamatok, fontos állapotok és működő prototípus.
-8. **Teszt és módosítás:** mit figyelt meg, mi változott, és hogyan ellenőrizte a változtatást?
+8. **Teszt és módosítás:** mit figyeltem meg, mi változott, és hogyan ellenőriztem a változtatást?
 9. **Eredmény:** mi készült el, mi mérhető, és mi lenne még csak várt hatás?
-10. **Reflexió:** mit csinálna másként, és milyen új kérdés lett fontos?
+10. **Reflexió:** mit csinálnék másként, és milyen új kérdés lett fontos?
 
 Hasznos döntési jegyzet a munka közben:
 
@@ -268,22 +268,22 @@ Hasznos döntési jegyzet a munka közben:
 
 A képek a hozzájuk kapcsolódó döntés közelében jelenjenek meg. Egy olvasható előtte–utána pár rövid magyarázattal többet bizonyíthat, mint egy sokképernyős, apróra kicsinyített összkép. A folyamatábrák és personák akkor kerüljenek be, ha érthető, hogyan befolyásolták a munkát.
 
-A szöveg Niki saját beszámolója legyen. A „The case study does not document…” típusú mondatokat érdemes tényszerű első személyű leírásra cserélni: mit végzett el, milyen korláttal, és mi következik belőle. A saját szerepbe bele kell foglalni a mentori, fejlesztői és eszközöktől kapott segítséget is.
+A szöveg a saját beszámolóm legyen. A „The case study does not document…” típusú mondatokat tényszerű első személyű leírásra cserélem: mit végeztem el, milyen korláttal, és mi következik belőle. A saját szerepem bemutatásába belefoglalom a mentori, fejlesztői és eszközöktől kapott segítséget is.
 
 ### Az AI bemutatása a későbbi esettanulmányokban
 
-A meglévő esettanulmányokat nem kell utólag AI-val végzett munkának átírni. Ha Niki a továbbfejlesztés során használ AI-t, az új szakasz dátuma és feladata legyen elkülöníthető az eredeti munkától. A projekt áttekintésében röviden nevezze meg az eszközt, a támogatott feladatot és a saját felelősségét; a döntéseknél mutasson egy-két konkrét példát.
+A meglévő esettanulmányaimat nem kell utólag AI-val végzett munkának átírnom. Ha a továbbfejlesztés során használok AI-t, az új szakasz dátumát és feladatát elkülönítem az eredeti munkától. A projekt áttekintésében röviden megnevezem majd az eszközt, a támogatott feladatot és a saját felelősségemet; a döntéseknél mutatok egy-két konkrét példát.
 
 Lehetséges jövőbeli alkalmazások és a hozzájuk tartozó saját munka:
 
-| AI-val támogatott feladat | Mit kell Nikinek eldöntenie vagy ellenőriznie? |
+| AI-val támogatott feladat | Mit kell eldöntenem vagy ellenőriznem? |
 | --- | --- |
 | Folyamat- vagy felületi alternatívák keresése | Melyik illik a felhasználói problémához és a korlátokhoz, milyen kompromisszum árán? |
 | Feliratok és hibaüzenetek változatai | Pontosak, érthetők és a tényleges működéshez illeszkednek-e; mit mutat a kipróbálás? |
 | Működő prototípus készítése | Követi-e a tervezett folyamatot, kezeli-e a szükséges állapotokat, és alkalmas-e a kijelölt tesztfeladatra? |
 | Valódi kutatási jegyzetek rendezése | Visszakereshető-e minden következtetés az eredeti megfigyelésben, és megmaradtak-e az eltérő vélemények? Csak megosztható, személyes és céges belső adatot nem tartalmazó anyag használható. |
 
-Használható bemutatási sorrend: **feladat → az AI segítsége → Niki döntése és indoka → ellenőrzés → eredmény vagy nyitott kérdés**. A nyers beszélgetés helyett a munkát érdemben befolyásoló részletet és a kapcsolódó képernyőt érdemes megmutatni.
+Használható bemutatási sorrend: **feladat → az AI segítsége → saját döntésem és annak indoka → ellenőrzés → eredmény vagy nyitott kérdés**. A nyers beszélgetés helyett a munkát érdemben befolyásoló részletet és a kapcsolódó képernyőt érdemes megmutatnom.
 
 Generált persona, interjúidézet vagy felhasználói vélemény nem helyettesít kutatást, és nem szerepelhet valódi résztvevőtől származó adatként. Az AI kritikája ötletet adhat az ellenőrzéshez; önmagában nem igazolja a használhatóságot vagy az akadálymentességet. Megtakarított időt vagy más javulást is csak tényleges összehasonlítás alapján érdemes számszerűsíteni.
 
@@ -372,19 +372,21 @@ Elsőként a Budgeting kijelölt kiadásrögzítési feladatát és a Surfboard 
 
 ## 8 Pontosítandó tények és állítások
 
-A részletes szöveg és a régi vizuális esettanulmányok egyesítése előtt Niki saját emlékei, jegyzetei és eredeti anyagai alapján kell tisztázni az eltéréseket.
+A részletes szöveg és a régi vizuális esettanulmányok egyesítése előtt a saját emlékeim, jegyzeteim és eredeti anyagaim alapján kell tisztáznom az eltéréseket.
 
 | Téma | Tisztázandó kérdés |
 | --- | --- |
-| Budgeting tesztelés | Niki visszaemlékezése szerint körülbelül 4–5 ember vett részt, és körülbelül két tesztkör történt, ugyanazokkal a résztvevőkkel. A második körben már jónak találták a megoldást. Az eredmény értelmezésénél figyelembe kell venni, hogy ekkor már ismerték a prototípust; az esetleges tanulási hatás nem különíthető el a módosítások hatásától. |
-| Budgeting módszer | A résztvevők Niki barátai voltak. Egymással nem kezelték közösen a kiadásaikat, de volt köztük olyan, aki az élettársával közösen kezeli azokat. Niki jelen volt, és azonnal kapott visszajelzést; ez nem moderálatlan teszt volt. Még tisztázandó, milyen feladatokat kaptak, és mi maradt meg a visszajelzésekből. |
-| Budgeting visszajelzés és módosítás | Niki beszámolója szerint az első körben az „Add expense” nehezen volt megtalálható, ezért a kezdőképernyőre helyezte. A képernyők közötti navigáció sem volt elég egyértelmű: a vissza gomb nem minden oldalon ugyanott jelent meg, néhol pedig hiányzott, például egy olyan fülön, ahol az eszköztár ikonjaival is lehetett navigálni. Ez nem minden résztvevőnek volt logikus, ezért Niki egységesítette a vissza gomb elhelyezését és jelenlétét az érintett képernyőkön. |
+| Budgeting tesztelés | Visszaemlékezésem szerint körülbelül 4–5 ember vett részt, és körülbelül két tesztkört tartottam, ugyanazokkal a résztvevőkkel. A második körben már jónak találták a megoldást. Az eredmény értelmezésénél figyelembe kell vennem, hogy ekkor már ismerték a prototípust; az esetleges tanulási hatás nem különíthető el a módosítások hatásától. |
+| Budgeting módszer | A résztvevők a barátaim voltak. Egymással nem kezelték közösen a kiadásaikat, de volt köztük olyan, aki az élettársával közösen kezeli azokat. Konkrét feladatokat adtam nekik: kiadás hozzáadását és új megtakarítási („savings”) kategória létrehozását. Jelen voltam, és azonnal kaptam visszajelzést; ez nem moderálatlan teszt volt. A megosztott képeimen látható az eredeti és a továbbfejlesztett lo-fi verzió, valamint egy kérdéseket és visszajelzéseket tartalmazó jegyzet. A jegyzet említi a kiadásrögzítés túl sok lépését, javasolja a kezdőképernyős elérést és a vissza gombok következetes használatát. A második tesztkör pozitív visszajelzése egyelőre a visszaemlékezésemen alapul. |
+| Budgeting visszajelzés és módosítás | Az első körben az „Add expense” nehezen volt megtalálható, ezért a kezdőképernyőre helyeztem. A képernyők közötti navigáció sem volt elég egyértelmű: a vissza gomb nem minden oldalon ugyanott jelent meg, néhol pedig hiányzott, például egy olyan fülön, ahol az eszköztár ikonjaival is lehetett navigálni. Ez nem minden résztvevőnek volt logikus, ezért egységesítettem a vissza gomb elhelyezését és jelenlétét az érintett képernyőkön. |
+| Budgeting képi bizonyíték | A két megosztott lo-fi képernyősor összevetése igazolja a kezdőképernyős „Add expense” gomb hozzáadását, a „Pocket” mező megjelenését a kiadásűrlapon és a belső képernyők bal alsó vissza gombjainak egységesítését. Az esettanulmányba bekerült két előtte–utána összehasonlítás angol képaláírásokkal: kezdőképernyő és kiadásűrlap; Month és Savings navigáció. Az oldal az eredeti exportokból veszteségmentesen kivágott képernyőket mutatja négyoszlopos Markdown-táblázatokban, mobilon két-két képre tördelve, a hozzájuk tartozó feliratokkal; a képfájlok külön szerkeszthetők, a leírás nem igényel HTML-t vagy CSS-alapú képkivágást. A teljes eredeti és javított képernyősor fájljai megmaradnak; az esettanulmányban csak a kiválasztott részletek jelennek meg. |
 | Kutatási personák | Mely adatokból készültek, és mely részletek voltak szemléltető feltételezések? |
-| Pinterest kutatás | Az újabb szöveg körülbelül 25 résztvevőt említett. Mi volt a tényleges létszám, toborzás és kérdéssor? |
-| Pinterest következtetések | Mi támasztotta alá a címkézés módosítását és a chat eltávolítását? Mi volt személyes preferencia? |
-| Gaddr | Mely konkrét feladatok, időpontok és együttműködések mutathatók be? Mi volt Niki önálló hozzájárulása? |
-| Portfolio Website | Mit tervezett és valósított meg Niki, miben segített mentor, fejlesztő vagy AI eszköz? |
-| Tanulmányok | Az építészeti képzésnél tanulmányok vagy megszerzett végzettség szerepeljen? Mely tanúsítványok lezártak, melyek folyamatban lévők? |
+| Pinterest kutatás | A Google Formson készített kérdőívemet 20 ember töltötte ki. A kérdőívet az akkori munkahelyem erre szolgáló közös csoportjában osztottam meg. A válaszokról akkor mind mapet készítettem, amelyre visszaemlékezésem szerint pontosan kiírtam a válaszokat. Úgy emlékszem, az eredeti kérdőív és válaszok megvannak, de a helyüket még meg kell keresnem. A korábbi, körülbelül 25 résztvevőre utaló szöveget ennek megfelelően kell javítanom. A mind map és lehetőség szerint az eredeti anyag áttekintésével még tisztáznom kell a kérdéssort, a válaszadók Pinterest-használatát és a válaszokból levont következtetéseimet. |
+| Pinterest következtetések | Visszaemlékezésem szerint a válaszokban leggyakrabban az AI-képek, valamint a reklámokra és weboldalakra vezető linkek okozta problémák merültek fel. Második leggyakoribb témaként a chat funkció feleslegessége jelent meg. A tervemben minden link és AI-kép külön jelölést kapott, hogy azonnal megkülönböztethetők legyenek a hagyományos, emberek által feltöltött képektől. A beépített chatet eltávolítottam, majd egy kérdőívkitöltő javaslatára a beállításokban fiókösszekapcsolási („account linking”) lehetőséget terveztem: a hasonló érdeklődésű felhasználók külső szolgáltatáson keresztül beszélgethetnének. Ez tervezett működés, nem igazoltan megvalósított integráció. A válaszokat rögzítő mind mapem megvan Figmában; ebből még ellenőriznem kell a pontos megfogalmazásokat és említési gyakoriságokat. |
+| Pinterest tesztelés | Az áttervezett felület elkészítése után nem végeztem külön tesztet. A módosításokat a kérdőíves visszajelzésekre épülő tervezési döntéseimként mutathatom be; érthetőségük és használhatóságuk javulását utólagos teszt nem igazolta. |
+| Gaddr | Egy meglévő, nagy design system komponenseinek egységesítésén dolgoztam másokkal együtt. A feladatom a színek, formák és betűtípusok frissítése volt úgy, hogy a komponensek közvetlenül megadott értékek helyett a megfelelő központi, alapértelmezett elemekre hivatkozzanak. Főleg a keresőfülhöz tartozó komponenseken, valamint a profil linkjeit és egyéb elemeit tartalmazó komponensen dolgoztam. A munkámat a fő designer nézte át. Titoktartási kötelezettség miatt nem mutathatok be képernyőképeket vagy Figma-anyagot; a portfóliómban a megosztható szöveges feladatleírásra, a saját hozzájárulásomra és az együttműködésre kell építenem. |
+| Portfolio Website | A vizuális megjelenést önállóan találtam ki. A kód első verzióját a mentorom készítette; ettől kezdve közvetlenül AI-val dolgoztam tovább az oldalon, ChatGPT-t és Copilotot használva. A kódolás nagyobb részét AI-ra bíztam; kézzel például képeket szúrtam be és tartalmat szerkesztettem. A szövegeket is AI segítségével írtam, hogy a saját gondolataimat érthetőbben adjam át. Az ellenőrzéshez localhoston megnyitottam az oldalt, és AI által készített unit teszteket futtattam. A tesztek vizsgálati körét és eredményét még pontosítanom kell. |
+| Tanulmányok | A bemutatkozásomban és a CV-mben „építészeti tanulmányok” megfogalmazást használok, a képzés lezárásának külön hangsúlyozása nélkül. Befejezett képzéseim: Udemy – Figma Basics; Coursera – Google UI/UX. Folyamatban lévő képzéseim: Coursera – Meta Full Stack; Coursera – Figma Advanced. A képzésnevek egyelőre a saját megnevezéseim; a végleges CV-mhez a hivatalos címeket a képzési felületen vagy a tanúsítványokon kell ellenőriznem. |
 | Technikai állítások | A végleges verzióban ténylegesen jelen van-e minden bemutatott funkció és ellenőrzés? |
 
 Ismeretlen adat helyére ne kerüljön becsült tény. Ha egy korábbi részlet nem állapítható meg, szűkebb állítás vagy egy új, megfelelően dokumentált vizsgálat használható. A később elvégzett új munka dátuma és szerepe különüljön el az eredeti kurzusprojekttől.
@@ -408,21 +410,34 @@ Az állások feltérképezése és a meglévő anyaggal vállalható jelentkezé
 
 ### Az első három munkalépés
 
-1. Niki válaszolja meg a 8. fejezet ténykérdéseit, és válassza ki a főként megcélzott szerepeket.
+1. Megválaszolom a 8. fejezet ténykérdéseit, és kiválasztom a főként megcélzott szerepeket.
 2. A Budgeting Apphoz készüljön egyoldalas probléma- és feladatleírás, valamint lista a rendelkezésre álló bizonyítékokról.
 3. Legyen kijelölve egy szakmai visszajelzést adó személy és az első új teszt megszervezésének módja.
 
 A weboldal további látványbeli finomítása ezekhez képest másodlagos. Egy új színpaletta vagy újabb animáció akkor kapjon időt, ha konkrét olvasási vagy használati problémát old meg.
 
+### Jelenlegi időkeret és az első hét
+
+Jelenleg körülbelül heti 10 órát tudok a portfóliómra és az álláskeresésre fordítani. Az alábbi beosztás javaslat; az időigények becslések, a rendelkezésre álló anyagok áttekintése után pontosíthatók.
+
+| Feladat | Tervezett idő | Kézzelfogható eredmény |
+| --- | --- | --- |
+| Budgeting: eredeti és továbbfejlesztett lo-fi anyag összevetése | 2 óra | Válogatott előtte–utána képek az „Add expense” és a vissza gomb változásáról |
+| Budgeting: a meglévő tesztelés és döntések leírása | 3 óra | Rövid esettanulmány-szöveg a 8. fejezetben pontosított tények alapján |
+| Pinterest: a Figmában meglévő mind map áttekintése | 2 óra | A fő visszajelzések és a hozzájuk kapcsolódó tervezési döntések kigyűjtése |
+| Bemutatkozás, Gaddr és Portfolio Website rövid leírásának pontosítása | 1 óra | Saját szerepet és kapott segítséget egyértelműen bemutató szövegjavaslatok |
+| Álláskeresés | 1 óra | Célhoz illő lehetőségek áttekintése, megfelelő pályázat esetén jelentkezés |
+| Tartalék és heti áttekintés | 1 óra | Nyitott kérdések rendezése és a következő hét három fő feladata |
+
 ### A haladás követése
 
-Hetente röviden rögzíthető: mi készült el, mit tanult Niki, milyen döntés változott, és mi a következő feladat. Jó haladási jel a bemutatható döntés, teszt, javítás, együttműködés vagy interjútapasztalat. Az elvégzett tananyag mennyisége önmagában kevés visszajelzést ad a gyakorlati felkészültségről.
+Hetente röviden rögzítem: mi készült el, mit tanultam, milyen döntésem változott, és mi a következő feladatom. Jó haladási jel a bemutatható döntés, teszt, javítás, együttműködés vagy interjútapasztalat. Az elvégzett tananyag mennyisége önmagában kevés visszajelzést ad a gyakorlati felkészültségről.
 
 ## 10 Álláskeresés és interjúfelkészülés
 
 ### A szakmai bemutatkozás
 
-A célpozícióként megnevezhető a Junior Product Designer. A korábbi munkaköröket és a projektek kurzusjellegét pontosan kell feltüntetni.
+A célpozíciómként megnevezhetem a Junior Product Designert. A korábbi munkaköreimet és a projektjeim kurzusjellegét pontosan kell feltüntetnem.
 
 Lehetséges angol nyitómondat, személyes átnézésre:
 
@@ -436,11 +451,11 @@ Az AI-tapasztalat jelenleg a Portfolio Website projekthez kapcsolva, „AI-assis
 
 Jelentkezéskor és interjún hasznos kérdések:
 
-- Ki ad szakmai visszajelzést a junior designernek, és milyen rendszerességgel?
-- Milyen feladatot kapna az első néhány hónapban?
-- Hogyan kapcsolódik be a kutatásba és a felhasználói visszajelzések értékelésébe?
+- Ki adna nekem szakmai visszajelzést junior designerként, és milyen rendszerességgel?
+- Milyen feladatot kapnék az első néhány hónapban?
+- Hogyan kapcsolódhatnék be a kutatásba és a felhasználói visszajelzések értékelésébe?
 - Hogyan dolgozik együtt a design, a termékmenedzsment és a fejlesztés?
-- Lesz lehetősége látni, hogyan működik a terve a megvalósítás után?
+- Lesz lehetőségem látni, hogyan működik a tervem a megvalósítás után?
 
 A diploma, a helyszín, a nyelv és a gyakornoki hallgatói jogviszony követelményeit minden hirdetésnél külön ellenőrizni kell. A távoli munkavégzés országkorlátozást is jelenthet. Az itt hivatkozott szerepleírásokból nem következik, hogy minden junior állás azonos belépési feltételekkel rendelkezik.
 
@@ -450,13 +465,13 @@ Készüljön egy 2–3 perces rövid és egy körülbelül 10 perces részletes 
 
 Gyakorlókérdések:
 
-1. Mi volt a probléma, és miből tudtad, hogy érdemes foglalkozni vele?
-2. Mit csináltál személyesen, és kikkel dolgoztál együtt?
-3. Milyen más megoldást vizsgáltál, és miért vetetted el?
-4. Melyik visszajelzés változtatta meg leginkább a tervedet?
+1. Mi volt a probléma, és miből tudtam, hogy érdemes foglalkozni vele?
+2. Mit csináltam személyesen, és kikkel dolgoztam együtt?
+3. Milyen más megoldást vizsgáltam, és miért vetettem el?
+4. Melyik visszajelzés változtatta meg leginkább a tervemet?
 5. Mi volt nehéz a megvalósíthatóságban vagy a feladathatár kijelölésében?
-6. Mit tudsz bizonyítani az eredményből, és mi maradt feltételezés?
-7. Mit tennél másként, ha újrakezdenéd?
+6. Mit tudok bizonyítani az eredményből, és mi maradt feltételezés?
+7. Mit tennék másként, ha újrakezdeném?
 
 Egy mentorral vagy designerrel végzett próbainterjú különösen hasznos lehet. Érdemes azt kérni, hogy a döntések érthetőségét, a UI részleteit és a bizonyítékok erejét is értékelje.
 
@@ -472,19 +487,19 @@ Az első állásban a fejlődés folytatódik: kezdetben a termék és a csapat 
 
 A lista a rendezett pályázati csomag célállapotát írja le. A tények pontossága, a saját szerep érthetősége és a munkák hozzáférhetősége elsődleges. Az új borító és a képnézegető további finomítása nem indokolja egy egyébként megfelelő jelentkezés elhalasztását.
 
-- [ ] A célpozíció és a saját szakmai történet egyértelmű.
+- [ ] A célpozícióm és a saját szakmai történetem egyértelmű.
 - [ ] Legalább egy projektben követhető a probléma, az alternatívák, a döntés, a teszt és a változtatás.
 - [ ] A szerepek, résztvevőszámok, tesztkörök, dátumok és tanulmányi státuszok egyeznek a valósággal.
-- [ ] A saját munka és a kapott segítség elkülöníthető.
+- [ ] A saját munkám és a kapott segítség elkülöníthető.
 - [ ] Az AI-használat leírása csak ténylegesen elvégzett munkára vonatkozik; a saját döntés, az eszköz és a segítők szerepe követhető, a jövőbeli gyakorlat nem szerepel megszerzett tapasztalatként.
 - [ ] A legfontosabb képernyők olvashatók, a szükséges állapotok és műveletek megtervezettek.
 - [ ] A szöveg és a képes esettanulmány nem mond ellent egymásnak.
 - [ ] A Portfolio Website borítója a bemutatott megvalósítást mutatja.
 - [ ] Mobilon és asztali nézetben is ellenőrizve vannak a szövegek, képek, navigáció és nagyítás.
 - [ ] A prototípusok jelentkezéshez megfelelő hozzáféréssel megnyithatók, és a bemutatni kívánt feladatok végigjárhatók.
-- [ ] Az ellenőrzésből kiválasztott javításokat újra kipróbáltuk; az elvégzett és a még hiányzó vizsgálatokat pontosan nevezzük meg.
-- [ ] Az önéletrajz, LinkedIn és portfólió ugyanazokat a lényeges szakmai tényeket tartalmazza.
-- [ ] Niki angolul is be tudja mutatni a fő munkát, és válaszolni tud a döntésekkel kapcsolatos kérdésekre.
+- [ ] Az ellenőrzésből kiválasztott javításokat újra kipróbáltam; az elvégzett és a még hiányzó vizsgálatokat pontosan megnevezem.
+- [ ] Az önéletrajzom, a LinkedIn-profilom és a portfólióm ugyanazokat a lényeges szakmai tényeket tartalmazza.
+- [ ] Angolul is be tudom mutatni a fő munkámat, és válaszolni tudok a döntéseimmel kapcsolatos kérdésekre.
 - [ ] Egy külső olvasó vagy szakmai visszajelző átnézte az anyagot.
 
 ## 12 Források és a folytatáshoz fontos fájlok

@@ -44,13 +44,39 @@ Throughout this process, I focused on creating a clear layout and intuitive user
 
 ## Usability feedback and the expense navigation change
 
-I tested the low-fidelity Figma prototype with the same people I had spoken to during the initial research. Participants were asked to navigate the app, add an expense, and create a savings goal.
+I tested the low-fidelity Figma prototype with around four or five friends over approximately two rounds. I was present during the sessions and received feedback directly. The tasks were to add an expense and create a new savings category. The participants did not manage expenses together, although at least one managed shared expenses with their partner.
 
 The testing revealed two main usability issues. First, adding an expense required too many steps, making an important action harder to find than it should be. Participants suggested making expense entry more accessible directly from the home screen.
 
-The second issue involved navigation between screens. Moving between different sections of the app was not always intuitive, so I refined the navigation by introducing consistent back buttons across the screens.
+The second issue involved navigation between screens. Back buttons appeared in different positions and were missing from some screens. The saved feedback specifically suggested adding them to the Month and Savings screens.
 
-Based on this feedback, I moved the “Add expense” action to the home screen, allowing users to access expense entry more directly. I also standardised the back-button placement and behaviour to make navigation more predictable.
+### What changed in the wireframes
+
+The original and revised low-fidelity screens, together with the saved feedback, document the following changes:
+
+- **Direct expense entry:** I added an “Add expense” button to the home screen. Previously, users had to navigate into the monthly budget before reaching expense entry.
+- **Expense category:** The revised “New Expense” form includes a “Pocket” field, so the category can be specified when starting from the home screen.
+- **Consistent back navigation:** I placed back buttons in the bottom-left corner of the internal screens, including the Month and Savings screens where they had been missing.
+
+#### Expense entry: before and after
+
+| Before — Home | After — Home | Before — New Expense | After — New Expense |
+| --- | --- | --- | --- |
+| ![Original home screen without a direct Add expense button.](/images/projects/budgeting-app/lofi-home-before.png) | ![Revised home screen with a direct Add expense button.](/images/projects/budgeting-app/lofi-home-after.png) | ![Original expense form without a Pocket field.](/images/projects/budgeting-app/lofi-expense-before.png) | ![Revised expense form with a Pocket field for the category.](/images/projects/budgeting-app/lofi-expense-after.png) |
+
+The revised home screen provides direct access to expense entry. The added Pocket field lets users specify the category within the form.
+
+#### Back navigation: before and after
+
+| Before — Month | After — Month | Before — Savings | After — Savings |
+| --- | --- | --- | --- |
+| ![Original Month screen without a back button.](/images/projects/budgeting-app/lofi-month-before.png) | ![Revised Month screen with a back button at the bottom left.](/images/projects/budgeting-app/lofi-month-after.png) | ![Original Savings screen without a back button.](/images/projects/budgeting-app/lofi-savings-before.png) | ![Revised Savings screen with a back button at the bottom left.](/images/projects/budgeting-app/lofi-savings-after.png) |
+
+Both screens now include a back button in the same position as the other internal screens.
+
+### Follow-up and limits
+
+The same participants tried the revised version in the second round. I remember receiving positive feedback, but the retained wireframe screenshots and feedback notes do not document that second round. Because the participants already knew the prototype, familiarity may also have influenced their experience. These materials do not establish a measured improvement in task completion or speed.
 
 These changes informed the next design iteration, where I developed the revised wireframes into high-fidelity screens and an interactive Figma prototype.
 
