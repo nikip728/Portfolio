@@ -59,7 +59,7 @@ test('frontmatter rejects absent delimiters, malformed YAML and duplicate keys',
 
 test('image paths and HTTPS fields reject unsafe or legacy values', () => {
   const project = entries('projects')[0].data;
-  const budgetingImage = '/images/projects/budgeting-app/Budgeting.app_main.png';
+  const budgetingImage = '/images/projects/budgeting-app/budgeting-app-main.png';
   for (const field of ['cover', 'caseStudy']) {
     assert.equal(contentSchemas.projects.safeParse({ ...project, [field]: budgetingImage }).success, true);
   }
@@ -114,6 +114,14 @@ test('repository validator accepts content and rejects duplicate orders and miss
   const duplicate = validateFixture(directory => cpSync(join(directory, 'src/content/projects', `${entries('projects')[0].slug}.md`), join(directory, 'src/content/projects/duplicate-fixture.md')));
   assert.notEqual(duplicate.status, 0);
   assert.match(duplicate.stderr, /duplicate order/i);
+  const duplicateRecency = validateFixture(directory => {
+    const projects = entries('projects');
+    const project = projects[0];
+    const data = { ...project.data, order: Math.max(...projects.map(item => item.data.order)) + 1 };
+    writeFileSync(join(directory, 'src/content/projects/duplicate-fixture.md'), `---\n${Object.entries(data).map(([key, value]) => `${key}: ${JSON.stringify(value)}`).join('\n')}\n---\n${project.body}`);
+  });
+  assert.notEqual(duplicateRecency.status, 0);
+  assert.match(duplicateRecency.stderr, /duplicate recencyOrder/);
   const missing = validateFixture(directory => {
     const project = entries('projects')[0];
     const source = `---\n${Object.entries({ ...project.data, cover: '/images/nonexistent-test-fixture.png' }).map(([key, value]) => `${key}: ${JSON.stringify(value)}`).join('\n')}\n---\n${project.body}`;

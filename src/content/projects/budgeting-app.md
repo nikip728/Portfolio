@@ -1,15 +1,16 @@
 ---
 title: Household Budgeting App — Expenses and Shared Savings
 summary: A simpler way to manage household expenses, stay on top of budgets, and understand everyday spending.
-order: 3
+order: 4
+recencyOrder: 3
 published: true
 tags:
   - Figma
   - UI/UX
   - Case Study
-cover: /images/projects/budgeting-app/Budgeting.app_main.png
+cover: /images/projects/budgeting-app/budgeting-app-main.png
 prototype: https://www.figma.com/proto/v3IHIaiTSpbfXGCKbrcwPT/Google-1?node-id=34-10&p=f&t=eyqMIgViOzbOExZi-0&scaling=scale-down&content-scaling=fixed&page-id=34%3A10&starting-point-node-id=75%3A129
-caseStudy: /images/projects/budgeting-app/Budgeting.app_main.png
+caseStudy: /images/projects/budgeting-app/budgeting-app-main.png
 details:
   role: UX Research & UI Design
   workedWith: Independent course project
@@ -26,9 +27,9 @@ This was a self-directed course project and a design concept, not a launched pro
 
 ## Research and Problem framing
 
-To explore how people manage money together, I started with informal conversations with people I knew, discussing their experiences with household expenses, budgeting, and shared financial goals. I also used online research to explore different financial situations and challenges.
+To explore how people manage money together, I started with informal conversations with people I knew, discussing their experiences with household expenses, budgeting, and shared financial goals. I also browsed online for background information about different financial situations and challenges, but did not retain links or notes from that browsing.
 
-These findings informed two personas representing different user perspectives. Katy, a mother managing household expenses while saving for a home, and Anna, a cashier balancing a limited income with personal travel goals, helped illustrate different financial priorities and saving habits.
+I created two personas based on the informal conversations and what I had read online. Since I did not keep the online sources, I cannot trace individual persona details back to them. Katy, a mother managing household expenses while saving for a home, and Anna, a cashier balancing a limited income with personal travel goals, helped illustrate different financial priorities and saving habits.
 
 This led to the central design challenge: creating an experience that helps people manage different income sources, track shared expenses, and work towards common savings goals. The concept brought these needs together through expense tracking, budgeting, joint accounts, and visual savings progress.
 
@@ -90,7 +91,7 @@ I designed key UI elements such as savings progress bars, monthly spending stati
 
 The final design brought these elements together into a cohesive experience, with a consistent visual language across screens. I connected the main user flows in a Figma prototype, allowing users to explore the budgeting and savings interactions. The prototype is linked at the beginning of this case study.
 
-![A collection of high-fidelity Household Budgeting App screens.](/images/projects/budgeting-app/Budgeting.app_pages.png)
+![A collection of high-fidelity Household Budgeting App screens.](/images/projects/budgeting-app/budgeting-app-pages.png)
 
 ## Reflection and next steps
 

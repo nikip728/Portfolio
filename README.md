@@ -2,7 +2,7 @@
 
 A static Astro portfolio with Markdown content, YAML configuration, and local project images. No database or admin backend is required.
 
-UI/UX design is the portfolio's primary focus; front-end development is a secondary interest.
+Junior UI/UX design is the portfolio's primary focus, with openness to junior Product Designer roles and an interest in front-end development.
 
 - Website: https://nikip728.github.io/Portfolio/
 - Source reference: https://github.com/nikip728/Portfolio
@@ -46,6 +46,8 @@ Markdown files start with YAML metadata between `---` delimiters; the main prose
 
 Ordered collections display the **highest `order` first**. To add a new first item, use the collection's current maximum plus one; existing files do not need renumbering. Values must be unique within each collection, but do not have to be consecutive (10, 20, 30 is valid). Navigation and skills keep their explicit YAML list order. Existing content numbers were migrated once to preserve the previous visible order.
 
+Projects also require a unique positive integer `recencyOrder`, with higher values meaning newer projects. The default **Recommended** view uses `order`; **Latest projects** uses `recencyOrder`. Both controls sit beside the category filters and keep the current filter active. Recency records the owner's stated completion sequence, rather than dates inferred from commits or text edits. For a newly completed project, use the current maximum `recencyOrder` plus one and choose its recommended `order` separately. Planned projects are not published entries until ready. Without JavaScript, projects remain in recommended order.
+
 For example, a new project can start as an unpublished draft:
 
 ```markdown
@@ -53,6 +55,7 @@ For example, a new project can start as an unpublished draft:
 title: New Project
 summary: A short homepage introduction describing the problem and project scope.
 order: 5
+recencyOrder: 5
 published: false
 tags:
   - UI/UX
@@ -96,22 +99,24 @@ Keep section filenames stable: they identify existing homepage sections and do n
 
 ### Local images
 
+Use lowercase, hyphen-separated image filenames and directory names without spaces or accents (for example, `mind-map-1.png`). Keep the original extension and update references when renaming.
+
 Project images live under `public/images/projects/`:
 
-- `budgeting-app/Budgeting.app_main.png` and `budgeting-app/case-study.png`
+- `budgeting-app/budgeting-app-main.png` and `budgeting-app/case-study.png`
 - `pinterest-redesign/cover.png` and `pinterest-redesign/case-study.png`
 - `surfboard-store/cover.png`
-- `portfolio-website/Portfolio.website-main.png` (desktop homepage screenshot); `portfolio-website/cover.svg` is the original interface illustration
+- `portfolio-website/portfolio-website-main.png` (desktop homepage screenshot); `portfolio-website/cover.svg` is the original interface illustration
 
-Reference them directly as `/images/projects/budgeting-app/Budgeting.app_main.png`, for example. Image paths point directly to local files. Do not add `/public` or `/Portfolio` to content image paths; the application handles the deployment base path.
+Reference them directly as `/images/projects/budgeting-app/budgeting-app-main.png`, for example. Image paths point directly to local files. Do not add `/public` or `/Portfolio` to content image paths; the application handles the deployment base path.
 
 ### Project pages and case studies
 
 Each published project has a page at `/projects/<filename-without-extension>/`. Its title, summary, tags, prototype and repository links, Markdown body, and optional case-study image come from the project's Markdown file. Links on the homepage lead to these pages, rather than opening a bare image.
 
-Case-study images render at full width without cropping. **Enlarge case study** opens a keyboard-accessible dialog; **Actual size** toggles the original image dimensions, with scrolling for long or wide images. Close with the **Close** button or Escape; focus returns to the opening link. Without JavaScript, that link opens the local image directly. No third-party viewer service is used.
+Project pages display the written case studies and images included in their Markdown bodies. The supplementary full-poster section and image-viewer dialog have been removed. Existing `caseStudy` metadata is retained, but does not render a supplementary image or viewer.
 
-The written case studies in Markdown describe the brief, decisions, limitations, and next steps. The original image-based studies remain supplementary visuals; image zoom does not replace the written explanation. Avoid inventing participant counts, measured outcomes, or personal contributions when expanding the text.
+The written case studies in Markdown describe the brief, decisions, limitations, and next steps. Selected images support those explanations. The Budgeting App uses Markdown tables for before-and-after comparisons, with four images per row on desktop and two per row on mobile. Avoid inventing participant counts, measured outcomes, or personal contributions when expanding the text.
 
 `portfolio-website.md` presents the portfolio's visual design and front-end implementation, with a local desktop homepage screenshot, design decisions, technical details, and a repository reference. Project order is controlled by its `order` metadata. The early-career introductions, learning reflections, and contact invitation are editorial drafts: review personal goals and the types of opportunities mentioned before publication.
 

@@ -1,7 +1,6 @@
 # yaml-language-server: $schema=./editor-schemas/site.json
 language: en
-description: Papp Niki — UI/UX Designer with a background in architecture studies
-  and customer support, and a secondary interest in frontend development.
+description: Papp Niki — Junior UI/UX Designer, open to junior Product Designer roles and interested in front-end development.
 
 labels:
   skipToContent: Skip to content

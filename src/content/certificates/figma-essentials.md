@@ -4,5 +4,6 @@ issuer: Udemy
 name: Figma UI UX Design Essentials
 order: 1
 published: true
+status: completed
 ---
-Building a foundation in UI/UX design with Figma, focusing on essential tools, layout principles, and visual design. I aim to apply these fundamentals more confidently in my design work.
+I completed an introductory UI/UX design course in Figma, practising wireframing, visual design, reusable components, and responsive layouts through the Surfboard Store project.

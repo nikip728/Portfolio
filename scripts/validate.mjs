@@ -32,6 +32,7 @@ for (const [collection, schema] of Object.entries(contentSchemas)) {
   if (collection === 'profile') assert.deepEqual(files, ['about.md']);
     if (collection === 'sections') assert.deepEqual(files, sectionContentIds.map(id => `${id}.md`).sort(), 'sections: expected exactly one Markdown file for each homepage section');
   const orders = new Set();
+  const recencyOrders = new Set();
   const ids = new Set();
   for (const file of files) {
     assert(/^[a-z0-9]+(?:-[a-z0-9]+)*\.md$/.test(file), `${directory}/${file}: expected a slug-named Markdown file`);
@@ -46,6 +47,10 @@ for (const [collection, schema] of Object.entries(contentSchemas)) {
     if ('order' in data) {
       assert(!orders.has(data.order), `${directory}: duplicate order ${data.order}`);
       orders.add(data.order);
+    }
+    if ('recencyOrder' in data) {
+      assert(!recencyOrders.has(data.recencyOrder), `${directory}: duplicate recencyOrder ${data.recencyOrder}`);
+      recencyOrders.add(data.recencyOrder);
     }
     for (const field of ['avatar', 'cover', 'caseStudy']) checkImage(data[field], `${directory}/${file}.${field}`);
     // Validate Markdown image destinations as well as frontmatter assets.

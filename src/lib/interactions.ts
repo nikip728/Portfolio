@@ -20,9 +20,11 @@ export function initPageInteractions() {
 
   const projectBrowser = document.querySelector<HTMLElement>('[data-project-browser]');
   const projectFilters = projectBrowser?.querySelectorAll<HTMLButtonElement>('[data-project-filter]') ?? [];
-  const projectCards = projectBrowser?.querySelectorAll<HTMLElement>('[data-project-tags]') ?? [];
+  const projectCards = Array.from(projectBrowser?.querySelectorAll<HTMLElement>('[data-project-tags]') ?? []);
+  const projectSorts = projectBrowser?.querySelectorAll<HTMLButtonElement>('[data-project-sort]') ?? [];
+  const projectList = projectBrowser?.querySelector<HTMLElement>('[data-project-list]');
   const emptyProjects = projectBrowser?.querySelector<HTMLElement>('[data-project-empty]');
-  const projectFilterListeners: Array<[HTMLButtonElement, EventListener]> = [];
+  const projectControlListeners: Array<[HTMLButtonElement, EventListener]> = [];
   if (emptyProjects) {
     const applyProjectFilter = (button: HTMLButtonElement) => {
       const category = button.dataset.projectFilter;
@@ -43,8 +45,25 @@ export function initPageInteractions() {
     for (const button of projectFilters) {
       const listener: EventListener = () => applyProjectFilter(button);
       button.addEventListener('click', listener);
-      projectFilterListeners.push([button, listener]);
+      projectControlListeners.push([button, listener]);
       if (button.getAttribute('aria-pressed') === 'true') applyProjectFilter(button);
+    }
+  }
+
+  if (projectList && emptyProjects) {
+    const applyProjectSort = (button: HTMLButtonElement) => {
+      const field = button.dataset.projectSort === 'latest' ? 'projectRecency' : 'projectOrder';
+      const cards = [...projectCards].sort((a, b) => Number(b.dataset[field]) - Number(a.dataset[field]));
+      projectList.append(...cards, emptyProjects);
+      for (const sort of projectSorts) {
+        sort.setAttribute('aria-pressed', String(sort === button));
+      }
+    };
+    for (const button of projectSorts) {
+      const listener: EventListener = () => applyProjectSort(button);
+      button.addEventListener('click', listener);
+      projectControlListeners.push([button, listener]);
+      if (button.getAttribute('aria-pressed') === 'true') applyProjectSort(button);
     }
   }
 
@@ -120,7 +139,7 @@ export function initPageInteractions() {
     window.removeEventListener('resize', scheduleUpdate);
     window.removeEventListener('pageshow', scheduleUpdate);
     backToTop?.removeEventListener('blur', scheduleUpdate);
-    for (const [button, listener] of projectFilterListeners) {
+    for (const [button, listener] of projectControlListeners) {
       button.removeEventListener('click', listener);
     }
     document.removeEventListener('focusin', handleFocus);

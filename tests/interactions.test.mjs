@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { initPageInteractions } from '../src/lib/interactions.ts';
 
-function setup(t, { reducedMotion = false, intersectionObserver = true, animate = true, revealTops = [1400, 1800] } = {}) {
+function setup(t, { reducedMotion = false, intersectionObserver = true, animate = true, revealTops = [1400, 1800], initialProjectOrder = [0, 1, 2, 3] } = {}) {
   const events = () => {
     const listeners = new Map();
     return {
@@ -33,6 +33,12 @@ function setup(t, { reducedMotion = false, intersectionObserver = true, animate 
     }
     setAttribute(name, value) { this.attributes.set(name, value); }
     getAttribute(name) { return this.attributes.get(name) ?? null; }
+    append(...nodes) {
+      for (const node of nodes) {
+        this.children = this.children.filter(child => child !== node);
+        this.children.push(node);
+      }
+    }
   }
   const animations = [];
   if (animate) {
@@ -93,21 +99,33 @@ function setup(t, { reducedMotion = false, intersectionObserver = true, animate 
     filter.setAttribute('aria-pressed', String(category === 'all'));
     return filter;
   });
-  const projectCards = ['UI/UX', 'Front-end', 'UI/UX|Front-end', 'Figma'].map(tags => {
+  const projectSorts = ['recommended', 'latest'].map(mode => {
+    const button = new FakeElement();
+    button.dataset.projectSort = mode;
+    button.setAttribute('aria-pressed', String(mode === 'recommended'));
+    return button;
+  });
+  const projectCards = ['UI/UX', 'Front-end', 'UI/UX|Front-end', 'Figma'].map((tags, index) => {
     const card = new FakeElement();
     card.dataset.projectTags = tags;
+    card.dataset.projectOrder = String(4 - index);
+    card.dataset.projectRecency = String([2, 4, 3, 1][index]);
     return card;
   });
   const emptyProjects = new FakeElement();
   emptyProjects.hidden = true;
+  const projectList = new FakeElement();
+  projectList.children = [...initialProjectOrder.map(index => projectCards[index]), emptyProjects];
   const projectBrowser = new FakeElement();
   projectBrowser.querySelectorAll = selector => {
     if (selector === '[data-project-filter]') return projectFilters;
-    if (selector === '[data-project-tags]') return projectCards;
+    if (selector === '[data-project-tags]') return projectList.children.filter(card => card !== emptyProjects);
+    if (selector === '[data-project-sort]') return projectSorts;
     throw new Error(`Unexpected project browser selector: ${selector}`);
   };
   projectBrowser.querySelector = selector => {
     if (selector === '[data-project-empty]') return emptyProjects;
+    if (selector === '[data-project-list]') return projectList;
     throw new Error(`Unexpected project browser selector: ${selector}`);
   };
   const preference = { ...events(), matches: reducedMotion };
@@ -154,7 +172,7 @@ function setup(t, { reducedMotion = false, intersectionObserver = true, animate 
   cleanup = initPageInteractions();
   return {
     window, document, link, reveals, preference, observers, animations, FakeElement, frames, cleanup,
-    projectFilters, projectCards, emptyProjects,
+    projectFilters, projectSorts, projectCards, projectList, emptyProjects,
     flushFrames() {
       const pending = [...frames.values()];
       frames.clear();
@@ -183,6 +201,38 @@ test('project filters match tags case-insensitively and report empty categories'
   uiUx.dispatch('click');
   assert.ok(env.projectCards.every(card => card.hidden));
   assert.equal(env.emptyProjects.hidden, false);
+});
+
+test('project sorting restores recommended order and preserves the selected filter', t => {
+  const env = setup(t);
+  const [recommended, latest] = env.projectSorts;
+  const [a, b, c, d] = env.projectCards;
+  env.projectFilters[1].dispatch('click');
+  latest.dispatch('click');
+  assert.deepEqual(env.projectList.children, [b, c, a, d, env.emptyProjects]);
+  assert.deepEqual(env.projectList.children.filter(card => !card.hidden), [c, a]);
+  assert.equal(latest.getAttribute('aria-pressed'), 'true');
+  assert.equal(recommended.getAttribute('aria-pressed'), 'false');
+  assert.equal(env.projectFilters[1].getAttribute('aria-pressed'), 'true');
+  env.projectFilters[0].dispatch('click');
+  assert.deepEqual(env.projectList.children.filter(card => !card.hidden), [b, c, a, d]);
+  recommended.dispatch('click');
+  assert.deepEqual(env.projectList.children, [a, b, c, d, env.emptyProjects]);
+  assert.equal(recommended.getAttribute('aria-pressed'), 'true');
+  assert.equal(latest.getAttribute('aria-pressed'), 'false');
+  env.cleanup();
+  latest.dispatch('click');
+  assert.deepEqual(env.projectList.children, [a, b, c, d, env.emptyProjects]);
+});
+
+test('recommended sorting uses its explicit rank even when the initial DOM is in a different order', t => {
+  const env = setup(t, { initialProjectOrder: [1, 2, 0, 3] });
+  const [a, b, c, d] = env.projectCards;
+  assert.deepEqual(env.projectList.children, [a, b, c, d, env.emptyProjects]);
+  env.projectSorts[1].dispatch('click');
+  assert.deepEqual(env.projectList.children, [b, c, a, d, env.emptyProjects]);
+  env.projectSorts[0].dispatch('click');
+  assert.deepEqual(env.projectList.children, [a, b, c, d, env.emptyProjects]);
 });
 
 test('floating-top is hidden initially and updates at the scroll threshold through a coalesced RAF', t => {
