@@ -12,7 +12,7 @@ tags:
 cover: /images/projects/portfolio-website/portfolio-website-main.png
 coverAlt: Desktop screenshot of the Papp Niki portfolio homepage, showing the navigation, introduction, and contact buttons.
 coverCaption: A desktop screenshot of the portfolio homepage.
-repository: https://github.com/nikip728/Portfolio
+repository: https://github.com/nikip728/portfolio
 details:
   role: Visual design and AI-assisted implementation
   workedWith: "I worked alongside my mentor"

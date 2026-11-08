@@ -4,8 +4,8 @@ A static Astro portfolio with Markdown content, YAML configuration, and local pr
 
 Junior UI/UX design is the portfolio's primary focus, with openness to junior Product Designer roles and an interest in front-end development.
 
-- Website: https://nikip728.github.io/Portfolio/
-- Source reference: https://github.com/nikip728/Portfolio
+- Website: https://nikip728.github.io/portfolio/
+- Source reference: https://github.com/nikip728/portfolio
 
 ## Development
 
@@ -16,7 +16,7 @@ npm ci
 npm run dev
 ```
 
-The default base path is `/Portfolio`; open that path on the development server. To validate and inspect a production build locally:
+The default base path is `/portfolio`; open that path on the development server. To validate and inspect a production build locally:
 
 ```sh
 npm run build
@@ -108,7 +108,7 @@ Project images live under `public/images/projects/`:
 - `surfboard-store/cover.png`
 - `portfolio-website/portfolio-website-main.png` (desktop homepage screenshot); `portfolio-website/cover.svg` is the original interface illustration
 
-Reference them directly as `/images/projects/budgeting-app/budgeting-app-main.png`, for example. Image paths point directly to local files. Do not add `/public` or `/Portfolio` to content image paths; the application handles the deployment base path.
+Reference them directly as `/images/projects/budgeting-app/budgeting-app-main.png`, for example. Image paths point directly to local files. Do not add `/public` or `/portfolio` to content image paths; the application handles the deployment base path.
 
 ### CV
 
@@ -187,7 +187,7 @@ A failed install, validation, build, or test prevents artifact upload and deploy
 
 ### Required GitHub settings
 
-Configure these in the target repository, `nikip728/Portfolio`:
+Configure these in the target repository, `nikip728/portfolio`:
 
 1. A repository owner or administrator must first enable Pages under **Settings → Pages → Build and deployment → Source: GitHub Actions**. Merely adding the workflow does not enable the Pages site. For private repositories, the owner's plan must support private-repository Pages (GitHub Pro, Team, or Enterprise); GitHub Free supports Pages from public repositories. Do not change repository visibility without reviewing its contents and history.
 2. **Settings → Environments → github-pages:** leave **Required reviewers** unset for manual-dispatch-only publishing. If reviewers were previously configured, remove that protection rule to avoid an additional approval step. Optionally restrict deployment branches to `main` as well; the workflow already checks the selected ref.
@@ -195,7 +195,7 @@ Configure these in the target repository, `nikip728/Portfolio`:
 
 Remote repository and environment settings are not modified by editing these files. Existing protection rules, if any, still apply until changed in GitHub.
 
-The default site URL is `https://nikip728.github.io/Portfolio/`. For a different host or base path, override the build environment:
+The default site URL is `https://nikip728.github.io/portfolio/`. For a different host or base path, override the build environment:
 
 ```sh
 BASE_PATH=/ SITE_URL=https://example.com npm run build

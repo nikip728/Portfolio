@@ -26,7 +26,7 @@ A kész jelölés az adott tartalmi vagy technikai feladatra vonatkozik, nem a t
 - [x] Egyoldalas, szövegként olvasható A4-es angol CV Markdown-forrással és Pandoc + XeLaTeX generálással; AI tools külön sorban. A CV-ből kattintható a portfólió, a főoldal bemutatkozásából és kapcsolat részéből új lapon nyitható a PDF.
 - [x] Helyi technikai ellenőrzés: `npm run build` sikeres, az Astro ellenőrzésben 0 hiba és 0 figyelmeztetés; `npm test`: 38/38 sikeres teszt. A generált oldalak CV-linkjei és a közzétételre szánt PDF-példány egyezése ellenőrizve.
 - [x] A portfólió, a CV és az ideiglenes fájlok kizárásának változtatásai külön helyi commitokban rögzítve; a tervfrissítés külön dokumentációs commitba kerül.
-- [x] A `Development` ág helyben és GitHubon `development` névre átnevezve, a távoli követés frissítve. A repo továbbra is `Portfolio`: átnevezéséhez a jelenlegi fióknak nincs adminjoga, ezért a webcímek változatlanok.
+- [x] A `Development` ág helyben és GitHubon `development` névre átnevezve, a távoli követés frissítve. A repo és a GitHub Pages címe azóta `portfolio` névre változott; a helyi remote, az Astro alapútvonala, az aktív hivatkozások és a CV is kisbetűs címre frissítve. A CV fejlécéből a GitHub-hivatkozást eltávolítottam.
 - [ ] A helyi commitok feltöltése, szükség szerint merge és publikálás; utána az éles linkek ellenőrzése.
 - [ ] LinkedIn egyeztetése, angol projektbemutató gyakorlása és külső szakmai visszajelzés.
 - [ ] A prototípusok nyitott folyamatproblémáinak javítása és új, dokumentált résztvevős teszt; ezek nem készültek el a szövegfrissítéssel.
@@ -370,7 +370,7 @@ A megvizsgált újabb változat mobilmenüje és projektszűrése működött, a
 
 **Ez kézi technikai ellenőrzés és részleges prototípus-bejárás volt. Nem történt teljes prototípus-folyamatteszt, valódi résztvevőkkel végzett használhatósági vizsgálat vagy teljes akadálymentességi audit.** Az eredmények a vizsgálatkor elérhető állapotot írják le; a feltárt problémák javítása még elvégzendő munka.
 
-A vizsgálat tárgya a `http://localhost:4321/Portfolio` címen futó, régebbi, képnézegetős portfólió és a három hivatkozott Figma-prototípus volt. A böngészős ellenőrzés asztali, 1280 × 720 pixeles és keskeny, 320 × 800 pixeles nézetet használt. Mind az öt portfólióoldalnál ellenőriztük a vízszintes túlcsordulást 320 px szélességen. A kézi vizsgálatot a HTML/CSS áttekintése, a fő CSS-színpárok kontrasztszámítása és a Figma hozzáférhetőségi nézetének megtekintése egészítette ki.
+A vizsgálat tárgya az akkori `http://localhost:4321/Portfolio` címen (a jelenlegi alapútvonal: `/portfolio`) futó, régebbi, képnézegetős portfólió és a három hivatkozott Figma-prototípus volt. A böngészős ellenőrzés asztali, 1280 × 720 pixeles és keskeny, 320 × 800 pixeles nézetet használt. Mind az öt portfólióoldalnál ellenőriztük a vízszintes túlcsordulást 320 px szélességen. A kézi vizsgálatot a HTML/CSS áttekintése, a fő CSS-színpárok kontrasztszámítása és a Figma hozzáférhetőségi nézetének megtekintése egészítette ki.
 
 | Terület | Elvégzett ellenőrzés és megfigyelés | Következő munka vagy korlát |
 | --- | --- | --- |

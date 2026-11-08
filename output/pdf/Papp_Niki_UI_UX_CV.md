@@ -4,7 +4,7 @@ Junior UI/UX Designer
 
 papp.nikolett.eniko@gmail.com | https://www.linkedin.com/in/nikipapp
 
-Portfolio: [nikip728.github.io/Portfolio/](https://nikip728.github.io/Portfolio/) | GitHub: https://github.com/nikip728/Portfolio
+Portfolio: [nikip728.github.io/portfolio/](https://nikip728.github.io/portfolio/)
 
 ## PROFILE
 
